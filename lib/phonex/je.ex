@@ -1,6 +1,4 @@
-defmodule Phonex do
-  defmodule JE do
-    def match(number) do
-    end
+defmodule Phonex.JE do
+  def match(number) do
   end
 end

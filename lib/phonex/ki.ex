@@ -1,6 +1,4 @@
-defmodule Phonex do
-  defmodule KI do
-    def match(number) do
-    end
+defmodule Phonex.KI do
+  def match(number) do
   end
 end

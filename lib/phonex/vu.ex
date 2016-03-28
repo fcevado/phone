@@ -1,6 +1,4 @@
-defmodule Phonex do
-  defmodule VU do
-    def match(number) do
-    end
+defmodule Phonex.VU do
+  def match(number) do
   end
 end
