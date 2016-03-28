@@ -1,6 +1,6 @@
-defmodule PhonexTest do
+defmodule PhoneTest do
   use ExUnit.Case
-  doctest Phonex
+  doctest Phone
 
   test "the truth" do
     assert 1 + 1 == 2
