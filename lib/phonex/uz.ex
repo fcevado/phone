@@ -1,4 +1,6 @@
-defmodule Phonex.UZ do
-  def match(number) do
+defmodule Phonex do
+  defmodule UZ do
+    def match(number) do
+    end
   end
 end

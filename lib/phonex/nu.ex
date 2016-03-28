@@ -1,4 +1,6 @@
-defmodule Phonex.NU do
-  def match(number) do
+defmodule Phonex do
+  defmodule NU do
+    def match(number) do
+    end
   end
 end

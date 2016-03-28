@@ -1,4 +1,6 @@
-defmodule Phonex.LY do
-  def match(number) do
+defmodule Phonex do
+  defmodule LY do
+    def match(number) do
+    end
   end
 end

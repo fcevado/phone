@@ -1,4 +1,6 @@
-defmodule Phonex.GT do
-  def match(number) do
+defmodule Phonex do
+  defmodule GT do
+    def match(number) do
+    end
   end
 end
