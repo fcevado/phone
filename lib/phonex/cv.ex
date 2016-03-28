@@ -1,6 +1,4 @@
-defmodule Phonex do
-  defmodule CV do
-    def match(number) do
-    end
+defmodule Phonex.CV do
+  def match(number) do
   end
 end
