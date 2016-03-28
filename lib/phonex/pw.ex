@@ -1,6 +1,4 @@
-defmodule Phonex do
-  defmodule PW do
-    def match(number) do
-    end
+defmodule Phonex.PW do
+  def match(number) do
   end
 end
