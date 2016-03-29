@@ -33,6 +33,6 @@ defmodule Phone.NANP.CA.AB do
   end
 
   def abbreviation do
-    @abbreviaton
+    @abbreviation
   end
 end
