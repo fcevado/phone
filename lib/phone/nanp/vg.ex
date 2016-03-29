@@ -1,17 +1,44 @@
 defmodule Phone.NANP.VG do
-  def valid?(number) do
-    String.length(number) == 7
+  @regex ~r/^(284)([2-9].+)/
+  @country "British Virgin Islands"
+  @a2 "VG"
+  @a3 "VGB"
+
+  def match?(number) do
+    Regex.match?(@regex, number) and String.length(number) == 10
   end
-  def builder(code, number) do
-    unless valid?(number) do
-      raise ArgumentError, message: "Not a valid phone number."
+
+  def build(number) do
+    case match?(number) do
+      false -> {:error, "Not a valid number."}
+      true -> {:ok, builder(number)}
     end
+  end
+
+  def builder(number) do
+    [[_, code, number]] = Regex.scan(@regex,number)
     %{
-      country: "British Virgin Islands",
+      country: @country,
       code: "1-"<>code,
       number: number,
-      a2: "VG",
-      a3: "VGB"
+      a2: @a2,
+      a3: @a3
     }
+  end
+
+  def country do
+    @country
+  end
+
+  def a2 do
+    @a2
+  end
+
+  def a3 do
+    @a3
+  end
+
+  def abbreviation do
+    %{a2: @a2, a3: @a3}
   end
 end
