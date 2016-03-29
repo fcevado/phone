@@ -1,7 +1,7 @@
-defmodule Phone.NANP.CA.NS do
+defmodule Phone.NANP.CA.NS_PE do
   @regex ~r/^(902)([2-9].+)/
-  @province "Nova Scotia"
-  @abbreviation "NS"
+  @provinces ["Nova Scotia","Prince Edward Island"]
+  @abbreviations ["NS","PE"]
 
   def match?(number) do
     Regex.match?(@regex,number) and String.length(number) == 10
@@ -23,16 +23,16 @@ defmodule Phone.NANP.CA.NS do
       a3: Phone.NANP.CA.a3,
       code: 1,
       area_code: code,
-      province: @province,
-      province_abbreviation: @abbreviation
+      provinces: @provinces,
+      provinces_abbreviations: @abbreviations
     }
   end
 
-  def province do
-    @province
+  def provinces do
+    @provinces
   end
 
-  def abbreviation do
-    @abbreviaton
+  def abbreviations do
+    @abbreviations
   end
 end
