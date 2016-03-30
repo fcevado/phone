@@ -1,6 +1,6 @@
 defmodule Phone.NANP.US.AL do
   @regex ~r/^(205|251|256|334)([2-9].+)/
-  @province "Alabama"
+  @state "Alabama"
   @abbreviation "AL"
 
   def match?(number) do
@@ -23,13 +23,13 @@ defmodule Phone.NANP.US.AL do
       a3: Phone.NANP.US.a3,
       code: 1,
       area_code: code,
-      province: @province,
-      province_abbreviation: @abbreviation
+      state: @state,
+      state_abbreviation: @abbreviation
     }
   end
 
-  def province do
-    @province
+  def state do
+    @state
   end
 
   def abbreviation do

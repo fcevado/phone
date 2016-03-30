@@ -1,6 +1,6 @@
 defmodule Phone.NANP.US.CA do
   @regex ~r/^(209|213|310|323|408|415|510|530|559|562|619|626|650|661|707|714|760|805|818|831|858|909|916|925|949)([2-9].+)/
-  @province "California"
+  @state "California"
   @abbreviation "CA"
 
   def match?(number) do
@@ -23,13 +23,13 @@ defmodule Phone.NANP.US.CA do
       a3: Phone.NANP.US.a3,
       code: 1,
       area_code: code,
-      province: @province,
-      province_abbreviation: @abbreviation
+      state: @state,
+      state_abbreviation: @abbreviation
     }
   end
 
-  def province do
-    @province
+  def state do
+    @state
   end
 
   def abbreviation do
