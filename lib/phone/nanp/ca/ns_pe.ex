@@ -21,7 +21,8 @@ defmodule Phone.NANP.CA.NS_PE do
       country: Phone.NANP.CA.country,
       a2: Phone.NANP.CA.a2,
       a3: Phone.NANP.CA.a3,
-      code: 1,
+      code: "1",
+      number: number,
       area_code: code,
       provinces: @provinces,
       provinces_abbreviations: @abbreviations

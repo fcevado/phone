@@ -1,4 +1,4 @@
-defmodule Phone.NANP.DM do
+defmodule Phone.NANP.DO do
   @regex ~r/^(8[0|2|4]9)([2-9].+)/
   @country "Dominican Republic"
   @a2 "DO"

@@ -1,4 +1,4 @@
-defmodule Phone.NANP.KN do
+defmodule Phone.NANP.KY do
   @regex ~r/^(345)([2-9].+)/
   @country "Cayman Islands"
   @a2 "KY"
