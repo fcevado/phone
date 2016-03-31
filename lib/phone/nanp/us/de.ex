@@ -21,7 +21,8 @@ defmodule Phone.NANP.US.DE do
       country: Phone.NANP.US.country,
       a2: Phone.NANP.US.a2,
       a3: Phone.NANP.US.a3,
-      code: 1,
+      code: "1",
+      number: number,
       area_code: code,
       state: @state,
       state_abbreviation: @abbreviation

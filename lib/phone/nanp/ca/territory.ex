@@ -21,7 +21,8 @@ defmodule Phone.NANP.CA.Territory do
       country: Phone.NANP.CA.country,
       a2: Phone.NANP.CA.a2,
       a3: Phone.NANP.CA.a3,
-      code: 1,
+      code: "1",
+      number: number,
       area_code: code,
       territories: @territories,
       territories_abbreviations: @abbreviations
@@ -33,6 +34,6 @@ defmodule Phone.NANP.CA.Territory do
   end
 
   def abbreviations do
-    @abbreviaton
+    @abbreviations
   end
 end

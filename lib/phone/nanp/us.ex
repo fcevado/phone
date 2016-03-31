@@ -59,7 +59,7 @@ defmodule Phone.NANP.US do
   def match?(number) do
     module = Enum.filter(@modules, fn (x) -> x.match?(number) end)
 
-    length(module)
+    length(module) > 0
   end
 
   def build(number) do
@@ -77,7 +77,7 @@ defmodule Phone.NANP.US do
   end
 
   def a3 do
-    a3
+    @a3
   end
 
   def abbreviation do
