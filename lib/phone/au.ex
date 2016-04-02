@@ -19,7 +19,7 @@ defmodule Phone.AU do
     [[_, code, number]] = Regex.scan(@regex, number)
 
     %{
-      code: "47",
+      code: "61",
       area_code: code,
       number: number,
       country: @country,

@@ -19,7 +19,7 @@ defmodule Phone.AL do
     [[_, number]] = Regex.scan(@regex, number)
 
     %{
-      code: "93",
+      code: "355",
       number: number,
       country: @country,
       a2: @a2,

@@ -1,4 +1,4 @@
-defmodule Phone. do
+defmodule Phone.AZ do
   @regex ~r/^994(.+)/
   @country "Azerbeijan"
   @a2 "AZ"
@@ -19,7 +19,7 @@ defmodule Phone. do
     [[_, number]] = Regex.scan(@regex, number)
 
     %{
-      code: "93",
+      code: "994",
       number: number,
       country: @country,
       a2: @a2,
