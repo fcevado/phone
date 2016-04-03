@@ -1,4 +1,45 @@
 defmodule Phone.BR do
-  def match(number) do
+  @regex ~r/^55(.+)/
+  @country "Brazil"
+  @a2 "BR"
+  @a3 "BRA"
+
+  def match?(number) do
+    Regex.match?(@regex,number) and (String.length(number) == 12 or String.length(number) == 13)
+  end
+
+  def build(number) do
+    case match?(number) do
+      false -> {:error, "Not a valid number."}
+      true -> {:ok, builder(number)}
+    end
+  end
+
+  def builder(number) do
+    [[_, number]] = Regex.scan(@regex, number)
+
+    %{
+      code: "55",
+      number: number,
+      country: @country,
+      a2: @a2,
+      a3: @a3
+    }
+  end
+
+  def country do
+    @country
+  end
+
+  def a2 do
+    @a2
+  end
+
+  def a3 do
+    @a3
+  end
+
+  def abbreviation do
+    %{a2: @a2, a3: @a3}
   end
 end
