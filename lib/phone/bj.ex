@@ -6,7 +6,7 @@ defmodule Phone.BJ do
 
   def match?(number) do
     Regex.match?(@regex,number) and String.length(number) == 11
-  end:
+  end
 
   def build(number) do
     case match?(number) do

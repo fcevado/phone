@@ -19,7 +19,7 @@ defmodule Phone.BZ do
     [[_, number]] = Regex.scan(@regex, number)
 
     %{
-      code: "375",
+      code: "501",
       number: number,
       country: @country,
       a2: @a2,
