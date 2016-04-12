@@ -3,7 +3,6 @@ defmodule Phone.NANP.CA do
   field :country, "Canada"
   field :a2, "CA"
   field :a3, "CAN"
-  field :code, "1"
   field :modules, [
     Phone.NANP.CA.AB,
     Phone.NANP.CA.BC,
