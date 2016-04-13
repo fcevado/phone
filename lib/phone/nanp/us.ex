@@ -1,5 +1,9 @@
 defmodule Phone.NANP.US do
-  @modules [
+  use Helper.Country
+  field :country, "United States"
+  field :a2, "US"
+  field :a3, "USA"
+  field :modules, [
     Phone.NANP.US.AK,
     Phone.NANP.US.AL,
     Phone.NANP.US.AR,
@@ -52,36 +56,5 @@ defmodule Phone.NANP.US do
     Phone.NANP.US.WV,
     Phone.NANP.US.WY
   ]
-  @country "United States"
-  @a2 "US"
-  @a3 "USA"
-
-  def match?(number) do
-    module = Enum.filter(@modules, fn (x) -> x.match?(number) end)
-
-    length(module) > 0
-  end
-
-  def build(number) do
-    [module] = Enum.filter(@modules, fn (x) -> x.match?(number) end)
-
-    module.build(number)
-  end
-
-  def country do
-    @country
-  end
-
-  def a2 do
-    @a2
-  end
-
-  def a3 do
-    @a3
-  end
-
-  def abbreviation do
-    %{a2: @a2, a3: @a3}
-  end
-
+  match :modules
 end
