@@ -3,19 +3,43 @@ Phone number parser for numbers in international standard for Elixir.
 
 ## About
 What will be and what wont be about Phone:
-  - It wont be:
-    1. Intended to work as libphonenumber.
-    2. Prepared to format numbers.
-    3. Necessary any information about the number if in international standard.
-  - It will be:
-    1. A real parser, created to extract information based only in the number.
-    2. Prepared to work with numbers not only in the international standard.
-    3. Prepared for internationalization.
+  1. It wont be:
+    - Intended to work as libphonenumber.
+    - Prepared to format numbers.
+    - Necessary any information about the number if in international standard.
+  2. It will be:
+    - A real parser, created to extract information based only in the number.
+    - Prepared to work with numbers not only in the international standard.
+    - Prepared for internationalization.
+
+  3. Patterns:
+    - Countries without area code info:
+        %{
+          country: "Country Name",
+          a2: "Alpha-2",
+          a3: "Alpha-3",
+          international_code: "1",
+          area_code: "yyy",
+          number: "xxxxxxx"
+        }
+    - Countries with area code info:
+        %{
+          country: "Country Name",
+          a2: "Alpha-2 code",
+          a3: "Alpha-3 code",
+          international_code: "1",
+          number: "xxxxxxx",
+          area_code: "yyy",
+          area_name: "Area Name",
+          area_type: "state",
+          area_abbreviation: "AN"
+        }
 
 
 ## Progress
-I've done NANP countries and areas, Norway, Australia, Russia, Kazakhstan and countries that 2-letter code starts with A and B.
-I perceived that I had a lot of repeating code and it was really unnecessary, so I've been studing metaprograming to solve this.
+~~I've done NANP countries and areas, Norway, Australia, Russia, Kazakhstan and countries that 2-letter code starts with A and B.
+I perceived that I had a lot of repeating code and it was really unnecessary, so I've been studing metaprograming to solve this.~~
+Refactoring done. Focus on doing all countries.
 
 ## Vocabulary
   - a2: Alpha-2, two letters code for country names.
