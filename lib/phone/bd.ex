@@ -1,45 +1,8 @@
 defmodule Phone.BD do
-  @regex ~r/^880(.+)/
-  @country "Bangladesh"
-  @a2 "BD"
-  @a3 "BGD"
-
-  def match?(number) do
-    Regex.match?(@regex,number) and String.length(number) == 13
-  end
-
-  def build(number) do
-    case match?(number) do
-      false -> {:error, "Not a valid number."}
-      true -> {:ok, builder(number)}
-    end
-  end
-
-  def builder(number) do
-    [[_, number]] = Regex.scan(@regex, number)
-
-    %{
-      code: "880",
-      number: number,
-      country: @country,
-      a2: @a2,
-      a3: @a3
-    }
-  end
-
-  def country do
-    @country
-  end
-
-  def a2 do
-    @a2
-  end
-
-  def a3 do
-    @a3
-  end
-
-  def abbreviation do
-    %{a2: @a2, a3: @a3}
-  end
+  use Helper.Country
+  field :regex, ~r/^(880)()(.{10})/
+  field :country, "Bangladesh"
+  field :a2, "BD"
+  field :a3, "BGD"
+  match :regex
 end

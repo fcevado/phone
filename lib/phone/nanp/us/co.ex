@@ -1,39 +1,8 @@
 defmodule Phone.NANP.US.CO do
-  @regex ~r/^(307|719|720|970)([2-9].+)/
-  @state "Colorado"
-  @abbreviation "CO"
-
-  def match?(number) do
-    Regex.match?(@regex,number) and String.length(number) == 10
-  end
-
-  def build(number) do
-    case match?(number) do
-      false -> {:error, "Not a valid number."}
-      true -> {:ok, builder(number)}
-    end
-  end
-
-  def builder(number) do
-    [[_, code, number]] = Regex.scan(@regex,number)
-
-    %{
-      country: Phone.NANP.US.country,
-      a2: Phone.NANP.US.a2,
-      a3: Phone.NANP.US.a3,
-      code: "1",
-      number: number,
-      area_code: code,
-      state: @state,
-      state_abbreviation: @abbreviation
-    }
-  end
-
-  def state do
-    @state
-  end
-
-  def abbreviation do
-    @abbreviation
-  end
+  use Helper.Area
+  field :regex, ~r/^(1)(307|719|720|970)([2-9].{6})/
+  field :area_name, "Colorado"
+  field :area_type, "state"
+  field :area_abbreviation, "CO"
+  builder
 end
