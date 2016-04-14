@@ -1,4 +1,8 @@
 defmodule Phone.CM do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(237)()(.{8})/
+  field :country, "Cameroon"
+  field :a2, "CM"
+  field :a3, "CMR"
+  match :regex
 end
