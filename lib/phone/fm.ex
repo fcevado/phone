@@ -1,4 +1,8 @@
 defmodule Phone.FM do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(691)()(.{7})/
+  field :country, "Micronesia"
+  field :a2, "FM"
+  field :a3, "FSM"
+  match :regex
 end
