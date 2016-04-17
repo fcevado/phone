@@ -1,4 +1,8 @@
 defmodule Phone.GL do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(299)(..)(.{4})/
+  field :country, "Greenland"
+  field :a2, "GL"
+  field :a3, "GRL"
+  match :regex
 end

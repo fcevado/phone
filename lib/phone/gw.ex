@@ -1,4 +1,8 @@
 defmodule Phone.GW do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(245)()(.{7})/
+  field :country, "Guinea-Bissau"
+  field :a2, "GW"
+  field :a3, "GNB"
+  match :regex
 end
