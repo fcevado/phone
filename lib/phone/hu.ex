@@ -1,4 +1,8 @@
 defmodule Phone.HU do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(36)()(.{8,9})/
+  field :country, "Hungary"
+  field :a2, "HU"
+  field :a3, "HUN"
+  match :regex
 end
