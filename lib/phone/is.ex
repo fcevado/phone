@@ -1,4 +1,8 @@
 defmodule Phone.IS do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(354)()(.{7})/
+  field :country, "Iceland"
+  field :a2, "IS"
+  field :a3, "ISL"
+  match :regex
 end
