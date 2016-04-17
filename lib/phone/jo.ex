@@ -1,4 +1,8 @@
 defmodule Phone.JO do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(962)(.)(.{7,8})/
+  field :country, "Jordan"
+  field :a2, "JO"
+  field :a3, "JOR"
+  match :regex
 end
