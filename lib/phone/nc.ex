@@ -1,4 +1,8 @@
 defmodule Phone.NC do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(687)()(.{6})/
+  field :country, "New Caledonia"
+  field :a2, "NC"
+  field :a3, "NCL"
+  match :regex
 end

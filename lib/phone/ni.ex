@@ -1,4 +1,8 @@
 defmodule Phone.NI do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(505)()(.{8})/
+  field :country, "Nicaragua"
+  field :a2, "NI"
+  field :a3, "NIC"
+  match :regex
 end
