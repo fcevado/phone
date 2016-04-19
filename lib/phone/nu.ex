@@ -1,4 +1,8 @@
 defmodule Phone.NU do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(683)()(.{4})/
+  field :country, "Niue"
+  field :a2, "NU"
+  field :a3, "NIU"
+  match :regex
 end
