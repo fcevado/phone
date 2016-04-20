@@ -1,4 +1,8 @@
 defmodule Phone.PA do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(507)()(.{7})/
+  field :country, "Panama"
+  field :a2, "PA"
+  field :a3, "PAN"
+  match :regex
 end

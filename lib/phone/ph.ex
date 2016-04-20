@@ -1,4 +1,8 @@
 defmodule Phonex.PH do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(63)()(.+)/
+  field :country, "Philippines"
+  field :a2, "PH"
+  field :a3, "PHL"
+  match :regex
 end
