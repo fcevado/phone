@@ -10,8 +10,10 @@ defmodule Phone do
       {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
   """
 
-  @doc ~S"""
+  @doc """
   Parses a string and returns a map with information about that number.
+
+  ```
     iex> Phone.parse("555112345678")
     {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
 
@@ -23,6 +25,8 @@ defmodule Phone do
 
     iex> Phone.parse(555112345678)
     {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+
+  ```
   """
   def parse(number) when is_bitstring(number) do
     number = clear(number)
