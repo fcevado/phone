@@ -14,7 +14,7 @@ defmodule Helper.Country do
   defp regex_matcher do
     quote do
       def match?(number) do
-        Regex.match?(@regex, number)
+        Regex.match?(regex, number)
       end
 
       def builder(number) do
@@ -43,8 +43,8 @@ defmodule Helper.Country do
   defp modules_matcher do
     quote do
       def match?(number) do
-        modules = Enum.filter(modules, fn(m)-> m.match?(number) end)
-        length(modules) > 0
+        ms = Enum.filter(modules, fn(m)-> m.match?(number) end)
+        length(ms) > 0
       end
 
       def build(number) do

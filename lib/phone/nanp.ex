@@ -1,6 +1,6 @@
 defmodule Phone.NANP do
-  @regex ~r/1(.+)/
-  @modules [
+  use Helper.Country
+  field :modules, [
     Phone.NANP.AS,
     Phone.NANP.AI,
     Phone.NANP.AG,
@@ -28,21 +28,5 @@ defmodule Phone.NANP do
     Phone.NANP.VI,
     Phone.NANP.TollFree
   ]
-
-  def match?(number) do
-    if Regex.match?(@regex,number) do
-      [[_, number]] = Regex.scan(@regex, number)
-      module = Enum.filter(@modules, fn (x) -> x.match?(number) end)
-      length(module) > 0
-    else
-      false
-    end
-  end
-
-  def build(number) do
-    [[_, number]] = Regex.scan(@regex, number)
-    [module] = Enum.filter(@modules, fn(x) -> x.match?(number) end)
-
-    module.build(number)
-  end
+  match :modules
 end

@@ -1,4 +1,4 @@
-defmodule Phonex.PH do
+defmodule Phone.PH do
   use Helper.Country
   field :regex, ~r/^(63)()(.+)/
   field :country, "Philippines"
