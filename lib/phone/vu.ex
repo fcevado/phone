@@ -1,4 +1,8 @@
 defmodule Phone.VU do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(678)()(.{5})/
+  field :country, "Vanuatu"
+  field :a2, "VU"
+  field :a3, "VUT"
+  match :regex
 end
