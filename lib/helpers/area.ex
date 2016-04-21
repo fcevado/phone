@@ -38,7 +38,7 @@ defmodule Helper.Area do
 
       def build(number) do
         if match?(number) do
-          builder(number)
+          {:ok, builder(number)}
         else
           {:error, "Not a valid phone number."}
         end
