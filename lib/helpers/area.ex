@@ -1,7 +1,9 @@
 defmodule Helper.Area do
+  @moduledoc false
   defmacro __using__(_) do
     quote do
       import Helper.Area
+      @moduledoc false
     end
   end
 

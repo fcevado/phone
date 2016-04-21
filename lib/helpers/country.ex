@@ -1,7 +1,9 @@
 defmodule Helper.Country do
+  @moduledoc false
   defmacro __using__(_) do
     quote do
       import Helper.Country
+      @moduledoc false
     end
   end
 
