@@ -45,12 +45,15 @@ defmodule Phonex.Mixfile do
   end
 
   defp links do
-    %{"Github" => "https://github.com/fcevado/phone"}
+    %{
+      "Github" => "https://github.com/fcevado/phone",
+      "Doc" => ""
+    }
   end
 
   defp deps do
     [
-      {:earmark, "0.2", only: :dev},
+      {:earmark, "0.2.1", only: :dev},
       {:ex_doc, "0.11.4", only: :dev}
     ]
   end
