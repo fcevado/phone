@@ -1,4 +1,8 @@
 defmodule Phone.SI do
-  def match(number) do
-  end
+  use Helper.Country
+  field :regex, ~r/^(386)()(.+)/
+  field :country, "Slovenia"
+  field :a2, "SI"
+  field :a3, "SVN"
+  match :regex
 end
