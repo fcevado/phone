@@ -68,7 +68,7 @@ There are may ways you can help this project grow, like:
   * Create an issue if you find any inconsistency with our parsing. If possible give us official information about the numbering plan of your country.
   * Create a PR adding area code info for a country that is missing.
 
-Since for this project that would be a lot of repeating code, there is some helpers for creating a country module and a area.
+To reduce lines of code, there are helpers for area and country modules.
 
 Required fields for an area module:
   * regex, with the full regex for identifing that area number.
