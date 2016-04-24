@@ -9,7 +9,7 @@ defmodule Helper.Area do
 
   defmacro field(name, value) do
     quote do
-      def unquote(name)(), do: unquote(value)
+      defp unquote(name)(), do: unquote(value)
     end
   end
 
