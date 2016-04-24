@@ -28,6 +28,7 @@ defmodule Phone do
 
   ```
   """
+  @spec parse(String.t) :: {:ok, Map.t}
   def parse(number) when is_bitstring(number) do
     number = clear(number)
     number = try do
@@ -38,6 +39,7 @@ defmodule Phone do
     Phone.Countries.build(number)
   end
 
+  @spec parse(pos_integer) :: {:ok, Map.t}
   def parse(number) when is_integer(number) do
     number = Integer.to_string(number)
     parse(number)
