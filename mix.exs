@@ -34,7 +34,6 @@ defmodule Phonex.Mixfile do
 
   defp files do
     [
-      "lib",
       "mix.exs",
       "test",
       "README.md",
