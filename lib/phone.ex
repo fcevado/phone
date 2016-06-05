@@ -59,4 +59,15 @@ defmodule Phone do
     |> Enum.filter(fn(n)-> ! Enum.any?(remove,fn(r)-> r == n end) end)
     |> Enum.join("")
   end
+
+  parser :ad, "376"
+  parser :ae, "971"
+  parser :af, "93"
+  parser :al, "355"
+  parser :am, "374"
+  parser :ao, "244"
+  parser :ar, "54"
+  parser :at, "43"
+  parser :aw, "297"
+  parser :az, "994"
 end
