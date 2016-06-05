@@ -157,4 +157,10 @@ defmodule Phone do
 
   parser :gr, "30"
   parser :uk, "30"
+
+  parser :hk, "852"
+  parser :hn, "504"
+  parser :hr, "385"
+  parser :ht, "509"
+  parser :hu, "36"
 end
