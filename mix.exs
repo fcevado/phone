@@ -35,11 +35,7 @@ defmodule Phonex.Mixfile do
   defp files do
     [
       "mix.exs",
-      "test",
-      "README.md",
-      "CODE_OF_CONDUCT.md",
-      "CHANGELOG.md",
-      "LICENSE"
+      "lib"
     ]
   end
 
