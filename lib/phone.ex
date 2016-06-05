@@ -264,5 +264,18 @@ defmodule Phone do
 
   parser :om, "968"
 
+  parser :pa, "507"
+  parser :pe, "51"
+  parser :pf, "689"
+  parser :pg, "675"
+  parser :ph, "63"
+  parser :pk, "92"
+  parser :pl, "48"
+  parser :pm, "508"
+  parser :ps, "970"
+  parser :pt, "351"
+  parser :pw, "680"
+  parser :py, "595"
+
   parser :qa, "974"
 end
