@@ -61,7 +61,11 @@ defmodule Phone do
   end
 
   @doc """
-  Same as `parse(number)` but the number doesn't have the international code, instead you specify country as a atom with two-letters code.
+  Same as `parse(number)` but the number doesn't have the international code, instead you specify country as an atom with two-letters code.
+
+  For NANP countries you can use the atom `:nanp` or two-letter codes for any country in NANP.
+
+  For United Kingdom is possible to use the more known acronym `:uk` or the official two-letter code `:gb`.
 
   ```
   iex> Phone.parse(:br, "5112345678")
