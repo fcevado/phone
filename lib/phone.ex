@@ -278,4 +278,9 @@ defmodule Phone do
   parser :py, "595"
 
   parser :qa, "974"
+
+  parser :ro, "40"
+  parser :rs, "381"
+  parser :ru, "7"
+  parser :rw, "250"
 end
