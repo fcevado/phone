@@ -317,4 +317,9 @@ defmodule Phone do
   parser :tv, "688"
   parser :tw, "886"
   parser :tz, "255"
+
+  parser :ua, "380"
+  parser :ug, "256"
+  parser :uy, "598"
+  parser :uz, "998"
 end
