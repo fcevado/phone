@@ -122,4 +122,10 @@ defmodule Phone do
   parser :cw, "599"
   parser :cy, "357"
   parser :cz, "420"
+
+  parser :de, "49"
+  parser :dj, "253"
+  parser :dk, "45"
+  parser :dz, "213"
+
 end
