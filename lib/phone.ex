@@ -140,4 +140,21 @@ defmodule Phone do
   parser :fm, "691"
   parser :fo, "298"
   parser :fr, "33"
+
+  parser :ga, "241"
+  parser :gb, "44"
+  parser :ge, "995"
+  parser :gf, "594"
+  parser :gh, "233"
+  parser :gi, "350"
+  parser :gl, "299"
+  parser :gm, "220"
+  parser :gn, "224"
+  parser :gq, "240"
+  parser :gt, "502"
+  parser :gw, "245"
+  parser :gy, "592"
+
+  parser :gr, "30"
+  parser :uk, "30"
 end
