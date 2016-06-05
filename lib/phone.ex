@@ -186,4 +186,15 @@ defmodule Phone do
   parser :kr, "82"
   parser :kw, "965"
   parser :kz, "7"
+
+  parser :la, "856"
+  parser :lb, "961"
+  parser :li, "423"
+  parser :lk, "94"
+  parser :lr, "231"
+  parser :ls, "266"
+  parser :lt, "370"
+  parser :lu, "352"
+  parser :lv, "371"
+  parser :ly, "218"
 end
