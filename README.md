@@ -8,8 +8,8 @@
 
 Phone number parser for telephone numbers in international standard or missing international country code, for [Elixir](http://elixir-lang.org).
 
-[Online Documentation](https://hexdocs.pm/phone/api-reference.html)
-[Hex](https://hex.pm/packages/phone)
+* [Online Documentation](https://hexdocs.pm/phone/api-reference.html)
+* [Hex](https://hex.pm/packages/phone)
 
 ## About
 What is, what isnt and what will be about Phone:
