@@ -173,4 +173,7 @@ defmodule Phone do
   parser :ir, "98"
   parser :is, "353"
   parser :it, "39"
+
+  parser :jo, "962"
+  parser :jp, "81"
 end
