@@ -53,7 +53,7 @@ defmodule Phonex.Mixfile do
     [
       {:earmark, "0.2.1", only: :dev},
       {:ex_doc, "0.11.4", only: :dev},
-      {:inch_ex, only: :docs}
+      {:inch_ex, "0.5.1", only: :docs}
     ]
   end
 end

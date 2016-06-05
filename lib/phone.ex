@@ -10,8 +10,10 @@ defmodule Phone do
       {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
   """
 
+  import Phone.Helper.Parser
+
   @doc """
-  Parses a string and returns a map with information about that number.
+  Parses a string or integer and returns a map with information about that number.
 
   ```
     iex> Phone.parse("555112345678")
@@ -51,7 +53,9 @@ defmodule Phone do
 
   defp clear(number) when is_bitstring(number) do
     remove = String.graphemes("+()- ")
-    number |> String.graphemes
+
+    number
+    |> String.graphemes
     |> Enum.filter(fn(n)-> ! Enum.any?(remove,fn(r)-> r == n end) end)
     |> Enum.join("")
   end
