@@ -249,4 +249,16 @@ defmodule Phone do
   parser :vc, "1"
   parser :vg, "1"
   parser :vi, "1"
+
+  parser :na, "264"
+  parser :nc, "687"
+  parser :ne, "227"
+  parser :ng, "234"
+  parser :ni, "505"
+  parser :nl, "31"
+  parser :no, "47"
+  parser :np, "977"
+  parser :nr, "674"
+  parser :nu, "683"
+  parser :nz, "64"
 end
