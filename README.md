@@ -6,7 +6,10 @@
 [![GitHub issues](https://img.shields.io/github/issues/fcevado/phone.svg)](https://github.com/fcevado/phone/issues)
 [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/fcevado/phone/master/LICENSE)
 
-Phone number parser for numbers in international standard for Elixir.
+Phone number parser for telephone numbers in international standard or missing international country code, for [Elixir](http://elixir-lang.org).
+
+* [Online Documentation](https://hexdocs.pm/phone/api-reference.html)
+* [Hex](https://hex.pm/packages/phone)
 
 ## About
 What is, what isnt and what will be about Phone:
@@ -16,9 +19,9 @@ What is, what isnt and what will be about Phone:
     * Necessary any information about the number if in international standard.
   2. It is:
     * A real parser, created to extract information based only in the number.
-  3. It will be:
     * Prepared to work with numbers not only in the international standard.
-    * Prepared for internationalization.
+  3. It will have:
+     * Area code info for every country that numbering plan has area codes.
 
   * Patterns:
     * Countries without area code info:
@@ -48,6 +51,11 @@ What is, what isnt and what will be about Phone:
         }
         ```
 
+## Area Codes
+Countries that already has area code info:
+    * United States
+    * Canada
+
 ## Vocabulary
   * a2: Alpha-2, two letters code for country names.
   * a3: Alpha-3, three letters code for country names.
@@ -64,7 +72,7 @@ end
 ```
 
 ## Contributing
-There are may ways you can help this project grow, like:
+There are a couple of ways you can help this project grow, like:
   * Create an issue if you find any inconsistency with our parsing. If possible give us official information about the numbering plan of your country.
   * Create a PR adding area code info for a country that is missing.
 
