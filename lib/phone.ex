@@ -128,4 +128,10 @@ defmodule Phone do
   parser :dk, "45"
   parser :dz, "213"
 
+  parser :ec, "593"
+  parser :ee, "372"
+  parser :eg, "20"
+  parser :er, "291"
+  parser :es, "34"
+  parser :et, "251"
 end
