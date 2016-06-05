@@ -134,4 +134,10 @@ defmodule Phone do
   parser :er, "291"
   parser :es, "34"
   parser :et, "251"
+
+  parser :fi, "358"
+  parser :fj, "679"
+  parser :fm, "691"
+  parser :fo, "298"
+  parser :fr, "33"
 end
