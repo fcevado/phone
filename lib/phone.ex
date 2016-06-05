@@ -329,4 +329,6 @@ defmodule Phone do
 
   paser :wf, "681"
   parser :ws, "685"
+
+  parser :ye, "967"
 end
