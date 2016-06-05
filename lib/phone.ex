@@ -303,4 +303,18 @@ defmodule Phone do
   parser :sv, "503"
   parser :sy, "963"
   parser :sz, "268"
+
+  parser :td, "235"
+  parser :tg, "228"
+  parser :th, "66"
+  parser :tj, "992"
+  parser :tk, "690"
+  parser :tl, "670"
+  parser :tm, "993"
+  parser :tn, "216"
+  parser :to, "676"
+  parser :tr, "90"
+  parser :tv, "688"
+  parser :tw, "886"
+  parser :tz, "255"
 end
