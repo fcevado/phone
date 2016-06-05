@@ -322,4 +322,8 @@ defmodule Phone do
   parser :ug, "256"
   parser :uy, "598"
   parser :uz, "998"
+
+  parser :ve, "58"
+  parser :vn, "84"
+  parser :vu, "678"
 end
