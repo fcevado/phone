@@ -176,4 +176,14 @@ defmodule Phone do
 
   parser :jo, "962"
   parser :jp, "81"
+
+  parser :ke, "254"
+  parser :kg, "996"
+  parser :kh, "855"
+  parser :ki, "686"
+  parser :km, "269"
+  parser :kp, "850"
+  parser :kr, "82"
+  parser :kw, "965"
+  parser :kz, "7"
 end
