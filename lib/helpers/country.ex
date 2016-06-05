@@ -64,7 +64,7 @@ defmodule Helper.Country do
     case matcher do
       :regex -> regex_matcher
       :modules -> modules_matcher
-      other ->
+      true ->
         raise ArgumentError, "You can only match against :regex or :modules, passed #{inspect matcher}"
     end
   end

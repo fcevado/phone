@@ -10,8 +10,10 @@ defmodule Phone do
       {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
   """
 
+  import Phone.Helper.Parser
+
   @doc """
-  Parses a string and returns a map with information about that number.
+  Parses a string or integer and returns a map with information about that number.
 
   ```
     iex> Phone.parse("555112345678")
@@ -51,8 +53,36 @@ defmodule Phone do
 
   defp clear(number) when is_bitstring(number) do
     remove = String.graphemes("+()- ")
-    number |> String.graphemes
+
+    number
+    |> String.graphemes
     |> Enum.filter(fn(n)-> ! Enum.any?(remove,fn(r)-> r == n end) end)
     |> Enum.join("")
   end
+
+  @doc """
+  Same as `parse(number)` but the number doesn't have the international code, instead you specify country as an atom with two-letters code.
+
+  For NANP countries you can use the atom `:nanp` or two-letter codes for any country in NANP.
+
+  For United Kingdom is possible to use the more known acronym `:uk` or the official two-letter code `:gb`.
+
+  ```
+  iex> Phone.parse(:br, "5112345678")
+  {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+
+  iex> Phone.parse(:br, "(51)1234-5678")
+  {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+
+  iex> Phone.parse(:br, "51 1234-5678")
+  {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+
+  iex> Phone.parse(:br, 5112345678)
+  {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+
+  ```
+  """
+  @spec parse(Atom.t, String.t) :: {:ok, Map.t}
+  @spec parse(Atom.t, pos_integer) :: {:ok, Map.t}
+  country_parser
 end
