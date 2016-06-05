@@ -261,4 +261,8 @@ defmodule Phone do
   parser :nr, "674"
   parser :nu, "683"
   parser :nz, "64"
+
+  parser :om, "968"
+
+  parser :qa, "974"
 end
