@@ -331,4 +331,8 @@ defmodule Phone do
   parser :ws, "685"
 
   parser :ye, "967"
+
+  parser :za, "27"
+  parser :zm, "260"
+  parser :zw, "263"
 end
