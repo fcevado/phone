@@ -163,4 +163,14 @@ defmodule Phone do
   parser :hr, "385"
   parser :ht, "509"
   parser :hu, "36"
+
+  parser :id, "62"
+  parser :ie, "353"
+  parser :il, "972"
+  parser :in, "91"
+  parser :io, "246"
+  parser :iq, "964"
+  parser :ir, "98"
+  parser :is, "353"
+  parser :it, "39"
 end
