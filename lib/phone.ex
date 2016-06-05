@@ -326,4 +326,7 @@ defmodule Phone do
   parser :ve, "58"
   parser :vn, "84"
   parser :vu, "678"
+
+  paser :wf, "681"
+  parser :ws, "685"
 end
