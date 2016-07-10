@@ -3,17 +3,71 @@ defmodule Phone.Helper.Parser do
 
   defmacro parser(country, code) do
     quote do
-      def parse(unquote(country), number) when is_bitstring(number) do
+
+      @doc """
+      Same as `parse/1` but the number doesn't have the international code, instead you specify country as an atom with two-letters code.
+
+      For NANP countries you can use the atom `:nanp` or two-letter codes for any country in NANP.
+
+      For United Kingdom is possible to use the more known acronym `:uk` or the official two-letter code `:gb`.
+
+      ```
+      iex> Phone.parse("5112345678", :br)
+      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+
+      iex> Phone.parse("(51)1234-5678", :br)
+      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+
+      iex> Phone.parse("51 1234-5678", :br)
+      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+
+      iex> Phone.parse(5112345678, :br)
+      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+
+      ```
+      """
+      def parse(number, unquote(country)) when is_bitstring(number) do
         parse(unquote(code) <> number)
       end
 
-      def parse(unquote(country), number) when is_integer(number) do
+      def parse(number, unquote(country)) when is_integer(number) do
         number = Integer.to_string(number)
         parse(unquote(code) <> number)
       end
 
-      def parse(unquote(country), _) do
+      def parse(_, unquote(country)) do
         parse(unquote(country))
+      end
+
+      @doc """
+      Same as `parse/2`, except it raises on error.
+
+      ```
+      iex> Phone.parse!("5112345678", :br)
+      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+
+      iex> Phone.parse!("(51)1234-5678", :br)
+      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+
+      iex> Phone.parse!("51 1234-5678", :br)
+      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+
+      iex> Phone.parse!(5112345678, :br)
+      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+
+      ```
+      """
+      def parse!(number, unquote(country)) when is_bitstring(number) do
+        parse!(unquote(code) <> number)
+      end
+
+      def parse!(number, unquote(country)) when is_integer(number) do
+        number = Integer.to_string(number)
+        parse!(unquote(code) <> number)
+      end
+
+      def parse!(_, unquote(country)) do
+        parse!(unquote(country))
       end
     end
   end
