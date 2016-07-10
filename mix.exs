@@ -4,7 +4,7 @@ defmodule Phonex.Mixfile do
   def project do
     [app: :phone,
      version: "0.3.0",
-     elixir: ">= 1.0.0",
+     elixir: ">= 1.1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      description: description,
