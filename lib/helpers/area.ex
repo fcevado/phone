@@ -45,6 +45,14 @@ defmodule Helper.Area do
           {:error, "Not a valid phone number."}
         end
       end
+
+      def build!(number) do
+        if match?(number) do
+          builder(number)
+        else
+          raise ArgumentError, message: "Not a valid phone number."
+        end
+      end
     end
   end
 end
