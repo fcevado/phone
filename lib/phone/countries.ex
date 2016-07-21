@@ -13,15 +13,15 @@ defmodule Phone.Countries do
     Phone.FO, Phone.FR, Phone.GA, Phone.GB, Phone.GE, Phone.GF,
     Phone.GH, Phone.GI, Phone.GL, Phone.GM, Phone.GN, Phone.GQ,
     Phone.GR, Phone.GT, Phone.GW, Phone.GY, Phone.HK, Phone.HN,
-    Phone.HT, Phone.HU, Phone.ID, Phone.IE, Phone.IL, Phone.IN,
-    Phone.IO, Phone.IQ, Phone.IR, Phone.IS, Phone.IT, Phone.JO,
-    Phone.JP, Phone.KE, Phone.KG, Phone.KH, Phone.KI, Phone.KM,
-    Phone.KP, Phone.KR, Phone.KW, Phone.KZ, Phone.LA, Phone.LB,
-    Phone.LI, Phone.LK, Phone.LR, Phone.LS, Phone.LT, Phone.LU,
-    Phone.LV, Phone.LY, Phone.MA, Phone.MC, Phone.MD, Phone.ME,
-    Phone.MG, Phone.MH, Phone.MK, Phone.ML, Phone.MM, Phone.MN,
-    Phone.MO, Phone.MQ, Phone.MR, Phone.MT, Phone.MU, Phone.MV,
-    Phone.MW, Phone.MX, Phone.MY, Phone.MZ, Phone.NA, Phone.NANP,
+    Phone.HR, Phone.HT, Phone.HU, Phone.ID, Phone.IE, Phone.IL,
+    Phone.IN, Phone.IO, Phone.IQ, Phone.IR, Phone.IS, Phone.IT,
+    Phone.JO, Phone.JP, Phone.KE, Phone.KG, Phone.KH, Phone.KI,
+    Phone.KM, Phone.KP, Phone.KR, Phone.KW, Phone.KZ, Phone.LA,
+    Phone.LB, Phone.LI, Phone.LK, Phone.LR, Phone.LS, Phone.LT,
+    Phone.LU, Phone.LV, Phone.LY, Phone.MA, Phone.MC, Phone.MD,
+    Phone.ME, Phone.MG, Phone.MH, Phone.MK, Phone.ML, Phone.MM,
+    Phone.MN, Phone.MO, Phone.MQ, Phone.MR, Phone.MT, Phone.MU,
+    Phone.MV, Phone.MW, Phone.MX, Phone.MY, Phone.MZ, Phone.NA,
     Phone.NC, Phone.NE, Phone.NG, Phone.NI, Phone.NL, Phone.NO,
     Phone.NP, Phone.NR, Phone.NU, Phone.NZ, Phone.OM, Phone.PA,
     Phone.PE, Phone.PF, Phone.PG, Phone.PH, Phone.PK, Phone.PL,
@@ -34,7 +34,7 @@ defmodule Phone.Countries do
     Phone.TN, Phone.TO, Phone.TR, Phone.TV, Phone.TW, Phone.TZ,
     Phone.UA, Phone.UG, Phone.UY, Phone.UZ, Phone.VE, Phone.VN,
     Phone.VU, Phone.WF, Phone.WS, Phone.YE, Phone.ZA, Phone.ZM,
-    Phone.ZW
+    Phone.ZW, Phone.NANP,
   ]
   match :modules
 end
