@@ -34,7 +34,7 @@ defmodule Phone.Countries do
     Phone.TN, Phone.TO, Phone.TR, Phone.TV, Phone.TW, Phone.TZ,
     Phone.UA, Phone.UG, Phone.UY, Phone.UZ, Phone.VE, Phone.VN,
     Phone.VU, Phone.WF, Phone.WS, Phone.YE, Phone.ZA, Phone.ZM,
-    Phone.ZW, Phone.NANP,
+    Phone.ZW, Phone.NANP
   ]
   match :modules
 end
