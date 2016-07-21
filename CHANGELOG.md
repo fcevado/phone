@@ -1,5 +1,8 @@
 #Changelog
 
+##v0.3.1:
+  * Issues with Croatia numbers corrected.
+
 ##v0.3.0:
   * Changed `parse/2` parameters order for a better use on pipes.
   * Added functions `parse!/1` and `parse!/2` for a direct return, and raises on error.
