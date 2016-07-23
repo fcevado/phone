@@ -12,17 +12,17 @@ defmodule Phone.Helper.Parser do
       For United Kingdom is possible to use the more known acronym `:uk` or the official two-letter code `:gb`.
 
       ```
-      iex> Phone.parse("5112345678", :br)
-      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+      iex> Phone.parse("5132345678", :br)
+      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}}
 
-      iex> Phone.parse("(51)1234-5678", :br)
-      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+      iex> Phone.parse("(51)3234-5678", :br)
+      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}}
 
-      iex> Phone.parse("51 1234-5678", :br)
-      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+      iex> Phone.parse("51 3234-5678", :br)
+      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}}
 
-      iex> Phone.parse(5112345678, :br)
-      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+      iex> Phone.parse(5132345678, :br)
+      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}}
 
       ```
       """
@@ -43,17 +43,17 @@ defmodule Phone.Helper.Parser do
       Same as `parse/2`, except it raises on error.
 
       ```
-      iex> Phone.parse!("5112345678", :br)
-      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+      iex> Phone.parse!("5132345678", :br)
+      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}
 
-      iex> Phone.parse!("(51)1234-5678", :br)
-      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+      iex> Phone.parse!("(51)3234-5678", :br)
+      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}
 
-      iex> Phone.parse!("51 1234-5678", :br)
-      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+      iex> Phone.parse!("51 3234-5678", :br)
+      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}
 
-      iex> Phone.parse!(5112345678, :br)
-      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+      iex> Phone.parse!(5132345678, :br)
+      %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}
 
       ```
       """

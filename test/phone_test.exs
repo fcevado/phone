@@ -2,27 +2,27 @@ defmodule PhoneTest do
   use ExUnit.Case, async: true
   doctest Phone
   @right_assertion {:ok, %{
-      a2: "BR",
-      a3: "BRA",
-      country: "Brazil",
-      international_code: "55",
-      area_code: "51",
+      a2: "HR",
+      a3: "HRV",
+      country: "Croatia",
+      international_code: "385",
+      area_code: "",
       number: "12345678"
     }}
   @right_return %{
-    a2: "BR",
-    a3: "BRA",
-    country: "Brazil",
-    international_code: "55",
-    area_code: "51",
+    a2: "HR",
+    a3: "HRV",
+    country: "Croatia",
+    international_code: "385",
+    area_code: "",
     number: "12345678"
   }
   @wrong_type {:error, "Not a valid parameter, only string or integer."}
   @wrong_assertion {:error, "Not a valid phone number."}
 
   test "parse integer" do
-    assert Phone.parse(555112345678) == @right_assertion
-    assert Phone.parse!(555112345678) == @right_return
+    assert Phone.parse(38512345678) == @right_assertion
+    assert Phone.parse!(38512345678) == @right_return
   end
 
   test "parse not valid integer" do
@@ -44,14 +44,14 @@ defmodule PhoneTest do
   end
 
   test "parse string with formatted number" do
-    assert Phone.parse("+55 51 1234 5678") == @right_assertion
-    assert Phone.parse!("+55 51 1234 5678") == @right_return
+    assert Phone.parse("+385 1234 5678") == @right_assertion
+    assert Phone.parse!("+385 1234 5678") == @right_return
 
-    assert Phone.parse("+55(51)1234-5678") == @right_assertion
-    assert Phone.parse!("+55(51)1234-5678") == @right_return
+    assert Phone.parse("+385 1234-5678") == @right_assertion
+    assert Phone.parse!("+385 1234-5678") == @right_return
 
-    assert Phone.parse("+555112345678") == @right_assertion
-    assert Phone.parse!("+555112345678") == @right_return
+    assert Phone.parse("+38512345678") == @right_assertion
+    assert Phone.parse!("+38512345678") == @right_return
   end
 
   test "parse other types" do

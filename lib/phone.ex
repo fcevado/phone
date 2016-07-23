@@ -6,8 +6,8 @@ defmodule Phone do
   ## How to use
 
   Very simple to use:
-      iex> Phone.parse("555112345678")
-      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+      iex> Phone.parse("555132345678")
+      {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}}
   """
 
   import Phone.Helper.Parser
@@ -22,17 +22,17 @@ defmodule Phone do
   Parses a string or integer and returns a map with information about that number.
 
   ```
-    iex> Phone.parse("555112345678")
-    {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+    iex> Phone.parse("555132345678")
+    {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}}
 
-    iex> Phone.parse("+55(51)1234-5678")
-    {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+    iex> Phone.parse("+55(51)3234-5678")
+    {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}}
 
-    iex> Phone.parse("55 51 1234-5678")
-    {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+    iex> Phone.parse("55 51 3234-5678")
+    {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}}
 
-    iex> Phone.parse(555112345678)
-    {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}}
+    iex> Phone.parse(555132345678)
+    {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}}
 
   ```
   """
@@ -70,17 +70,17 @@ defmodule Phone do
   Same as `parse/1`, except it raises on error.
 
   ```
-  iex> Phone.parse!("555112345678")
-  %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+  iex> Phone.parse!("555132345678")
+  %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}
 
-  iex> Phone.parse!("+55(51)1234-5678")
-  %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+  iex> Phone.parse!("+55(51)3234-5678")
+  %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}
 
-  iex> Phone.parse!("55 51 1234-5678")
-  %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+  iex> Phone.parse!("55 51 3234-5678")
+  %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}
 
-  iex> Phone.parse!(555112345678)
-  %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "12345678"}
+  iex> Phone.parse!(555132345678)
+  %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}
 
   ```
   """
