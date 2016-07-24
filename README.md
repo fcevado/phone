@@ -55,6 +55,7 @@ What is, what isnt and what will be about Phone:
 Countries that already has area code info:
 * United States.
 * Canada.
+* Brazil.
 
 ## Vocabulary
   * a2: Alpha-2, two letters code for country names.
