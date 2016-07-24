@@ -1,5 +1,9 @@
 #Changelog
 
+##v0.3.2:
+  * Area codes for Brazil.
+  * Updated all regular expressions for NANP, to enforce end of line.
+
 ##v0.3.1:
   * Issues with Croatia numbers corrected.
 
