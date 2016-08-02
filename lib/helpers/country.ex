@@ -53,13 +53,13 @@ defmodule Helper.Country do
   defp modules_matcher do
     quote do
       def match?(number) do
-        ms = Enum.filter(modules, fn(m)-> m.match?(number) end)
+        ms = Enum.filter(modules, fn m -> m.match?(number) end)
         length(ms) > 0
       end
 
       def build(number) do
         if match?(number) do
-          [module] = Enum.filter(modules, fn(m)-> m.match?(number) end)
+          [module] = Enum.filter(modules, fn m -> m.match?(number) end)
           module.build(number)
         else
           {:error, "Not a valid phone number."}
@@ -68,7 +68,7 @@ defmodule Helper.Country do
 
       def build!(number) do
         if match?(number) do
-          [module] = Enum.filter(modules, fn(m)-> m.match?(number) end)
+          [module] = Enum.filter(modules, fn m -> m.match?(number) end)
           module.build!(number)
         else
           raise ArgumentError, message: "Not a valid phone number."

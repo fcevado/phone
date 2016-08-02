@@ -47,6 +47,7 @@ defmodule Phonex.Mixfile do
 
   defp deps do
     [
+      {:credo, "0.4.7", only: [:dev, :test]},
       {:earmark, "0.2.1", only: :dev},
       {:ex_doc, "0.11.4", only: :dev},
       {:inch_ex, "0.5.1", only: :docs}
