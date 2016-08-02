@@ -62,7 +62,7 @@ defmodule Phone do
 
     number
     |> String.graphemes
-    |> Enum.filter(fn(n)-> ! Enum.any?(remove,fn(r)-> r == n end) end)
+    |> Enum.filter(fn n -> ! Enum.any?(remove, fn r -> r == n end) end)
     |> Enum.join("")
   end
 

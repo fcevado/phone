@@ -20,10 +20,16 @@ defmodule Helper.Area do
       end
 
       def builder(number) do
-        [_ | country] = Module.split(__MODULE__) |> Enum.reverse
-        country = Enum.reverse(country) |> Module.concat
+        [_ | country] =
+          __MODULE__
+          |> Module.split
+          |> Enum.reverse
+        country =
+          country
+          |> Enum.reverse
+          |> Module.concat
 
-        [[_, code, area, number]] = Regex.scan(regex,number)
+        [[_, code, area, number]] = Regex.scan(regex, number)
 
         %{
           country: country.country,
