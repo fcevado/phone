@@ -68,7 +68,7 @@ Add to your depencies like any other hex package.
 
 ```elixir
 defp deps do
-  [{:phone, "0.1.1"}]
+  [{:phone, "0.3.3"}]
 end
 ```
 

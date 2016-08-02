@@ -1,5 +1,8 @@
 #Changelog
 
+##v0.3.3:
+  * Correct number validation to São Paulo - BR.
+
 ##v0.3.2:
   * Area codes for Brazil.
   * Updated all regular expressions for NANP, to enforce end of line.
