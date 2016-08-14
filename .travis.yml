@@ -1,11 +1,22 @@
 language: elixir
+
 elixir:
   - 1.1.1
   - 1.2.6
   - 1.3.2
+
 otp_release:
   - 18.2
   - 18.3
+
+env:
+  - MIX_ENV=test
+
+script:
+  - mix compile
+  - mix coveralls.travis
+
+
 after_script:
   - MIX_ENV=docs mix deps.get
   - MIX_ENV=docs mix inch.report
