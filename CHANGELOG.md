@@ -1,5 +1,8 @@
 #Changelog
 
+##v0.3.5:
+  * Correct number validation to Bosnia and Herzegovina.
+
 ##v0.3.4:
   * Correct number validation to Estonia.
 
