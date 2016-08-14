@@ -10,6 +10,7 @@ defmodule Phonex.Mixfile do
      description: description,
      package: package,
      source_url: "https://github.com/fcevado/phone",
+     test_coverage: [tool: ExCoveralls],
      deps: deps]
   end
 
@@ -47,7 +48,7 @@ defmodule Phonex.Mixfile do
 
   defp deps do
     [
-      {:credo, "0.4.7", only: [:dev, :test]},
+      {:excoveralls, "0.5.5", only: [ :test]},
       {:earmark, "0.2.1", only: :dev},
       {:ex_doc, "0.11.4", only: :dev},
       {:inch_ex, "0.5.1", only: :docs}
