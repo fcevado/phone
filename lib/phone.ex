@@ -10,7 +10,7 @@ defmodule Phone do
       {:ok, %{a2: "BR", a3: "BRA", country: "Brazil", international_code: "55", area_code: "51", number: "32345678", area_abbreviation: "RS", area_type: "state", area_name: "Rio Grande do Sul"}}
   """
 
-  import Phone.Helper.Parser
+  import Helper.Parser
 
   @after_compile __MODULE__
   def __after_compile__(_env, _bytecode) do

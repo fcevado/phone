@@ -1,4 +1,4 @@
-defmodule Phone.Helper.Parser do
+defmodule Helper.Parser do
   @moduledoc false
 
   defmacro parser(country, code) do
