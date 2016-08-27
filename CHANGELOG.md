@@ -1,5 +1,8 @@
 #Changelog
 
+##v0.3.6:
+  * Correct number validation to Italy.
+
 ##v0.3.5:
   * Correct number validation to Bosnia and Herzegovina.
 
