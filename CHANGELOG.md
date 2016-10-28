@@ -1,5 +1,8 @@
 #Changelog
 
+##v0.3.7:
+  * Correct area code for Ontario - US.
+
 ##v0.3.6:
   * Correct number validation to Italy.
 
