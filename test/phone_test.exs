@@ -21,8 +21,8 @@ defmodule PhoneTest do
   @wrong_assertion {:error, "Not a valid phone number."}
 
   test "parse integer" do
-    assert Phone.parse(38512345678) == @right_assertion
-    assert Phone.parse!(38512345678) == @right_return
+    assert Phone.parse(38_512_345_678) == @right_assertion
+    assert Phone.parse!(38_512_345_678) == @right_return
   end
 
   test "parse not valid integer" do
@@ -57,18 +57,22 @@ defmodule PhoneTest do
   test "parse other types" do
     assert Phone.parse(:test) == @wrong_type
     assert_raise ArgumentError,
-      "Not a valid parameter, only string or integer.", fn -> Phone.parse!(:test) end
+      "Not a valid parameter, only string or integer.",
+    fn -> Phone.parse!(:test) end
 
     assert Phone.parse({55,51,1234,5678}) == @wrong_type
     assert_raise ArgumentError,
-      "Not a valid parameter, only string or integer.", fn -> Phone.parse!({55,51,1234,5678}) end
+      "Not a valid parameter, only string or integer.",
+    fn -> Phone.parse!({55,51,1234,5678}) end
 
     assert Phone.parse([55,51,1234,5678]) == @wrong_type
     assert_raise ArgumentError,
-      "Not a valid parameter, only string or integer.", fn -> Phone.parse!([55,51,1234,5678]) end
-
-    assert Phone.parse(fn(t)-> t end) == @wrong_type
+      "Not a valid parameter, only string or integer.",
+    fn -> Phone.parse!([55,51,1234,5678]) end
+    
+    assert Phone.parse(fn(t) -> t end) == @wrong_type
     assert_raise ArgumentError,
-      "Not a valid parameter, only string or integer.", fn -> Phone.parse!(fn(t)-> t end) end
+      "Not a valid parameter, only string or integer.",
+    fn -> Phone.parse!(fn(t) -> t end) end
   end
 end
