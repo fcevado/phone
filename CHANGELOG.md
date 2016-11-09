@@ -1,6 +1,10 @@
 #Changelog
 
 ##v0.3.7:
+  * Add 424 area code for California.
+  * Add 475 area code for Connecticut.
+
+##v0.3.7:
   * Correct area code for Ontario - US.
 
 ##v0.3.6:
