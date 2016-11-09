@@ -57,9 +57,9 @@ defmodule Phonex.Mixfile do
     [
       {:coverex, "1.4.10", only: :test},
       {:credo, "0.5.2", only: :dev},
-      {:earmark, "0.2.1", only: :dev},
-      {:ex_doc, "0.11.4", only: :dev},
-      {:inch_ex, "0.5.1", only: :docs}
+      {:earmark, "1.0.3", only: :dev},
+      {:ex_doc, "0.14.3", only: :dev},
+      {:inch_ex, "0.5.5", only: :docs}
     ]
   end
 end
