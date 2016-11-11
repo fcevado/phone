@@ -1,6 +1,7 @@
 # Phone
 [![Build Status](https://travis-ci.org/fcevado/phone.svg?branch=master)](https://travis-ci.org/fcevado/phone)
 [![Coverage Status](https://coveralls.io/repos/github/fcevado/phone/badge.svg?branch=master)](https://coveralls.io/github/fcevado/phone?branch=master)
+[![Ebert](https://ebertapp.io/github/fcevado/phone.svg)](https://ebertapp.io/github/fcevado/phone.svg)
 [![Phone version](https://img.shields.io/hexpm/v/phone.svg)](https://hex.pm/packages/phone)
 [![Inline docs](http://inch-ci.org/github/fcevado/phone.svg?branch=master)](http://inch-ci.org/github/fcevado/phone)
 [![Hex.pm](https://img.shields.io/hexpm/dt/phone.svg)](https://hex.pm/packages/phone)

@@ -1,6 +1,10 @@
 #Changelog
 
-##v0.3.7:
+##v0.3.9:
+  * Add and correct various area codes for NANP.
+  * Better test coverage for NANP numbers.
+
+##v0.3.8:
   * Add 424 area code for California.
   * Add 475 area code for Connecticut.
 
