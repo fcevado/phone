@@ -1,8 +1,7 @@
 defmodule Phone.TV do
-  use Helper.Country
+  use Helper.Country, match: :regex
   field :regex, ~r/^(688)()(.{5,6})/
   field :country, "Tuvalu"
   field :a2, "TV"
   field :a3, "TUV"
-  match :regex
 end

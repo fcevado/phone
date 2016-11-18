@@ -1,5 +1,5 @@
 defmodule Phone.NANP do
-  use Helper.Country
+  use Helper.Country, match: :modules
   field :modules, [
     Phone.NANP.AS,
     Phone.NANP.AI,
@@ -28,5 +28,4 @@ defmodule Phone.NANP do
     Phone.NANP.VI,
     Phone.NANP.TollFree
   ]
-  match :modules
 end

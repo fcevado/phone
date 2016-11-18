@@ -27,23 +27,21 @@ Required fields for an country module:
   * a2, two letter code for that country.
   * a3, three letter code for that country.
   * modules, list of area modules for that country.
-  * match, a macro to say if that country should match against regex or the list of area modules.
 
 ```elixir
   defmodule Phone.NANP.AG do
-    use Helper.Country
+    use Helper.Country, match: regex
     field :regex, ~r/^(1)(268)([2-9].{6})/
     field :country, "Antigua and Barbuda"
     field :a2, "AG"
     field :a3, "ATG"
-    match :regex
   end
 ```
 
 
 ```elixir
   defmodule Phone.NANP.CA do
-    use Helper.Country
+    use Helper.Country, match: :modules
     field :country, "Canada"
     field :a2, "CA"
     field :a3, "CAN"
@@ -59,7 +57,6 @@ Required fields for an country module:
       Phone.NANP.CA.SK,
       Phone.NANP.CA.Territory
     ]
-    match :modules
   end
 ```
 

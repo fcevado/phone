@@ -1,5 +1,5 @@
 defmodule Phone.NANP.CA do
-  use Helper.Country
+  use Helper.Country, match: :modules
   field :country, "Canada"
   field :a2, "CA"
   field :a3, "CAN"
@@ -15,5 +15,4 @@ defmodule Phone.NANP.CA do
     Phone.NANP.CA.SK,
     Phone.NANP.CA.Territory
   ]
-  match :modules
 end

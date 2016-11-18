@@ -1,10 +1,8 @@
 defmodule Helper.Country do
   @moduledoc false
-  defmacro __using__(_) do
-    quote do
-      import Helper.Country
-      @moduledoc false
-    end
+  defmacro __using__(opts \\ []) do
+    match_type = Keyword.get(opts, :match)
+    build_matcher(match_type)
   end
 
   defmacro field(name, value) do
@@ -15,6 +13,9 @@ defmodule Helper.Country do
 
   defp regex_matcher do
     quote do
+      import Helper.Country
+      @moduledoc false
+
       def match?(number) do
         Regex.match?(regex, number)
       end
@@ -52,6 +53,9 @@ defmodule Helper.Country do
 
   defp modules_matcher do
     quote do
+      import Helper.Country
+      @moduledoc false
+
       def match?(number) do
         ms = Enum.filter(modules, fn m -> m.match?(number) end)
         length(ms) > 0
@@ -77,7 +81,7 @@ defmodule Helper.Country do
     end
   end
 
-  defmacro match(matcher) do
+  defp build_matcher(matcher) do
     case matcher do
       :regex -> regex_matcher
       :modules -> modules_matcher
