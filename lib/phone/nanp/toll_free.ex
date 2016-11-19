@@ -1,5 +1,6 @@
 defmodule Phone.NANP.TollFree do
-  use Helper.Country, match: :regex
+  use Helper.Country, match: :regex,
+    number_prefix: "1"
   field :regex, ~r/^(1)(800|844|855|866|877|888)([2-9].{6})$/
   field :country, "NANP tool-free"
   field :a2, ""

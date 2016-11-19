@@ -1,5 +1,6 @@
 defmodule Phone.CO do
-  use Helper.Country, match: :regex
+  use Helper.Country, match: :regex,
+    number_prefix: "57"
   field :regex, ~r/^(57)()(.+)/
   field :country, "Colombia"
   field :a2, "CO"
