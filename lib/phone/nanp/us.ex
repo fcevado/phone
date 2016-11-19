@@ -1,5 +1,5 @@
 defmodule Phone.NANP.US do
-  use Helper.Country
+  use Helper.Country, match: :modules
   field :country, "United States"
   field :a2, "US"
   field :a3, "USA"
@@ -56,5 +56,4 @@ defmodule Phone.NANP.US do
     Phone.NANP.US.WV,
     Phone.NANP.US.WY
   ]
-  match :modules
 end

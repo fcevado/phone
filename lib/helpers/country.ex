@@ -1,10 +1,9 @@
 defmodule Helper.Country do
   @moduledoc false
-  defmacro __using__(_) do
-    quote do
-      import Helper.Country
-      @moduledoc false
-    end
+  defmacro __using__(opts \\ []) do
+    match_type = Keyword.get(opts, :match)
+    number_prefix = Keyword.get(opts, :number_prefix, "")
+    build_matcher(match_type, number_prefix)
   end
 
   defmacro field(name, value) do
@@ -13,11 +12,15 @@ defmodule Helper.Country do
     end
   end
 
-  defp regex_matcher do
+  defp regex_matcher(number_prefix) do
     quote do
-      def match?(number) do
+      import Helper.Country
+      @moduledoc false
+
+      def match?(unquote(number_prefix) <> _ = number) do
         Regex.match?(regex, number)
       end
+      def match?(_), do: false
 
       def builder(number) do
         [[_, code, area, number]] = Regex.scan(regex,number)
@@ -52,6 +55,9 @@ defmodule Helper.Country do
 
   defp modules_matcher do
     quote do
+      import Helper.Country
+      @moduledoc false
+
       def match?(number) do
         ms = Enum.filter(modules, fn m -> m.match?(number) end)
         length(ms) > 0
@@ -77,9 +83,9 @@ defmodule Helper.Country do
     end
   end
 
-  defmacro match(matcher) do
+  defp build_matcher(matcher, number_prefix) do
     case matcher do
-      :regex -> regex_matcher
+      :regex -> regex_matcher(number_prefix)
       :modules -> modules_matcher
       true ->
         raise ArgumentError, "You can only match against :regex or :modules, passed #{inspect matcher}"

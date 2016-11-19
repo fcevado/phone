@@ -1,5 +1,5 @@
 defmodule Phone.BR do
-  use Helper.Country
+  use Helper.Country, match: :modules
   field :country, "Brazil"
   field :a2, "BR"
   field :a3, "BRA"
@@ -19,5 +19,4 @@ defmodule Phone.BR do
     Phone.BR.SE, Phone.BR.SP,
     Phone.BR.TO
   ]
-  match :modules
 end

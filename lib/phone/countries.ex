@@ -1,5 +1,5 @@
 defmodule Phone.Countries do
-  use Helper.Country
+  use Helper.Country, match: :modules
   field :modules, [
     Phone.AD, Phone.AE, Phone.AF, Phone.AL, Phone.AM, Phone.AO,
     Phone.AR, Phone.AT, Phone.AU, Phone.AW, Phone.AZ, Phone.BA,
@@ -36,5 +36,4 @@ defmodule Phone.Countries do
     Phone.VU, Phone.WF, Phone.WS, Phone.YE, Phone.ZA, Phone.ZM,
     Phone.ZW, Phone.NANP
   ]
-  match :modules
 end
