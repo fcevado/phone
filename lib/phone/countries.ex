@@ -37,4 +37,27 @@ defmodule Phone.Countries do
     Phone.ZW, Phone.NANP
   ]
   match :modules
+
+  def build("376" <> _ = number), do: Phone.AD.build(number)
+  def build("971" <> _ = number), do: Phone.AE.build(number)
+  def build("93" <> _ = number), do: Phone.AF.build(number)
+  def build("355" <> _ = number), do: Phone.AL.build(number)
+  def build("374" <> _ = number), do: Phone.AM.build(number)
+  def build("244" <> _ = number), do: Phone.AO.build(number)
+  def build("54" <> _ = number), do: Phone.AR.build(number)
+  def build("43" <> _ = number), do: Phone.AT.build(number)
+  def build("297" <> _ = number), do: Phone.AW.build(number)
+  def build("994" <> _ = number), do: Phone.AZ.build(number)
+
+  def build!("376" <> _ = number), do: Phone.AD.build!(number)
+  def build!("971" <> _ = number), do: Phone.AE.build!(number)
+  def build!("93" <> _ = number), do: Phone.AF.build!(number)
+  def build!("355" <> _ = number), do: Phone.AL.build!(number)
+  def build!("374" <> _ = number), do: Phone.AM.build!(number)
+  def build!("244" <> _ = number), do: Phone.AO.build!(number)
+  def build!("54" <> _ = number), do: Phone.AR.build!(number)
+  def build!("43" <> _ = number), do: Phone.AT.build!(number)
+  def build!("297" <> _ = number), do: Phone.AW.build!(number)
+  def build!("994" <> _ = number), do: Phone.AZ.build!(number)
+
 end
