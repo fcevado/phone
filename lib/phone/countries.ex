@@ -162,4 +162,30 @@ defmodule Phone.Countries do
   def build!("385" <> _ = number), do: Phone.HR.build!(number)
   def build!("509" <> _ = number), do: Phone.HT.build!(number)
   def build!("36" <> _ = number), do: Phone.HU.build!(number)
+
+  def build("62" <> _ = number), do: Phone.ID.build(number)
+  def build("353" <> _ = number), do: Phone.IE.build(number)
+  def build("972" <> _ = number), do: Phone.IL.build(number)
+  def build("91" <> _ = number), do: Phone.IN.build(number)
+  def build("246" <> _ = number), do: Phone.IO.build(number)
+  def build("964" <> _ = number), do: Phone.IQ.build(number)
+  def build("98" <> _ = number), do: Phone.IR.build(number)
+  def build("354" <> _ = number), do: Phone.IS.build(number)
+  def build("39" <> _ = number), do: Phone.IT.build(number)
+
+  def build!("62" <> _ = number), do: Phone.ID.build!(number)
+  def build!("353" <> _ = number), do: Phone.IE.build!(number)
+  def build!("972" <> _ = number), do: Phone.IL.build!(number)
+  def build!("91" <> _ = number), do: Phone.IN.build!(number)
+  def build!("246" <> _ = number), do: Phone.IO.build!(number)
+  def build!("964" <> _ = number), do: Phone.IQ.build!(number)
+  def build!("98" <> _ = number), do: Phone.IR.build!(number)
+  def build!("354" <> _ = number), do: Phone.IS.build!(number)
+  def build!("39" <> _ = number), do: Phone.IT.build!(number)
+
+  def build("962" <> _ = number), do: Phone.JO.build(number)
+  def build("81" <> _ = number), do: Phone.JP.build(number)
+
+  def build!("962" <> _ = number), do: Phone.JO.build!(number)
+  def build!("81" <> _ = number), do: Phone.JP.build!(number)
 end
