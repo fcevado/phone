@@ -94,4 +94,30 @@ defmodule Phone.Countries do
   def build!("253" <> _ = number), do: Phone.DJ.build!(number)
   def build!("45" <> _ = number), do: Phone.DK.build!(number)
   def build!("213" <> _ = number), do: Phone.DZ.build!(number)
+
+  def build("593" <> _ = number), do: Phone.EC.build(number)
+  def build("372" <> _ = number), do: Phone.EE.build(number)
+  def build("20" <> _ = number), do: Phone.EG.build(number)
+  def build("291" <> _ = number), do: Phone.ER.build(number)
+  def build("34" <> _ = number), do: Phone.ES.build(number)
+  def build("251" <> _ = number), do: Phone.ET.build(number)
+
+  def build!("593" <> _ = number), do: Phone.EC.build!(number)
+  def build!("372" <> _ = number), do: Phone.EE.build!(number)
+  def build!("20" <> _ = number), do: Phone.EG.build!(number)
+  def build!("291" <> _ = number), do: Phone.ER.build!(number)
+  def build!("34" <> _ = number), do: Phone.ES.build!(number)
+  def build!("251" <> _ = number), do: Phone.ET.build!(number)
+
+  def build("358" <> _ = number), do: Phone.FI.build(number)
+  def build("679" <> _ = number), do: Phone.FJ.build(number)
+  def build("691" <> _ = number), do: Phone.FM.build(number)
+  def build("298" <> _ = number), do: Phone.FO.build(number)
+  def build("33" <> _ = number), do: Phone.FR.build(number)
+
+  def build!("358" <> _ = number), do: Phone.FI.build!(number)
+  def build!("679" <> _ = number), do: Phone.FJ.build!(number)
+  def build!("691" <> _ = number), do: Phone.FM.build!(number)
+  def build!("298" <> _ = number), do: Phone.FO.build!(number)
+  def build!("33" <> _ = number), do: Phone.FR.build!(number)
 end
