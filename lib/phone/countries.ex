@@ -123,4 +123,14 @@ defmodule Phone.Countries do
   def build!("599" <> _ = number), do: Phone.CW.build!(number)
   def build!("357" <> _ = number), do: Phone.CY.build!(number)
   def build!("420" <> _ = number), do: Phone.CZ.build!(number)
+
+  def build("49" <> _ = number), do: Phone.DE.build(number)
+  def build("253" <> _ = number), do: Phone.DJ.build(number)
+  def build("45" <> _ = number), do: Phone.DK.build(number)
+  def build("213" <> _ = number), do: Phone.DZ.build(number)
+
+  def build!("49" <> _ = number), do: Phone.DE.build!(number)
+  def build!("253" <> _ = number), do: Phone.DJ.build!(number)
+  def build!("45" <> _ = number), do: Phone.DK.build!(number)
+  def build!("213" <> _ = number), do: Phone.DZ.build!(number)
 end
