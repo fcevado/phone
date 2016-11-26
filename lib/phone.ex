@@ -58,11 +58,9 @@ defmodule Phone do
   end
 
   defp clear(number) when is_bitstring(number) do
-    remove = String.graphemes("+()- ")
-
     number
     |> String.graphemes
-    |> Enum.filter(fn n -> ! Enum.any?(remove, fn r -> r == n end) end)
+    |> Enum.filter(fn n -> ! String.contains?("+()- ", n) end)
     |> Enum.join("")
   end
 
