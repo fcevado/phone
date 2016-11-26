@@ -150,4 +150,16 @@ defmodule Phone.Countries do
   def build!("502" <> _ = number), do: Phone.GT.build!(number)
   def build!("245" <> _ = number), do: Phone.GW.build!(number)
   def build!("592" <> _ = number), do: Phone.GY.build!(number)
+
+  def build("852" <> _ = number), do: Phone.HK.build(number)
+  def build("504" <> _ = number), do: Phone.HN.build(number)
+  def build("385" <> _ = number), do: Phone.HR.build(number)
+  def build("509" <> _ = number), do: Phone.HT.build(number)
+  def build("36" <> _ = number), do: Phone.HU.build(number)
+
+  def build!("852" <> _ = number), do: Phone.HK.build!(number)
+  def build!("504" <> _ = number), do: Phone.HN.build!(number)
+  def build!("385" <> _ = number), do: Phone.HR.build!(number)
+  def build!("509" <> _ = number), do: Phone.HT.build!(number)
+  def build!("36" <> _ = number), do: Phone.HU.build!(number)
 end
