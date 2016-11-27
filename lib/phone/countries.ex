@@ -404,4 +404,60 @@ defmodule Phone.Countries do
   def build!("688" <> _ = number), do: Phone.TV.build!(number)
   def build!("886" <> _ = number), do: Phone.TW.build!(number)
   def build!("255" <> _ = number), do: Phone.TZ.build!(number)
+
+  def build("380" <> _ = number), do: Phone.UA.build(number)
+  def build("256" <> _ = number), do: Phone.UG.build(number)
+  def build("598" <> _ = number), do: Phone.UY.build(number)
+  def build("998" <> _ = number), do: Phone.UZ.build(number)
+
+  def build!("380" <> _ = number), do: Phone.UA.build!(number)
+  def build!("256" <> _ = number), do: Phone.UG.build!(number)
+  def build!("598" <> _ = number), do: Phone.UY.build!(number)
+  def build!("998" <> _ = number), do: Phone.UZ.build!(number)
+
+  def build("58" <> _ = number), do: Phone.VE.build(number)
+  def build("84" <> _ = number), do: Phone.VN.build(number)
+  def build("678" <> _ = number), do: Phone.VU.build(number)
+
+  def build!("58" <> _ = number), do: Phone.VE.build!(number)
+  def build!("84" <> _ = number), do: Phone.VN.build!(number)
+  def build!("678" <> _ = number), do: Phone.VU.build!(number)
+
+  def build("681" <> _ = number), do: Phone.WF.build(number)
+  def build("685" <> _ = number), do: Phone.WS.build(number)
+
+  def build!("681" <> _ = number), do: Phone.WF.build!(number)
+  def build!("685" <> _ = number), do: Phone.WS.build!(number)
+
+  def build("967" <> _ = number), do: Phone.YE.build(number)
+  def build!("967" <> _ = number), do: Phone.YE.build!(number)
+
+  def build("27" <> _ = number), do: Phone.ZA.build(number)
+  def build("260" <> _ = number), do: Phone.ZM.build(number)
+  def build("263" <> _ = number), do: Phone.ZW.build(number)
+
+  def build!("27" <> _ = number), do: Phone.ZA.build!(number)
+  def build!("260" <> _ = number), do: Phone.ZM.build!(number)
+  def build!("263" <> _ = number), do: Phone.ZW.build!(number)
+
+  def build("7" <> _ = number) do
+    modules = [Phone.KZ, Phone.RU]
+
+    case Enum.filter(modules, fn m -> m.match?(number) end) do
+      [] -> {:error, "Not a valid phone number."}
+      [mod] -> mod.build(number)
+    end
+  end
+
+  def build!("7" <> _ = number) do
+    modules = [Phone.KZ, Phone.RU]
+
+    case Enum.filter(modules, fn m -> m.match?(number) end) do
+      [] -> raise ArgumentError, message: "Not a valid phone number."
+      [mod] -> mod.build!(number)
+    end
+  end
+
+  def build(""), do: {:error, "Not a valid phone number."}
+  def build!(""), do: raise ArgumentError, message: "Not a valid phone number."
 end
