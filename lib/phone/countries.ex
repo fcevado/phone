@@ -188,4 +188,22 @@ defmodule Phone.Countries do
 
   def build!("962" <> _ = number), do: Phone.JO.build!(number)
   def build!("81" <> _ = number), do: Phone.JP.build!(number)
+
+  def build("254" <> _ = number), do: Phone.KE.build(number)
+  def build("996" <> _ = number), do: Phone.KG.build(number)
+  def build("855" <> _ = number), do: Phone.KH.build(number)
+  def build("686" <> _ = number), do: Phone.KI.build(number)
+  def build("269" <> _ = number), do: Phone.KM.build(number)
+  def build("850" <> _ = number), do: Phone.KP.build(number)
+  def build("82" <> _ = number), do: Phone.KR.build(number)
+  def build("965" <> _ = number), do: Phone.KW.build(number)
+
+  def build!("254" <> _ = number), do: Phone.KE.build!(number)
+  def build!("996" <> _ = number), do: Phone.KG.build!(number)
+  def build!("855" <> _ = number), do: Phone.KH.build!(number)
+  def build!("686" <> _ = number), do: Phone.KI.build!(number)
+  def build!("269" <> _ = number), do: Phone.KM.build!(number)
+  def build!("850" <> _ = number), do: Phone.KP.build!(number)
+  def build!("82" <> _ = number), do: Phone.KR.build!(number)
+  def build!("965" <> _ = number), do: Phone.KW.build!(number)
 end
