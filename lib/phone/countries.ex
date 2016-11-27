@@ -299,4 +299,41 @@ defmodule Phone.Countries do
 
   def build("968" <> _ = number), do: Phone.OM.build(number)
   def build!("968" <> _ = number), do: Phone.OM.build!(number)
+
+  def build("507" <> _ = number), do: Phone.PA.build(number)
+  def build("51" <> _ = number), do: Phone.PE.build(number)
+  def build("689" <> _ = number), do: Phone.PF.build(number)
+  def build("675" <> _ = number), do: Phone.PG.build(number)
+  def build("63" <> _ = number), do: Phone.PH.build(number)
+  def build("92" <> _ = number), do: Phone.PK.build(number)
+  def build("48" <> _ = number), do: Phone.PL.build(number)
+  def build("508" <> _ = number), do: Phone.PM.build(number)
+  def build("970" <> _ = number), do: Phone.PS.build(number)
+  def build("351" <> _ = number), do: Phone.PT.build(number)
+  def build("680" <> _ = number), do: Phone.PW.build(number)
+  def build("595" <> _ = number), do: Phone.PY.build(number)
+
+  def build!("507" <> _ = number), do: Phone.PA.build!(number)
+  def build!("51" <> _ = number), do: Phone.PE.build!(number)
+  def build!("689" <> _ = number), do: Phone.PF.build!(number)
+  def build!("675" <> _ = number), do: Phone.PG.build!(number)
+  def build!("63" <> _ = number), do: Phone.PH.build!(number)
+  def build!("92" <> _ = number), do: Phone.PK.build!(number)
+  def build!("48" <> _ = number), do: Phone.PL.build!(number)
+  def build!("508" <> _ = number), do: Phone.PM.build!(number)
+  def build!("970" <> _ = number), do: Phone.PS.build!(number)
+  def build!("351" <> _ = number), do: Phone.PT.build!(number)
+  def build!("680" <> _ = number), do: Phone.PW.build!(number)
+  def build!("595" <> _ = number), do: Phone.PY.build!(number)
+
+  def build("974" <> _ = number), do: Phone.QA.build(number)
+  def build!("974" <> _ = number), do: Phone.QA.build!(number)
+
+  def build("40" <> _ = number), do: Phone.RO.build(number)
+  def build("381" <> _ = number), do: Phone.RS.build(number)
+  def build("250" <> _ = number), do: Phone.RW.build(number)
+
+  def build!("40" <> _ = number), do: Phone.RO.build!(number)
+  def build!("381" <> _ = number), do: Phone.RS.build!(number)
+  def build!("250" <> _ = number), do: Phone.RW.build!(number)
 end
