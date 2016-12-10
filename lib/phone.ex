@@ -57,14 +57,21 @@ defmodule Phone do
     {:error, "Not a valid parameter, only string or integer."}
   end
 
+  @doc false
   defp clear(number) when is_bitstring(number) do
-    remove = String.graphemes("+()- ")
-
     number
     |> String.graphemes
-    |> Enum.filter(fn n -> ! Enum.any?(remove, fn r -> r == n end) end)
+    |> Enum.filter(fn n -> valid_char(n) end)
     |> Enum.join("")
   end
+
+  @doc false
+  defp valid_char("+"), do: false
+  defp valid_char("("), do: false
+  defp valid_char(")"), do: false
+  defp valid_char("-"), do: false
+  defp valid_char(" "), do: false
+  defp valid_char(_), do: true
 
   @doc """
   Same as `parse/1`, except it raises on error.
