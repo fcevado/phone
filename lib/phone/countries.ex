@@ -1,40 +1,463 @@
 defmodule Phone.Countries do
-  use Helper.Country
-  field :modules, [
-    Phone.AD, Phone.AE, Phone.AF, Phone.AL, Phone.AM, Phone.AO,
-    Phone.AR, Phone.AT, Phone.AU, Phone.AW, Phone.AZ, Phone.BA,
-    Phone.BD, Phone.BE, Phone.BG, Phone.BH, Phone.BI, Phone.BJ,
-    Phone.BN, Phone.BO, Phone.BR, Phone.BT, Phone.BW, Phone.BY,
-    Phone.BZ, Phone.CD, Phone.CF, Phone.CG, Phone.CH, Phone.CI,
-    Phone.CK, Phone.CL, Phone.CM, Phone.CN, Phone.CO, Phone.CR,
-    Phone.CU, Phone.CV, Phone.CW, Phone.CY, Phone.CZ, Phone.DE,
-    Phone.DJ, Phone.DK, Phone.DZ, Phone.EC, Phone.EE, Phone.EG,
-    Phone.ER, Phone.ES, Phone.ET, Phone.FI, Phone.FJ, Phone.FM,
-    Phone.FO, Phone.FR, Phone.GA, Phone.GB, Phone.GE, Phone.GF,
-    Phone.GH, Phone.GI, Phone.GL, Phone.GM, Phone.GN, Phone.GQ,
-    Phone.GR, Phone.GT, Phone.GW, Phone.GY, Phone.HK, Phone.HN,
-    Phone.HR, Phone.HT, Phone.HU, Phone.ID, Phone.IE, Phone.IL,
-    Phone.IN, Phone.IO, Phone.IQ, Phone.IR, Phone.IS, Phone.IT,
-    Phone.JO, Phone.JP, Phone.KE, Phone.KG, Phone.KH, Phone.KI,
-    Phone.KM, Phone.KP, Phone.KR, Phone.KW, Phone.KZ, Phone.LA,
-    Phone.LB, Phone.LI, Phone.LK, Phone.LR, Phone.LS, Phone.LT,
-    Phone.LU, Phone.LV, Phone.LY, Phone.MA, Phone.MC, Phone.MD,
-    Phone.ME, Phone.MG, Phone.MH, Phone.MK, Phone.ML, Phone.MM,
-    Phone.MN, Phone.MO, Phone.MQ, Phone.MR, Phone.MT, Phone.MU,
-    Phone.MV, Phone.MW, Phone.MX, Phone.MY, Phone.MZ, Phone.NA,
-    Phone.NC, Phone.NE, Phone.NG, Phone.NI, Phone.NL, Phone.NO,
-    Phone.NP, Phone.NR, Phone.NU, Phone.NZ, Phone.OM, Phone.PA,
-    Phone.PE, Phone.PF, Phone.PG, Phone.PH, Phone.PK, Phone.PL,
-    Phone.PM, Phone.PS, Phone.PT, Phone.PW, Phone.PY, Phone.QA,
-    Phone.RO, Phone.RS, Phone.RU, Phone.RW, Phone.SA, Phone.SB,
-    Phone.SC, Phone.SD, Phone.SE, Phone.SG, Phone.SH, Phone.SI,
-    Phone.SK, Phone.SL, Phone.SM, Phone.SN, Phone.SO, Phone.SR,
-    Phone.SS, Phone.ST, Phone.SV, Phone.SY, Phone.SZ, Phone.TD,
-    Phone.TG, Phone.TH, Phone.TJ, Phone.TK, Phone.TL, Phone.TM,
-    Phone.TN, Phone.TO, Phone.TR, Phone.TV, Phone.TW, Phone.TZ,
-    Phone.UA, Phone.UG, Phone.UY, Phone.UZ, Phone.VE, Phone.VN,
-    Phone.VU, Phone.WF, Phone.WS, Phone.YE, Phone.ZA, Phone.ZM,
-    Phone.ZW, Phone.NANP
-  ]
-  match :modules
+  def build("376" <> _ = number), do: Phone.AD.build(number)
+  def build("971" <> _ = number), do: Phone.AE.build(number)
+  def build("93" <> _ = number), do: Phone.AF.build(number)
+  def build("355" <> _ = number), do: Phone.AL.build(number)
+  def build("374" <> _ = number), do: Phone.AM.build(number)
+  def build("244" <> _ = number), do: Phone.AO.build(number)
+  def build("54" <> _ = number), do: Phone.AR.build(number)
+  def build("43" <> _ = number), do: Phone.AT.build(number)
+  def build("297" <> _ = number), do: Phone.AW.build(number)
+  def build("994" <> _ = number), do: Phone.AZ.build(number)
+
+  def build!("376" <> _ = number), do: Phone.AD.build!(number)
+  def build!("971" <> _ = number), do: Phone.AE.build!(number)
+  def build!("93" <> _ = number), do: Phone.AF.build!(number)
+  def build!("355" <> _ = number), do: Phone.AL.build!(number)
+  def build!("374" <> _ = number), do: Phone.AM.build!(number)
+  def build!("244" <> _ = number), do: Phone.AO.build!(number)
+  def build!("54" <> _ = number), do: Phone.AR.build!(number)
+  def build!("43" <> _ = number), do: Phone.AT.build!(number)
+  def build!("297" <> _ = number), do: Phone.AW.build!(number)
+  def build!("994" <> _ = number), do: Phone.AZ.build!(number)
+
+  def build("387" <> _ = number), do: Phone.BA.build(number)
+  def build("880" <> _ = number), do: Phone.BD.build(number)
+  def build("32" <> _ = number), do: Phone.BE.build(number)
+  def build("359" <> _ = number), do: Phone.BG.build(number)
+  def build("973" <> _ = number), do: Phone.BH.build(number)
+  def build("257" <> _ = number), do: Phone.BI.build(number)
+  def build("229" <> _ = number), do: Phone.BJ.build(number)
+  def build("673" <> _ = number), do: Phone.BN.build(number)
+  def build("591" <> _ = number), do: Phone.BO.build(number)
+  def build("55" <> _ = number), do: Phone.BR.build(number)
+  def build("975" <> _ = number), do: Phone.BT.build(number)
+  def build("267" <> _ = number), do: Phone.BW.build(number)
+  def build("375" <> _ = number), do: Phone.BY.build(number)
+  def build("501" <> _ = number), do: Phone.BZ.build(number)
+
+  def build!("387" <> _ = number), do: Phone.BA.build!(number)
+  def build!("880" <> _ = number), do: Phone.BD.build!(number)
+  def build!("32" <> _ = number), do: Phone.BE.build!(number)
+  def build!("359" <> _ = number), do: Phone.BG.build!(number)
+  def build!("973" <> _ = number), do: Phone.BH.build!(number)
+  def build!("257" <> _ = number), do: Phone.BI.build!(number)
+  def build!("229" <> _ = number), do: Phone.BJ.build!(number)
+  def build!("673" <> _ = number), do: Phone.BN.build!(number)
+  def build!("591" <> _ = number), do: Phone.BO.build!(number)
+  def build!("55" <> _ = number), do: Phone.BR.build!(number)
+  def build!("975" <> _ = number), do: Phone.BT.build!(number)
+  def build!("267" <> _ = number), do: Phone.BW.build!(number)
+  def build!("375" <> _ = number), do: Phone.BY.build!(number)
+  def build!("501" <> _ = number), do: Phone.BZ.build!(number)
+
+  def build("243" <> _ = number), do: Phone.CD.build(number)
+  def build("236" <> _ = number), do: Phone.CF.build(number)
+  def build("242" <> _ = number), do: Phone.CG.build(number)
+  def build("41" <> _ = number), do: Phone.CH.build(number)
+  def build("225" <> _ = number), do: Phone.CI.build(number)
+  def build("682" <> _ = number), do: Phone.CK.build(number)
+  def build("56" <> _ = number), do: Phone.CL.build(number)
+  def build("237" <> _ = number), do: Phone.CM.build(number)
+  def build("86" <> _ = number), do: Phone.CN.build(number)
+  def build("57" <> _ = number), do: Phone.CO.build(number)
+  def build("506" <> _ = number), do: Phone.CR.build(number)
+  def build("53" <> _ = number), do: Phone.CU.build(number)
+  def build("238" <> _ = number), do: Phone.CV.build(number)
+  def build("599" <> _ = number), do: Phone.CW.build(number)
+  def build("357" <> _ = number), do: Phone.CY.build(number)
+  def build("420" <> _ = number), do: Phone.CZ.build(number)
+
+  def build!("243" <> _ = number), do: Phone.CD.build!(number)
+  def build!("236" <> _ = number), do: Phone.CF.build!(number)
+  def build!("242" <> _ = number), do: Phone.CG.build!(number)
+  def build!("41" <> _ = number), do: Phone.CH.build!(number)
+  def build!("225" <> _ = number), do: Phone.CI.build!(number)
+  def build!("682" <> _ = number), do: Phone.CK.build!(number)
+  def build!("56" <> _ = number), do: Phone.CL.build!(number)
+  def build!("237" <> _ = number), do: Phone.CM.build!(number)
+  def build!("86" <> _ = number), do: Phone.CN.build!(number)
+  def build!("57" <> _ = number), do: Phone.CO.build!(number)
+  def build!("506" <> _ = number), do: Phone.CR.build!(number)
+  def build!("53" <> _ = number), do: Phone.CU.build!(number)
+  def build!("238" <> _ = number), do: Phone.CV.build!(number)
+  def build!("599" <> _ = number), do: Phone.CW.build!(number)
+  def build!("357" <> _ = number), do: Phone.CY.build!(number)
+  def build!("420" <> _ = number), do: Phone.CZ.build!(number)
+
+  def build("49" <> _ = number), do: Phone.DE.build(number)
+  def build("253" <> _ = number), do: Phone.DJ.build(number)
+  def build("45" <> _ = number), do: Phone.DK.build(number)
+  def build("213" <> _ = number), do: Phone.DZ.build(number)
+
+  def build!("49" <> _ = number), do: Phone.DE.build!(number)
+  def build!("253" <> _ = number), do: Phone.DJ.build!(number)
+  def build!("45" <> _ = number), do: Phone.DK.build!(number)
+  def build!("213" <> _ = number), do: Phone.DZ.build!(number)
+
+  def build("593" <> _ = number), do: Phone.EC.build(number)
+  def build("372" <> _ = number), do: Phone.EE.build(number)
+  def build("20" <> _ = number), do: Phone.EG.build(number)
+  def build("291" <> _ = number), do: Phone.ER.build(number)
+  def build("34" <> _ = number), do: Phone.ES.build(number)
+  def build("251" <> _ = number), do: Phone.ET.build(number)
+
+  def build!("593" <> _ = number), do: Phone.EC.build!(number)
+  def build!("372" <> _ = number), do: Phone.EE.build!(number)
+  def build!("20" <> _ = number), do: Phone.EG.build!(number)
+  def build!("291" <> _ = number), do: Phone.ER.build!(number)
+  def build!("34" <> _ = number), do: Phone.ES.build!(number)
+  def build!("251" <> _ = number), do: Phone.ET.build!(number)
+
+  def build("358" <> _ = number), do: Phone.FI.build(number)
+  def build("679" <> _ = number), do: Phone.FJ.build(number)
+  def build("691" <> _ = number), do: Phone.FM.build(number)
+  def build("298" <> _ = number), do: Phone.FO.build(number)
+  def build("33" <> _ = number), do: Phone.FR.build(number)
+
+  def build!("358" <> _ = number), do: Phone.FI.build!(number)
+  def build!("679" <> _ = number), do: Phone.FJ.build!(number)
+  def build!("691" <> _ = number), do: Phone.FM.build!(number)
+  def build!("298" <> _ = number), do: Phone.FO.build!(number)
+  def build!("33" <> _ = number), do: Phone.FR.build!(number)
+
+  def build("241" <> _ = number), do: Phone.GA.build(number)
+  def build("44" <> _ = number), do: Phone.GB.build(number)
+  def build("995" <> _ = number), do: Phone.GE.build(number)
+  def build("594" <> _ = number), do: Phone.GF.build(number)
+  def build("233" <> _ = number), do: Phone.GH.build(number)
+  def build("350" <> _ = number), do: Phone.GI.build(number)
+  def build("299" <> _ = number), do: Phone.GL.build(number)
+  def build("220" <> _ = number), do: Phone.GM.build(number)
+  def build("224" <> _ = number), do: Phone.GN.build(number)
+  def build("240" <> _ = number), do: Phone.GQ.build(number)
+  def build("30" <> _ = number), do: Phone.GR.build(number)
+  def build("502" <> _ = number), do: Phone.GT.build(number)
+  def build("245" <> _ = number), do: Phone.GW.build(number)
+  def build("592" <> _ = number), do: Phone.GY.build(number)
+
+  def build!("241" <> _ = number), do: Phone.GA.build!(number)
+  def build!("44" <> _ = number), do: Phone.GB.build!(number)
+  def build!("995" <> _ = number), do: Phone.GE.build!(number)
+  def build!("594" <> _ = number), do: Phone.GF.build!(number)
+  def build!("233" <> _ = number), do: Phone.GH.build!(number)
+  def build!("350" <> _ = number), do: Phone.GI.build!(number)
+  def build!("299" <> _ = number), do: Phone.GL.build!(number)
+  def build!("220" <> _ = number), do: Phone.GM.build!(number)
+  def build!("224" <> _ = number), do: Phone.GN.build!(number)
+  def build!("240" <> _ = number), do: Phone.GQ.build!(number)
+  def build!("30" <> _ = number), do: Phone.GR.build!(number)
+  def build!("502" <> _ = number), do: Phone.GT.build!(number)
+  def build!("245" <> _ = number), do: Phone.GW.build!(number)
+  def build!("592" <> _ = number), do: Phone.GY.build!(number)
+
+  def build("852" <> _ = number), do: Phone.HK.build(number)
+  def build("504" <> _ = number), do: Phone.HN.build(number)
+  def build("385" <> _ = number), do: Phone.HR.build(number)
+  def build("509" <> _ = number), do: Phone.HT.build(number)
+  def build("36" <> _ = number), do: Phone.HU.build(number)
+
+  def build!("852" <> _ = number), do: Phone.HK.build!(number)
+  def build!("504" <> _ = number), do: Phone.HN.build!(number)
+  def build!("385" <> _ = number), do: Phone.HR.build!(number)
+  def build!("509" <> _ = number), do: Phone.HT.build!(number)
+  def build!("36" <> _ = number), do: Phone.HU.build!(number)
+
+  def build("62" <> _ = number), do: Phone.ID.build(number)
+  def build("353" <> _ = number), do: Phone.IE.build(number)
+  def build("972" <> _ = number), do: Phone.IL.build(number)
+  def build("91" <> _ = number), do: Phone.IN.build(number)
+  def build("246" <> _ = number), do: Phone.IO.build(number)
+  def build("964" <> _ = number), do: Phone.IQ.build(number)
+  def build("98" <> _ = number), do: Phone.IR.build(number)
+  def build("354" <> _ = number), do: Phone.IS.build(number)
+  def build("39" <> _ = number), do: Phone.IT.build(number)
+
+  def build!("62" <> _ = number), do: Phone.ID.build!(number)
+  def build!("353" <> _ = number), do: Phone.IE.build!(number)
+  def build!("972" <> _ = number), do: Phone.IL.build!(number)
+  def build!("91" <> _ = number), do: Phone.IN.build!(number)
+  def build!("246" <> _ = number), do: Phone.IO.build!(number)
+  def build!("964" <> _ = number), do: Phone.IQ.build!(number)
+  def build!("98" <> _ = number), do: Phone.IR.build!(number)
+  def build!("354" <> _ = number), do: Phone.IS.build!(number)
+  def build!("39" <> _ = number), do: Phone.IT.build!(number)
+
+  def build("962" <> _ = number), do: Phone.JO.build(number)
+  def build("81" <> _ = number), do: Phone.JP.build(number)
+
+  def build!("962" <> _ = number), do: Phone.JO.build!(number)
+  def build!("81" <> _ = number), do: Phone.JP.build!(number)
+
+  def build("254" <> _ = number), do: Phone.KE.build(number)
+  def build("996" <> _ = number), do: Phone.KG.build(number)
+  def build("855" <> _ = number), do: Phone.KH.build(number)
+  def build("686" <> _ = number), do: Phone.KI.build(number)
+  def build("269" <> _ = number), do: Phone.KM.build(number)
+  def build("850" <> _ = number), do: Phone.KP.build(number)
+  def build("82" <> _ = number), do: Phone.KR.build(number)
+  def build("965" <> _ = number), do: Phone.KW.build(number)
+
+  def build!("254" <> _ = number), do: Phone.KE.build!(number)
+  def build!("996" <> _ = number), do: Phone.KG.build!(number)
+  def build!("855" <> _ = number), do: Phone.KH.build!(number)
+  def build!("686" <> _ = number), do: Phone.KI.build!(number)
+  def build!("269" <> _ = number), do: Phone.KM.build!(number)
+  def build!("850" <> _ = number), do: Phone.KP.build!(number)
+  def build!("82" <> _ = number), do: Phone.KR.build!(number)
+  def build!("965" <> _ = number), do: Phone.KW.build!(number)
+
+  def build("856" <> _ = number), do: Phone.LA.build(number)
+  def build("961" <> _ = number), do: Phone.LB.build(number)
+  def build("423" <> _ = number), do: Phone.LI.build(number)
+  def build("94" <> _ = number), do: Phone.LK.build(number)
+  def build("231" <> _ = number), do: Phone.LR.build(number)
+  def build("266" <> _ = number), do: Phone.LS.build(number)
+  def build("370" <> _ = number), do: Phone.LT.build(number)
+  def build("352" <> _ = number), do: Phone.LU.build(number)
+  def build("371" <> _ = number), do: Phone.LV.build(number)
+  def build("218" <> _ = number), do: Phone.LY.build(number)
+
+  def build!("856" <> _ = number), do: Phone.LA.build!(number)
+  def build!("961" <> _ = number), do: Phone.LB.build!(number)
+  def build!("423" <> _ = number), do: Phone.LI.build!(number)
+  def build!("94" <> _ = number), do: Phone.LK.build!(number)
+  def build!("231" <> _ = number), do: Phone.LR.build!(number)
+  def build!("266" <> _ = number), do: Phone.LS.build!(number)
+  def build!("370" <> _ = number), do: Phone.LT.build!(number)
+  def build!("352" <> _ = number), do: Phone.LU.build!(number)
+  def build!("371" <> _ = number), do: Phone.LV.build!(number)
+  def build!("218" <> _ = number), do: Phone.LY.build!(number)
+
+  def build("212" <> _ = number), do: Phone.MA.build(number)
+  def build("377" <> _ = number), do: Phone.MC.build(number)
+  def build("373" <> _ = number), do: Phone.MD.build(number)
+  def build("382" <> _ = number), do: Phone.ME.build(number)
+  def build("261" <> _ = number), do: Phone.MG.build(number)
+  def build("692" <> _ = number), do: Phone.MH.build(number)
+  def build("389" <> _ = number), do: Phone.MK.build(number)
+  def build("223" <> _ = number), do: Phone.ML.build(number)
+  def build("95" <> _ = number), do: Phone.MM.build(number)
+  def build("976" <> _ = number), do: Phone.MN.build(number)
+  def build("853" <> _ = number), do: Phone.MO.build(number)
+  def build("596" <> _ = number), do: Phone.MQ.build(number)
+  def build("222" <> _ = number), do: Phone.MR.build(number)
+  def build("356" <> _ = number), do: Phone.MT.build(number)
+  def build("230" <> _ = number), do: Phone.MU.build(number)
+  def build("960" <> _ = number), do: Phone.MV.build(number)
+  def build("265" <> _ = number), do: Phone.MW.build(number)
+  def build("52" <> _ = number), do: Phone.MX.build(number)
+  def build("60" <> _ = number), do: Phone.MY.build(number)
+  def build("258" <> _ = number), do: Phone.MZ.build(number)
+
+  def build!("212" <> _ = number), do: Phone.MA.build!(number)
+  def build!("377" <> _ = number), do: Phone.MC.build!(number)
+  def build!("373" <> _ = number), do: Phone.MD.build!(number)
+  def build!("382" <> _ = number), do: Phone.ME.build!(number)
+  def build!("261" <> _ = number), do: Phone.MG.build!(number)
+  def build!("692" <> _ = number), do: Phone.MH.build!(number)
+  def build!("389" <> _ = number), do: Phone.MK.build!(number)
+  def build!("223" <> _ = number), do: Phone.ML.build!(number)
+  def build!("95" <> _ = number), do: Phone.MM.build!(number)
+  def build!("976" <> _ = number), do: Phone.MN.build!(number)
+  def build!("853" <> _ = number), do: Phone.MO.build!(number)
+  def build!("596" <> _ = number), do: Phone.MQ.build!(number)
+  def build!("222" <> _ = number), do: Phone.MR.build!(number)
+  def build!("356" <> _ = number), do: Phone.MT.build!(number)
+  def build!("230" <> _ = number), do: Phone.MU.build!(number)
+  def build!("960" <> _ = number), do: Phone.MV.build!(number)
+  def build!("265" <> _ = number), do: Phone.MW.build!(number)
+  def build!("52" <> _ = number), do: Phone.MX.build!(number)
+  def build!("60" <> _ = number), do: Phone.MY.build!(number)
+  def build!("258" <> _ = number), do: Phone.MZ.build!(number)
+
+  def build("1" <> _ = number), do: Phone.NANP.build(number)
+  def build("264" <> _ = number), do: Phone.NA.build(number)
+  def build("687" <> _ = number), do: Phone.NC.build(number)
+  def build("27" <> _ = number), do: Phone.NE.build(number)
+  def build("234" <> _ = number), do: Phone.NG.build(number)
+  def build("505" <> _ = number), do: Phone.NI.build(number)
+  def build("31" <> _ = number), do: Phone.NL.build(number)
+  def build("47" <> _ = number), do: Phone.NO.build(number)
+  def build("977" <> _ = number), do: Phone.NP.build(number)
+  def build("674" <> _ = number), do: Phone.NR.build(number)
+  def build("683" <> _ = number), do: Phone.NU.build(number)
+  def build("64" <> _ = number), do: Phone.NZ.build(number)
+
+  def build!("1" <> _ = number), do: Phone.NANP.build!(number)
+  def build!("264" <> _ = number), do: Phone.NA.build!(number)
+  def build!("687" <> _ = number), do: Phone.NC.build!(number)
+  def build!("27" <> _ = number), do: Phone.NE.build!(number)
+  def build!("234" <> _ = number), do: Phone.NG.build!(number)
+  def build!("505" <> _ = number), do: Phone.NI.build!(number)
+  def build!("31" <> _ = number), do: Phone.NL.build!(number)
+  def build!("47" <> _ = number), do: Phone.NO.build!(number)
+  def build!("977" <> _ = number), do: Phone.NP.build!(number)
+  def build!("674" <> _ = number), do: Phone.NR.build!(number)
+  def build!("683" <> _ = number), do: Phone.NU.build!(number)
+  def build!("64" <> _ = number), do: Phone.NZ.build!(number)
+
+  def build("968" <> _ = number), do: Phone.OM.build(number)
+  def build!("968" <> _ = number), do: Phone.OM.build!(number)
+
+  def build("507" <> _ = number), do: Phone.PA.build(number)
+  def build("51" <> _ = number), do: Phone.PE.build(number)
+  def build("689" <> _ = number), do: Phone.PF.build(number)
+  def build("675" <> _ = number), do: Phone.PG.build(number)
+  def build("63" <> _ = number), do: Phone.PH.build(number)
+  def build("92" <> _ = number), do: Phone.PK.build(number)
+  def build("48" <> _ = number), do: Phone.PL.build(number)
+  def build("508" <> _ = number), do: Phone.PM.build(number)
+  def build("970" <> _ = number), do: Phone.PS.build(number)
+  def build("351" <> _ = number), do: Phone.PT.build(number)
+  def build("680" <> _ = number), do: Phone.PW.build(number)
+  def build("595" <> _ = number), do: Phone.PY.build(number)
+
+  def build!("507" <> _ = number), do: Phone.PA.build!(number)
+  def build!("51" <> _ = number), do: Phone.PE.build!(number)
+  def build!("689" <> _ = number), do: Phone.PF.build!(number)
+  def build!("675" <> _ = number), do: Phone.PG.build!(number)
+  def build!("63" <> _ = number), do: Phone.PH.build!(number)
+  def build!("92" <> _ = number), do: Phone.PK.build!(number)
+  def build!("48" <> _ = number), do: Phone.PL.build!(number)
+  def build!("508" <> _ = number), do: Phone.PM.build!(number)
+  def build!("970" <> _ = number), do: Phone.PS.build!(number)
+  def build!("351" <> _ = number), do: Phone.PT.build!(number)
+  def build!("680" <> _ = number), do: Phone.PW.build!(number)
+  def build!("595" <> _ = number), do: Phone.PY.build!(number)
+
+  def build("974" <> _ = number), do: Phone.QA.build(number)
+  def build!("974" <> _ = number), do: Phone.QA.build!(number)
+
+  def build("40" <> _ = number), do: Phone.RO.build(number)
+  def build("381" <> _ = number), do: Phone.RS.build(number)
+  def build("250" <> _ = number), do: Phone.RW.build(number)
+
+  def build!("40" <> _ = number), do: Phone.RO.build!(number)
+  def build!("381" <> _ = number), do: Phone.RS.build!(number)
+  def build!("250" <> _ = number), do: Phone.RW.build!(number)
+
+  def build("966" <> _ = number), do: Phone.SA.build(number)
+  def build("677" <> _ = number), do: Phone.SB.build(number)
+  def build("248" <> _ = number), do: Phone.SC.build(number)
+  def build("249" <> _ = number), do: Phone.SD.build(number)
+  def build("46" <> _ = number), do: Phone.SE.build(number)
+  def build("65" <> _ = number), do: Phone.SG.build(number)
+  def build("290" <> _ = number), do: Phone.SH.build(number)
+  def build("386" <> _ = number), do: Phone.SI.build(number)
+  def build("421" <> _ = number), do: Phone.SK.build(number)
+  def build("232" <> _ = number), do: Phone.SL.build(number)
+  def build("378" <> _ = number), do: Phone.SM.build(number)
+  def build("221" <> _ = number), do: Phone.SN.build(number)
+  def build("252" <> _ = number), do: Phone.SO.build(number)
+  def build("597" <> _ = number), do: Phone.SR.build(number)
+  def build("211" <> _ = number), do: Phone.SS.build(number)
+  def build("239" <> _ = number), do: Phone.ST.build(number)
+  def build("503" <> _ = number), do: Phone.SV.build(number)
+  def build("963" <> _ = number), do: Phone.SY.build(number)
+  def build("268" <> _ = number), do: Phone.SZ.build(number)
+
+  def build!("966" <> _ = number), do: Phone.SA.build!(number)
+  def build!("677" <> _ = number), do: Phone.SB.build!(number)
+  def build!("248" <> _ = number), do: Phone.SC.build!(number)
+  def build!("249" <> _ = number), do: Phone.SD.build!(number)
+  def build!("46" <> _ = number), do: Phone.SE.build!(number)
+  def build!("65" <> _ = number), do: Phone.SG.build!(number)
+  def build!("290" <> _ = number), do: Phone.SH.build!(number)
+  def build!("386" <> _ = number), do: Phone.SI.build!(number)
+  def build!("421" <> _ = number), do: Phone.SK.build!(number)
+  def build!("232" <> _ = number), do: Phone.SL.build!(number)
+  def build!("378" <> _ = number), do: Phone.SM.build!(number)
+  def build!("221" <> _ = number), do: Phone.SN.build!(number)
+  def build!("252" <> _ = number), do: Phone.SO.build!(number)
+  def build!("597" <> _ = number), do: Phone.SR.build!(number)
+  def build!("211" <> _ = number), do: Phone.SS.build!(number)
+  def build!("239" <> _ = number), do: Phone.ST.build!(number)
+  def build!("503" <> _ = number), do: Phone.SV.build!(number)
+  def build!("963" <> _ = number), do: Phone.SY.build!(number)
+  def build!("268" <> _ = number), do: Phone.SZ.build!(number)
+
+  def build("235" <> _ = number), do: Phone.TD.build(number)
+  def build("228" <> _ = number), do: Phone.TG.build(number)
+  def build("66" <> _ = number), do: Phone.TH.build(number)
+  def build("992" <> _ = number), do: Phone.TJ.build(number)
+  def build("690" <> _ = number), do: Phone.TK.build(number)
+  def build("670" <> _ = number), do: Phone.TL.build(number)
+  def build("993" <> _ = number), do: Phone.TM.build(number)
+  def build("216" <> _ = number), do: Phone.TN.build(number)
+  def build("676" <> _ = number), do: Phone.TO.build(number)
+  def build("90" <> _ = number), do: Phone.TR.build(number)
+  def build("688" <> _ = number), do: Phone.TV.build(number)
+  def build("886" <> _ = number), do: Phone.TW.build(number)
+  def build("255" <> _ = number), do: Phone.TZ.build(number)
+
+  def build!("235" <> _ = number), do: Phone.TD.build!(number)
+  def build!("228" <> _ = number), do: Phone.TG.build!(number)
+  def build!("66" <> _ = number), do: Phone.TH.build!(number)
+  def build!("992" <> _ = number), do: Phone.TJ.build!(number)
+  def build!("690" <> _ = number), do: Phone.TK.build!(number)
+  def build!("670" <> _ = number), do: Phone.TL.build!(number)
+  def build!("993" <> _ = number), do: Phone.TM.build!(number)
+  def build!("216" <> _ = number), do: Phone.TN.build!(number)
+  def build!("676" <> _ = number), do: Phone.TO.build!(number)
+  def build!("90" <> _ = number), do: Phone.TR.build!(number)
+  def build!("688" <> _ = number), do: Phone.TV.build!(number)
+  def build!("886" <> _ = number), do: Phone.TW.build!(number)
+  def build!("255" <> _ = number), do: Phone.TZ.build!(number)
+
+  def build("380" <> _ = number), do: Phone.UA.build(number)
+  def build("256" <> _ = number), do: Phone.UG.build(number)
+  def build("598" <> _ = number), do: Phone.UY.build(number)
+  def build("998" <> _ = number), do: Phone.UZ.build(number)
+
+  def build!("380" <> _ = number), do: Phone.UA.build!(number)
+  def build!("256" <> _ = number), do: Phone.UG.build!(number)
+  def build!("598" <> _ = number), do: Phone.UY.build!(number)
+  def build!("998" <> _ = number), do: Phone.UZ.build!(number)
+
+  def build("58" <> _ = number), do: Phone.VE.build(number)
+  def build("84" <> _ = number), do: Phone.VN.build(number)
+  def build("678" <> _ = number), do: Phone.VU.build(number)
+
+  def build!("58" <> _ = number), do: Phone.VE.build!(number)
+  def build!("84" <> _ = number), do: Phone.VN.build!(number)
+  def build!("678" <> _ = number), do: Phone.VU.build!(number)
+
+  def build("681" <> _ = number), do: Phone.WF.build(number)
+  def build("685" <> _ = number), do: Phone.WS.build(number)
+
+  def build!("681" <> _ = number), do: Phone.WF.build!(number)
+  def build!("685" <> _ = number), do: Phone.WS.build!(number)
+
+  def build("967" <> _ = number), do: Phone.YE.build(number)
+  def build!("967" <> _ = number), do: Phone.YE.build!(number)
+
+  def build("27" <> _ = number), do: Phone.ZA.build(number)
+  def build("260" <> _ = number), do: Phone.ZM.build(number)
+  def build("263" <> _ = number), do: Phone.ZW.build(number)
+
+  def build!("27" <> _ = number), do: Phone.ZA.build!(number)
+  def build!("260" <> _ = number), do: Phone.ZM.build!(number)
+  def build!("263" <> _ = number), do: Phone.ZW.build!(number)
+
+  def build("7" <> _ = number) do
+    modules = [Phone.KZ, Phone.RU]
+
+    case Enum.filter(modules, fn m -> m.match?(number) end) do
+      [] -> {:error, "Not a valid phone number."}
+      [mod] -> mod.build(number)
+    end
+  end
+
+  def build!("7" <> _ = number) do
+    modules = [Phone.KZ, Phone.RU]
+
+    case Enum.filter(modules, fn m -> m.match?(number) end) do
+      [] -> raise ArgumentError, message: "Not a valid phone number."
+      [mod] -> mod.build!(number)
+    end
+  end
+
+  def build(""), do: {:error, "Not a valid phone number."}
+  def build!(""), do: raise ArgumentError, message: "Not a valid phone number."
 end

@@ -137,7 +137,6 @@ defmodule Helper.Parser do
         parser :fr, "33"
 
         parser :ga, "241"
-        parser :gb, "44"
         parser :ge, "995"
         parser :gf, "594"
         parser :gh, "233"
@@ -146,12 +145,13 @@ defmodule Helper.Parser do
         parser :gm, "220"
         parser :gn, "224"
         parser :gq, "240"
+        parser :gr, "30"
         parser :gt, "502"
         parser :gw, "245"
         parser :gy, "592"
 
-        parser :gr, "30"
-        parser :uk, "30"
+        parser :gb, "44"
+        parser :uk, "44"
 
         parser :hk, "852"
         parser :hn, "504"
@@ -166,7 +166,7 @@ defmodule Helper.Parser do
         parser :io, "246"
         parser :iq, "964"
         parser :ir, "98"
-        parser :is, "353"
+        parser :is, "354"
         parser :it, "39"
 
         parser :jo, "962"
