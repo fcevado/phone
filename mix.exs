@@ -3,7 +3,7 @@ defmodule Phonex.Mixfile do
 
   def project do
     [app: :phone,
-     version: "0.3.9",
+     version: "0.3.10",
      elixir: ">= 1.1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -55,10 +55,10 @@ defmodule Phonex.Mixfile do
 
   defp deps do
     [
-      {:coverex, "1.4.10", only: :test},
-      {:credo, "0.5.2", only: :dev},
+      {:coverex, "1.4.11", only: :test},
+      {:credo, "0.5.3", only: :dev},
       {:earmark, "1.0.3", only: :dev},
-      {:ex_doc, "0.14.3", only: :dev},
+      {:ex_doc, "0.14.5", only: :dev},
       {:inch_ex, "0.5.5", only: :docs}
     ]
   end
