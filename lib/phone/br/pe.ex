@@ -4,5 +4,5 @@ defmodule Phone.BR.PE do
   field :area_name, "Pernambuco"
   field :area_type, "state"
   field :area_abbreviation, "PE"
-  builder
+  builder()
 end

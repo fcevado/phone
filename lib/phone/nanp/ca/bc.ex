@@ -4,5 +4,5 @@ defmodule Phone.NANP.CA.BC do
   field :area_name, "British Columbia"
   field :area_type, "province"
   field :area_abbreviation, "BC"
-  builder
+  builder()
 end

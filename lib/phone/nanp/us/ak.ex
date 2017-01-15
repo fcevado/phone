@@ -4,5 +4,5 @@ defmodule Phone.NANP.US.AK do
   field :area_name, "Alaska"
   field :area_type, "state"
   field :area_abbreviation, "AK"
-  builder
+  builder()
 end

@@ -4,5 +4,5 @@ defmodule Phone.NANP.CA.QC do
   field :area_name, "Quebec"
   field :area_type, "province"
   field :area_abbreviation, "QC"
-  builder
+  builder()
 end

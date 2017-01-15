@@ -4,5 +4,5 @@ defmodule Phone.BR.PR do
   field :area_name, "Paraná"
   field :area_type, "state"
   field :area_abbreviation, "PR"
-  builder
+  builder()
 end

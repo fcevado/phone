@@ -4,5 +4,5 @@ defmodule Phone.NANP.US.NJ do
   field :area_name, "New Jersey"
   field :area_type, "state"
   field :area_abbreviation, "NJ"
-  builder
+  builder()
 end

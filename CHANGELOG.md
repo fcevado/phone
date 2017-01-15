@@ -1,5 +1,9 @@
 #Changelog
 
+##v0.3.10:
+  * Correct number validation for Norway.
+  * Correct Ireland area codes validation.
+
 ##v0.3.9:
   * Add and correct various area codes for NANP.
   * Better test coverage for NANP numbers.

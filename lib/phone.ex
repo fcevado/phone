@@ -109,6 +109,6 @@ defmodule Phone do
   @spec parse(pos_integer, Atom.t) :: {:ok, Map.t}
   @spec parse!(String.t, Atom.t) :: Map.t
   @spec parse!(pos_integer, Atom.t) :: Map.t
-  country_parser
+  country_parser()
 
 end

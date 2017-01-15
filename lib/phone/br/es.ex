@@ -4,5 +4,5 @@ defmodule Phone.BR.ES do
   field :area_name, "Espírito Santo"
   field :area_type, "state"
   field :area_abbreviation, "ES"
-  builder
+  builder()
 end

@@ -4,5 +4,5 @@ defmodule Phone.NANP.US.KY do
   field :area_name, "Kentucky"
   field :area_type, "state"
   field :area_abbreviation, "KY"
-  builder
+  builder()
 end
