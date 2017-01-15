@@ -7,19 +7,19 @@ defmodule Phonex.Mixfile do
      elixir: ">= 1.1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     description: description,
-     package: package,
+     description: description(),
+     package: package(),
      source_url: "https://github.com/fcevado/phone",
-     test_coverage: coverage,
-     deps: deps]
+     test_coverage: coverage(),
+     deps: deps()]
   end
 
   defp package do
     [
-      files: files,
+      files: files(),
       maintainers: ["Flávio Moreira Vieira"],
       licenses: ["Apache 2.0"],
-      links: links
+      links: links()
     ]
   end
 

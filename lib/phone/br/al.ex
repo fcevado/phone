@@ -4,5 +4,5 @@ defmodule Phone.BR.AL do
   field :area_name, "Alagoas"
   field :area_type, "state"
   field :area_abbreviation, "AL"
-  builder
+  builder()
 end

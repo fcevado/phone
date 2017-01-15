@@ -4,5 +4,5 @@ defmodule Phone.BR.RO do
   field :area_name, "Rondônia"
   field :area_type, "state"
   field :area_abbreviation, "RO"
-  builder
+  builder()
 end

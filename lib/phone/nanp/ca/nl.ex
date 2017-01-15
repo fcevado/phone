@@ -4,5 +4,5 @@ defmodule Phone.NANP.CA.NL do
   field :area_name, "Newfoundland and Labrador"
   field :area_type, "province"
   field :area_abbreviation, "NL"
-  builder
+  builder()
 end

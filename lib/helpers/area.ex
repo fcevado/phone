@@ -16,7 +16,7 @@ defmodule Helper.Area do
   defmacro builder do
     quote do
       def match?(number) do
-        Regex.match?(regex, number)
+        Regex.match?(regex(), number)
       end
 
       def builder(number) do
@@ -29,18 +29,18 @@ defmodule Helper.Area do
           |> Enum.reverse
           |> Module.concat
 
-        [[_, code, area, number]] = Regex.scan(regex, number)
+        [[_, code, area, number]] = Regex.scan(regex(), number)
 
         %{
-          country: country.country,
-          a2: country.a2,
-          a3: country.a3,
+          country: country.country(),
+          a2: country.a2(),
+          a3: country.a3(),
           international_code: code,
           number: number,
           area_code: area,
-          area_name: area_name,
-          area_type: area_type,
-          area_abbreviation: area_abbreviation
+          area_name: area_name(),
+          area_type: area_type(),
+          area_abbreviation: area_abbreviation()
         }
       end
 

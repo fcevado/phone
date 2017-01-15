@@ -4,5 +4,5 @@ defmodule Phone.NANP.US.IL do
   field :area_name, "Illinois"
   field :area_type, "state"
   field :area_abbreviation, "IL"
-  builder
+  builder()
 end

@@ -4,5 +4,5 @@ defmodule Phone.NANP.US.MD do
   field :area_name, "Maryland"
   field :area_type, "state"
   field :area_abbreviation, "MD"
-  builder
+  builder()
 end

@@ -4,5 +4,5 @@ defmodule Phone.NANP.US.VT do
   field :area_name, "Vermont"
   field :area_type, "state"
   field :area_abbreviation, "VT"
-  builder
+  builder()
 end

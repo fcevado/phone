@@ -4,5 +4,5 @@ defmodule Phone.NANP.CA.Territory do
   field :area_name, ["Northwest Territories", "Nunavut", "Yukon"]
   field :area_type, "territories"
   field :area_abbreviation, ["NT","NU","YT"]
-  builder
+  builder()
 end

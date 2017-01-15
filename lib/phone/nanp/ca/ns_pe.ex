@@ -4,5 +4,5 @@ defmodule Phone.NANP.CA.NS_PE do
   field :area_name, ["Nova Scotia","Prince Edward Island"]
   field :area_type, "provinces"
   field :area_abbreviation, ["NS","PE"]
-  builder
+  builder()
 end

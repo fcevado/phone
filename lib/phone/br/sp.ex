@@ -4,5 +4,5 @@ defmodule Phone.BR.SP do
   field :area_name, "São Paulo"
   field :area_type, "state"
   field :area_abbreviation, "SP"
-  builder
+  builder()
 end

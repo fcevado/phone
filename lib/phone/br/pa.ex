@@ -4,5 +4,5 @@ defmodule Phone.BR.PA do
   field :area_name, "Pará"
   field :area_type, "state"
   field :area_abbreviation, "PA"
-  builder
+  builder()
 end

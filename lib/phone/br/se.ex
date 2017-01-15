@@ -4,5 +4,5 @@ defmodule Phone.BR.SE do
   field :area_name, "Sergipe"
   field :area_type, "state"
   field :area_abbreviation, "SE"
-  builder
+  builder()
 end

@@ -4,5 +4,5 @@ defmodule Phone.BR.AM do
   field :area_name, "Amazonas"
   field :area_type, "state"
   field :area_abbreviation, "AM"
-  builder
+  builder()
 end

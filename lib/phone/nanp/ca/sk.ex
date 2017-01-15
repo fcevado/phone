@@ -4,5 +4,5 @@ defmodule Phone.NANP.CA.SK do
   field :area_name, "Saskatchewan"
   field :area_type, "province"
   field :area_abbreviation, "SK"
-  builder
+  builder()
 end

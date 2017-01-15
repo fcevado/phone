@@ -4,5 +4,5 @@ defmodule Phone.BR.TO do
   field :area_name, "Tocantins"
   field :area_type, "state"
   field :area_abbreviation, "TO"
-  builder
+  builder()
 end

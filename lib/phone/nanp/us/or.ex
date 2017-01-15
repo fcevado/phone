@@ -4,5 +4,5 @@ defmodule Phone.NANP.US.OR do
   field :area_name, "Oregon"
   field :area_type, "state"
   field :area_abbreviation, "OR"
-  builder
+  builder()
 end

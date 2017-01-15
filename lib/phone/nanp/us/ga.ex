@@ -4,5 +4,5 @@ defmodule Phone.NANP.US.GA do
   field :area_name, "Georgia"
   field :area_type, "state"
   field :area_abbreviation, "GA"
-  builder
+  builder()
 end

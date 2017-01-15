@@ -4,5 +4,5 @@ defmodule Phone.NANP.US.IA do
   field :area_name, "Iowa"
   field :area_type, "state"
   field :area_abbreviation, "IA"
-  builder
+  builder()
 end
