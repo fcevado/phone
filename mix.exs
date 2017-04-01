@@ -1,4 +1,4 @@
-defmodule Phonex.Mixfile do
+defmodule Phone.Mixfile do
   use Mix.Project
 
   def project do
