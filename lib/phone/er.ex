@@ -1,8 +1,10 @@
 defmodule Phone.ER do
   use Helper.Country
-  field :regex, ~r/^(291)(.)(.{6})/
-  field :country, "Eritrea"
-  field :a2, "ER"
-  field :a3, "ERI"
-  match :regex
+
+  def regex, do: ~r/^(291)(.)(.{6})/
+  def country, do: "Eritrea"
+  def a2, do: "ER"
+  def a3, do: "ERI"
+  
+  matcher :regex, ["291"]
 end

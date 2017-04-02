@@ -1,8 +1,10 @@
 defmodule Phone.SC do
   use Helper.Country
-  field :regex, ~r/^(248)()(.{7})/
-  field :country, "Seychelles"
-  field :a2, "SC"
-  field :a3, "SYC"
-  match :regex
+
+  def regex, do: ~r/^(248)()(.{7})/
+  def country, do: "Seychelles"
+  def a2, do: "SC"
+  def a3, do: "SYC"
+
+  matcher :regex, ["248:"]
 end

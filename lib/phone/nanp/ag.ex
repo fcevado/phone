@@ -1,8 +1,10 @@
 defmodule Phone.NANP.AG do
   use Helper.Country
-  field :regex, ~r/^(1)(268)([2-9].{6})$/
-  field :country, "Antigua and Barbuda"
-  field :a2, "AG"
-  field :a3, "ATG"
-  match :regex
+
+  def regex, do: ~r/^(1)(268)([2-9].{6})$/
+  def country, do: "Antigua and Barbuda"
+  def a2, do: "AG"
+  def a3, do: "ATG"
+
+  matcher :regex, ["1268"]
 end

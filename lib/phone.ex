@@ -12,12 +12,6 @@ defmodule Phone do
 
   import Helper.Parser
 
-  @after_compile __MODULE__
-  def __after_compile__(_env, _bytecode) do
-    IO.puts ":phone, v0.3.0"
-    IO.puts "WARN: parse/2 function has changed. Please take a look at the documentation."
-  end
-
   @doc """
   Parses a string or integer and returns a map with information about that number.
 
@@ -38,13 +32,9 @@ defmodule Phone do
   """
   @spec parse(String.t) :: {:ok, Map.t}
   def parse(number) when is_bitstring(number) do
-    number = clear(number)
-    number = try do
-      number |> String.to_integer |> Integer.to_string
-    rescue
-      _ -> ""
-    end
-    Phone.Countries.build(number)
+    number
+    |> prepare_number
+    |> Phone.Countries.build
   end
 
   @spec parse(pos_integer) :: {:ok, Map.t}
@@ -57,14 +47,32 @@ defmodule Phone do
     {:error, "Not a valid parameter, only string or integer."}
   end
 
-  defp clear(number) when is_bitstring(number) do
-    remove = String.graphemes("+()- ")
+  @doc false
+  defp prepare_number(number) do
+    number = clear(number)
 
+    try do
+      number |> String.to_integer |> Integer.to_string
+    rescue
+      _ -> ""
+    end
+  end
+
+  @doc false
+  defp clear(number) when is_bitstring(number) do
     number
     |> String.graphemes
-    |> Enum.filter(fn n -> ! Enum.any?(remove, fn r -> r == n end) end)
+    |> Enum.filter(fn n -> valid_char(n) end)
     |> Enum.join("")
   end
+
+  @doc false
+  defp valid_char("+"), do: false
+  defp valid_char("("), do: false
+  defp valid_char(")"), do: false
+  defp valid_char("-"), do: false
+  defp valid_char(" "), do: false
+  defp valid_char(_), do: true
 
   @doc """
   Same as `parse/1`, except it raises on error.
@@ -111,4 +119,36 @@ defmodule Phone do
   @spec parse!(pos_integer, Atom.t) :: Map.t
   country_parser()
 
+
+  @doc """
+  Returns `true` if the number can be parsed, otherwhise returns `false`.
+
+  ```
+  iex> Phone.valid?("555132345678")
+  true
+
+  iex> Phone.valid?("+55(51)3234-5678")
+  true
+
+  iex> Phone.valid?("55 51 3234-5678")
+  true
+
+  iex> Phone.valid?(555132345678)
+  true
+
+  ```
+  """
+  @spec parse(String.t) :: boolean
+  def valid?(number) when is_bitstring(number) do
+    number
+    |> prepare_number
+    |> Phone.Countries.match?
+  end
+
+  @spec parse(pos_integer) :: boolean
+  def valid?(number) when is_integer(number) do
+    number
+    |> to_string
+    |> valid?
+  end
 end

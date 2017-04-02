@@ -1,8 +1,10 @@
 defmodule Phone.JP do
   use Helper.Country
-  field :regex, ~r/^(81)()(.+)/
-  field :country, "Japan"
-  field :a2, "JP"
-  field :a3, "JPN"
-  match :regex
+
+  def regex, do: ~r/^(81)()(.+)/
+  def country, do: "Japan"
+  def a2, do: "JP"
+  def a3, do: "JPN"
+
+  matcher :regex, ["81"]
 end

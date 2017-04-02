@@ -1,8 +1,10 @@
 defmodule Phone.GQ do
   use Helper.Country
-  field :regex, ~r/^(240)()(.{9})/
-  field :country, "Equatorial Guinea"
-  field :a2, "GQ"
-  field :a3, "GNQ"
-  match :regex
+
+  def regex, do: ~r/^(240)()(.{9})/
+  def country, do: "Equatorial Guinea"
+  def a2, do: "GQ"
+  def a3, do: "GNQ"
+
+  matcher :regex, ["240"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.CZ do
   use Helper.Country
-  field :regex, ~r/^(420)()(.{9})/
-  field :country, "Czech Republic"
-  field :a2, "CZ"
-  field :a3, "CZE"
-  match :regex
+
+  def regex, do: ~r/^(420)()(.{9})/
+  def country, do: "Czech Republic"
+  def a2, do: "CZ"
+  def a3, do: "CZE"
+
+  matcher :regex, ["420"]
 end

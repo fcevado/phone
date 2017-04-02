@@ -1,8 +1,10 @@
 defmodule Phone.KW do
   use Helper.Country
-  field :regex, ~r/^(965)()(.{8})/
-  field :country, "Kuwait"
-  field :a2, "KW"
-  field :a3, "KWT"
-  match :regex
+
+  def regex, do: ~r/^(965)()(.{8})/
+  def country, do: "Kuwait"
+  def a2, do: "KW"
+  def a3, do: "KWT"
+
+  matcher :regex, ["965"]
 end

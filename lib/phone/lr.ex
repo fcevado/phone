@@ -1,8 +1,10 @@
 defmodule Phone.LR do
   use Helper.Country
-  field :regex, ~r/^(231)()(.{7,9})/
-  field :country, "Liberia"
-  field :a2, "LR"
-  field :a3, "LBR"
-  match :regex
+
+  def regex, do: ~r/^(231)()(.{7,9})/
+  def country, do: "Liberia"
+  def a2, do: "LR"
+  def a3, do: "LBR"
+
+  matcher :regex, ["231"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.NANP.LC do
   use Helper.Country
-  field :regex, ~r/^(1)(758)([2-9].{6})$/
-  field :country, "Saint Lucia"
-  field :a2, "LC"
-  field :a3, "LCA"
-  match :regex
+
+  def regex, do: ~r/^(1)(758)([2-9].{6})$/
+  def country, do: "Saint Lucia"
+  def a2, do: "LC"
+  def a3, do: "LCA"
+
+  matcher :regex, ["1758"]
 end

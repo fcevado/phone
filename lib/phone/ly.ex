@@ -1,8 +1,10 @@
 defmodule Phone.LY do
   use Helper.Country
-  field :regex, ~r/^(218)()(.+)/
-  field :country, "Libya"
-  field :a2, "LY"
-  field :a3, "LBY"
-  match :regex
+
+  def regex, do: ~r/^(218)()(.+)/
+  def country, do: "Libya"
+  def a2, do: "LY"
+  def a3, do: "LBY"
+
+  matcher :regex, ["218"]
 end

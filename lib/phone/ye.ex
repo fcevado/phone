@@ -1,8 +1,10 @@
 defmodule Phone.YE do
   use Helper.Country
-  field :regex, ~r/^(967)()(.+)/
-  field :country, "Yemen"
-  field :a2, "YE"
-  field :a3, "YEM"
-  match :regex
+
+  def regex, do: ~r/^(967)()(.+)/
+  def country, do: "Yemen"
+  def a2, do: "YE"
+  def a3, do: "YEM"
+
+  matcher :regex, ["967"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.BE do
   use Helper.Country
-  field :regex, ~r/^(32)()(.{9})/
-  field :country, "Belgium"
-  field :a2, "BE"
-  field :a3, "BEL"
-  match :regex
+
+  def regex, do: ~r/^(32)()(.{9})/
+  def country, do: "Belgium"
+  def a2, do: "BE"
+  def a3, do: "BEL"
+
+  matcher :regex, ["32"]
 end

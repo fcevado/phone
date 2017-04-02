@@ -1,8 +1,10 @@
 defmodule Phone.DZ do
-   use Helper.Country
-  field :regex, ~r/^(213)()(.{8})/
-  field :country, "Algeria"
-  field :a2, "DZ"
-  field :a3, "DZA"
-  match :regex
+  use Helper.Country
+
+  def regex, do: ~r/^(213)()(.{8})/
+  def country, do: "Algeria"
+  def a2, do: "DZ"
+  def a3, do: "DZA"
+
+  matcher :regex, ["213"]
 end

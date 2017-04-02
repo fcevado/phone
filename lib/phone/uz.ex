@@ -1,8 +1,10 @@
 defmodule Phone.UZ do
   use Helper.Country
-  field :regex, ~r/^(998)()(.{9})/
-  field :country, "Uzbekistan"
-  field :a2, "UZ"
-  field :a3, "UZB"
-  match :regex
+
+  def regex, do: ~r/^(998)()(.{9})/
+  def country, do: "Uzbekistan"
+  def a2, do: "UZ"
+  def a3, do: "UZB"
+
+  matcher :regex, ["998"]
 end

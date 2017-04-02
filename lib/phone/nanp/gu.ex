@@ -1,8 +1,10 @@
 defmodule Phone.NANP.GU do
   use Helper.Country
-  field :regex, ~r/^(1)(671)([2-9].{6})$/
-  field :country, "Guam"
-  field :a2, "GU"
-  field :a3, "GUM"
-  match :regex
+
+  def regex, do: ~r/^(1)(671)([2-9].{6})$/
+  def country, do: "Guam"
+  def a2, do: "GU"
+  def a3, do: "GUM"
+
+  matcher :regex, ["1671"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.NANP.PR do
   use Helper.Country
-  field :regex, ~r/^(1)(787|939)([2-9].{6})$/
-  field :country, "Puerto Rico"
-  field :a2, "PR"
-  field :a3, "PRI"
-  match :regex
+
+  def regex, do: ~r/^(1)(787|939)([2-9].{6})$/
+  def country, do: "Puerto Rico"
+  def a2, do: "PR"
+  def a3, do: "PRI"
+
+  matcher :regex, ["1787", "1939"]
 end

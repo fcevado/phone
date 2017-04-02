@@ -1,8 +1,10 @@
 defmodule Phone.KE do
   use Helper.Country
-  field :regex, ~r/^(254)()(.+)/
-  field :country, "Kenya"
-  field :a2, "KE"
-  field :a3, "KEN"
-  match :regex
+
+  def regex, do: ~r/^(254)()(.+)/
+  def country, do: "Kenya"
+  def a2, do: "KE"
+  def a3, do: "KEN"
+
+  matcher :regex, ["254"]
 end

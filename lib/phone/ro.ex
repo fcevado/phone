@@ -1,8 +1,10 @@
 defmodule Phone.RO do
   use Helper.Country
-  field :regex, ~r/^(40)()(.{9})/
-  field :country, "Romania"
-  field :a2, "RO"
-  field :a3, "ROU"
-  match :regex
+
+  def regex, do: ~r/^(40)()(.{9})/
+  def country, do: "Romania"
+  def a2, do: "RO"
+  def a3, do: "ROU"
+
+  matcher :regex, ["40"]
 end

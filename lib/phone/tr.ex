@@ -1,8 +1,10 @@
 defmodule Phone.TR do
   use Helper.Country
-  field :regex, ~r/^(90)(.{3})(.{7})/
-  field :country, "Turkey"
-  field :a2, "TR"
-  field :a3, "TUR"
-  match :regex
+
+  def regex, do: ~r/^(90)(.{3})(.{7})/
+  def country, do: "Turkey"
+  def a2, do: "TR"
+  def a3, do: "TUR"
+
+  matcher :regex, ["90"]
 end

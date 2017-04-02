@@ -1,8 +1,10 @@
 defmodule Phone.CI do
   use Helper.Country
-  field :regex, ~r/^(225)(..)(.{6})/
-  field :country, "Ivory Coast"
-  field :a2, "CI"
-  field :a3, "CIV"
-  match :regex
+
+  def regex, do: ~r/^(225)(..)(.{6})/
+  def country, do: "Ivory Coast"
+  def a2, do: "CI"
+  def a3, do: "CIV"
+
+  matcher :regex, ["225"]
 end

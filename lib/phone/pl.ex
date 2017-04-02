@@ -1,8 +1,10 @@
 defmodule Phone.PL do
   use Helper.Country
-  field :regex, ~r/^(48)()(.+)/
-  field :country, "Poland"
-  field :a2, "PL"
-  field :a3, "POL"
-  match :regex
+
+  def regex, do: ~r/^(48)()(.+)/
+  def country, do: "Poland"
+  def a2, do: "PL"
+  def a3, do: "POL"
+
+  matcher :regex, ["48"]
 end

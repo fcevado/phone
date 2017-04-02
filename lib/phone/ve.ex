@@ -1,8 +1,10 @@
 defmodule Phone.VE do
   use Helper.Country
-  field :regex, ~r/^(58)(.{3})(.{7})/
-  field :country, "Venezuela"
-  field :a2, "VE"
-  field :a3, "VEN"
-  match :regex
+
+  def regex, do: ~r/^(58)(.{3})(.{7})/
+  def country, do: "Venezuela"
+  def a2, do: "VE"
+  def a3, do: "VEN"
+
+  matcher :regex, ["58"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.EE do
   use Helper.Country
-  field :regex, ~r/^(372)()(.{7,8})/
-  field :country, "Estonia"
-  field :a2, "EE"
-  field :a3, "EST"
-  match :regex
+
+  def regex, do: ~r/^(372)()(.{7,8})/
+  def country, do: "Estonia"
+  def a2, do: "EE"
+  def a3, do: "EST"
+
+  matcher :regex, ["372"]
 end

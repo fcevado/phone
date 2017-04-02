@@ -1,8 +1,10 @@
 defmodule Phone.PK do
   use Helper.Country
-  field :regex, ~r/^(92)()(.+'')/
-  field :country, "Pakistan"
-  field :a2, "PK"
-  field :a3, "PAK"
-  match :regex
+
+  def regex, do: ~r/^(92)()(.+'')/
+  def country, do: "Pakistan"
+  def a2, do: "PK"
+  def a3, do: "PAK"
+
+  matcher :regex, ["92"]
 end

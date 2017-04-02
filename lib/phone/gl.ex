@@ -1,8 +1,10 @@
 defmodule Phone.GL do
   use Helper.Country
-  field :regex, ~r/^(299)(..)(.{4})/
-  field :country, "Greenland"
-  field :a2, "GL"
-  field :a3, "GRL"
-  match :regex
+
+  def regex, do: ~r/^(299)(..)(.{4})/
+  def country, do: "Greenland"
+  def a2, do: "GL"
+  def a3, do: "GRL"
+
+  matcher :regex, ["299"]
 end

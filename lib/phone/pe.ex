@@ -1,8 +1,10 @@
 defmodule Phone.PE do
   use Helper.Country
-  field :regex, ~r/^(51)()(.{8,9})/
-  field :country, "Peru"
-  field :a2, "PE"
-  field :a3, "PER"
-  match :regex
+
+  def regex, do: ~r/^(51)()(.{8,9})/
+  def country, do: "Peru"
+  def a2, do: "PE"
+  def a3, do: "PER"
+
+  matcher :regex, ["51"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.NANP.KN do
   use Helper.Country
-  field :regex, ~r/^(1)(869)([2-9].{6})$/
-  field :country, "Saint Kitts and Nevis"
-  field :a2, "KN"
-  field :a3, "KNA"
-  match :regex
+
+  def regex, do: ~r/^(1)(869)([2-9].{6})$/
+  def country, do: "Saint Kitts and Nevis"
+  def a2, do: "KN"
+  def a3, do: "KNA"
+
+  matcher :regex, ["1869"]
 end

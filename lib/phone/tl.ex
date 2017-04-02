@@ -1,8 +1,10 @@
 defmodule Phone.TL do
   use Helper.Country
-  field :regex, ~r/^(670)()(.{8})/
-  field :country, "East Timor"
-  field :a2, "TL"
-  field :a3, "TLS"
-  match :regex
+
+  def regex, do: ~r/^(670)()(.{8})/
+  def country, do: "East Timor"
+  def a2, do: "TL"
+  def a3, do: "TLS"
+
+  matcher :regex, ["670"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.LB do
   use Helper.Country
-  field :regex, ~r/^(961)(.{1,2})(.{6})/
-  field :country, "Lebanon"
-  field :a2, "LB"
-  field :a3, "LBN"
-  match :regex
+
+  def regex, do: ~r/^(961)(.{1,2})(.{6})/
+  def country, do: "Lebanon"
+  def a2, do: "LB"
+  def a3, do: "LBN"
+
+  matcher :regex, ["961"]
 end

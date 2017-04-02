@@ -1,8 +1,10 @@
 defmodule Phone.CN do
   use Helper.Country
-  field :regex, ~r/^(86)()(.+)/
-  field :country, "China"
-  field :a2, "CN"
-  field :a3, "CHN"
-  match :regex
+
+  def regex, do: ~r/^(86)()(.+)/
+  def country, do: "China"
+  def a2, do: "CN"
+  def a3, do: "CHN"
+
+  matcher :regex, ["86"]
 end

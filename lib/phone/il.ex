@@ -1,8 +1,10 @@
 defmodule Phone.IL do
   use Helper.Country
-  field :regex, ~r/^(972)()(.{8,9})/
-  field :country, "Israel"
-  field :a2, "IL"
-  field :a3, "ISR"
-  match :regex
+
+  def regex, do: ~r/^(972)()(.{8,9})/
+  def country, do: "Israel"
+  def a2, do: "IL"
+  def a3, do: "ISR"
+
+  matcher :regex, ["972"]
 end

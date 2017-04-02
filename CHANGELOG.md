@@ -1,5 +1,11 @@
 #Changelog
 
+##v0.4.0:
+  * Updates `Helper.Countries` and `Helper.Area` behavior
+  * Several changes to improve performance.
+  * Include `valid?/1`.
+  * Remove warning from v0.3
+
 ##v0.3.10:
   * Correct number validation for Norway.
   * Correct Ireland area codes validation.

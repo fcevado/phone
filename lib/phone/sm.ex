@@ -1,8 +1,10 @@
 defmodule Phone.SM do
   use Helper.Country
-  field :regex, ~r/^(378)(0549)(.{6})/
-  field :country, "San Marino"
-  field :a2, "SM"
-  field :a3, "SMR"
-  match :regex
+
+  def regex, do: ~r/^(378)(0549)(.{6})/
+  def country, do: "San Marino"
+  def a2, do: "SM"
+  def a3, do: "SMR"
+
+  matcher :regex, ["3780549"]
 end

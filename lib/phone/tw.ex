@@ -1,8 +1,10 @@
 defmodule Phone.TW do
   use Helper.Country
-  field :regex, ~r/^(886)()(.+)/
-  field :country, "Taiwan"
-  field :a2, "TW"
-  field :a3, "TWN"
-  match :regex
+
+  def regex, do: ~r/^(886)()(.+)/
+  def country, do: "Taiwan"
+  def a2, do: "TW"
+  def a3, do: "TWN"
+
+  matcher :regex, ["886"]
 end

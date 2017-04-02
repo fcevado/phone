@@ -1,8 +1,10 @@
 defmodule Phone.PG do
   use Helper.Country
-  field :regex, ~r/^(675)()(.+)/
-  field :country, "Papua New Guinea"
-  field :a2, "PG"
-  field :a3, "PNG"
-  match :regex
+
+  def regex, do: ~r/^(675)()(.+)/
+  def country, do: "Papua New Guinea"
+  def a2, do: "PG"
+  def a3, do: "PNG"
+
+  matcher :regex, ["675"]
 end

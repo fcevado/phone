@@ -1,8 +1,10 @@
 defmodule Phone.NANP.CA.NL do
   use Helper.Area
-  field :regex, ~r/^(1)(709)([2-9].{6})$/
-  field :area_name, "Newfoundland and Labrador"
-  field :area_type, "province"
-  field :area_abbreviation, "NL"
-  builder()
+
+  def regex, do: ~r/^(1)(709)([2-9].{6})$/
+  def area_name, do: "Newfoundland and Labrador"
+  def area_type, do: "province"
+  def area_abbreviation, do: "NL"
+
+  matcher ["1709"]
 end

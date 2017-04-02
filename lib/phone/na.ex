@@ -1,8 +1,10 @@
 defmodule Phone.NA do
   use Helper.Country
-  field :regex, ~r/^(264)()(.+)/
-  field :country, "Namibia"
-  field :a2, "NA"
-  field :a3, "NAM"
-  match :regex
+
+  def regex, do: ~r/^(264)()(.+)/
+  def country, do: "Namibia"
+  def a2, do: "NA"
+  def a3, do: "NAM"
+
+  matcher :regex, ["264"]
 end

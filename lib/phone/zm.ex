@@ -1,8 +1,10 @@
 defmodule Phone.ZM do
   use Helper.Country
-  field :regex, ~r/^(260)()(.{7})/
-  field :country, "Zambia"
-  field :a2, "ZM"
-  field :a3, "ZMB"
-  match :regex
+
+  def regex, do: ~r/^(260)()(.{7})/
+  def country, do: "Zambia"
+  def a2, do: "ZM"
+  def a3, do: "ZMB"
+
+  matcher :regex, ["260"]
 end

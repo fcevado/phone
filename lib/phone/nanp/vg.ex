@@ -1,8 +1,10 @@
 defmodule Phone.NANP.VG do
   use Helper.Country
-  field :regex, ~r/^(1)(284)([2-9].{6})$/
-  field :country, "British Virgin Islands"
-  field :a2, "VG"
-  field :a3, "VGB"
-  match :regex
+
+  def regex, do: ~r/^(1)(284)([2-9].{6})$/
+  def country, do: "British Virgin Islands"
+  def a2, do: "VG"
+  def a3, do: "VGB"
+
+  matcher :regex, ["1284"]
 end

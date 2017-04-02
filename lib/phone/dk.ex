@@ -1,8 +1,10 @@
 defmodule Phone.DK do
   use Helper.Country
-  field :regex, ~r/^(45)()(.{8})/
-  field :country, "Denmark"
-  field :a2, "DK"
-  field :a3, "DNK"
-  match :regex
+
+  def regex, do: ~r/^(45)()(.{8})/
+  def country, do: "Denmark"
+  def a2, do: "DK"
+  def a3, do: "DNK"
+
+  matcher :regex, ["45"]
 end

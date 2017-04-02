@@ -1,8 +1,10 @@
 defmodule Phone.UA do
   use Helper.Country
-  field :regex, ~r/^(380)()(.{9})/
-  field :country, "Ukraine"
-  field :a2, "UA"
-  field :a3, "UKR"
-  match :regex
+
+  def regex, do: ~r/^(380)()(.{9})/
+  def country, do: "Ukraine"
+  def a2, do: "UA"
+  def a3, do: "UKR"
+
+  matcher :regex, ["380"]
 end

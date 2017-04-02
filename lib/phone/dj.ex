@@ -1,8 +1,10 @@
 defmodule Phone.DJ do
   use Helper.Country
-  field :regex, ~r/^(253)()(.{8})/
-  field :country, "Djibouti"
-  field :a2, "DJ"
-  field :a3, "DJI"
-  match :regex
+
+  def regex, do: ~r/^(253)()(.{8})/
+  def country, do: "Djibouti"
+  def a2, do: "DJ"
+  def a3, do: "DJI"
+
+  matcher :regex, ["253"]
 end

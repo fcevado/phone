@@ -1,8 +1,10 @@
 defmodule Phone.NANP.US.LA do
   use Helper.Area
-  field :regex, ~r/^(1)(225|318|337|504|985)([2-9].{6})$/
-  field :area_name, "Louisiana"
-  field :area_type, "state"
-  field :area_abbreviation, "LA"
-  builder()
+
+  def regex, do: ~r/^(1)(225|318|337|504|985)([2-9].{6})$/
+  def area_name, do: "Louisiana"
+  def area_type, do: "state"
+  def area_abbreviation, do: "LA"
+
+  matcher ["1225", "1318", "1337", "1504", "1985"]
 end

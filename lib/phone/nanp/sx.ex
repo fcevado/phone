@@ -1,8 +1,10 @@
 defmodule Phone.NANP.SX do
   use Helper.Country
-  field :regex, ~r/^(1)(721)([2-9].{6})$/
-  field :country, "Sint Maarten"
-  field :a2, "SX"
-  field :a3, "SXM"
-  match :regex
+
+  def regex, do: ~r/^(1)(721)([2-9].{6})$/
+  def country, do: "Sint Maarten"
+  def a2, do: "SX"
+  def a3, do: "SXM"
+
+  matcher :regex, ["1721"]
 end

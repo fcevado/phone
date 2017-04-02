@@ -1,8 +1,10 @@
 defmodule Phone.IN do
   use Helper.Country
-  field :regex, ~r/^(91)()(.+)/
-  field :country, "India"
-  field :a2, "IN"
-  field :a3, "IND"
-  match :regex
+
+  def regex, do: ~r/^(91)()(.+)/
+  def country, do: "India"
+  def a2, do: "IN"
+  def a3, do: "IND"
+
+  matcher :regex, ["91"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.MQ do
   use Helper.Country
-  field :regex, ~r/^(596)([5|6]96)(.{6})/
-  field :country, "Martinique"
-  field :a2, "MQ"
-  field :a3, "MTQ"
-  match :regex
+
+  def regex, do: ~r/^(596)([5|6]96)(.{6})/
+  def country, do: "Martinique"
+  def a2, do: "MQ"
+  def a3, do: "MTQ"
+
+  matcher :regex, ["596596", "596696"]
 end

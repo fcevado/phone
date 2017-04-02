@@ -1,8 +1,10 @@
 defmodule Phone.PS do
   use Helper.Country
-  field :regex, ~r/^(970)()(.{8,9})/
-  field :country, "Palestine"
-  field :a2, "DJ"
-  field :a3, "DJI"
-  match :regex
+
+  def regex, do: ~r/^(970)()(.{8,9})/
+  def country, do: "Palestine"
+  def a2, do: "DJ"
+  def a3, do: "DJI"
+
+  matcher :regex, ["970"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.NR do
   use Helper.Country
-  field :regex, ~r/^(674)()(.{7})/
-  field :country, "Nauru"
-  field :a2, "NR"
-  field :a3, "NRU"
-  match :regex
+
+  def regex, do: ~r/^(674)()(.{7})/
+  def country, do: "Nauru"
+  def a2, do: "NR"
+  def a3, do: "NRU"
+
+  matcher :regex, ["674"]
 end

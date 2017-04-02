@@ -1,8 +1,10 @@
 defmodule Phone.MK do
   use Helper.Country
-  field :regex, ~r/^(389)()(.{8})/
-  field :country, "Macedonia"
-  field :a2, "MK"
-  field :a3, "MKD"
-  match :regex
+
+  def regex, do: ~r/^(389)()(.{8})/
+  def country, do: "Macedonia"
+  def a2, do: "MK"
+  def a3, do: "MKD"
+
+  matcher :regex, ["389"]
 end

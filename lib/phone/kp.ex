@@ -1,8 +1,10 @@
 defmodule Phone.KP do
   use Helper.Country
-  field :regex, ~r/^(850)()(.+)/
-  field :country, "North Korea"
-  field :a2, "KP"
-  field :a3, "PRK"
-  match :regex
+
+  def regex, do: ~r/^(850)()(.+)/
+  def country, do: "North Korea"
+  def a2, do: "KP"
+  def a3, do: "PRK"
+
+  matcher :regex, ["850"]
 end

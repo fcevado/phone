@@ -1,8 +1,10 @@
 defmodule Phone.SG do
   use Helper.Country
-  field :regex, ~r/^(65)()(.{8})/
-  field :country, "Singapore"
-  field :a2, "SG"
-  field :a3, "SGP"
-  match :regex
+
+  def regex, do: ~r/^(65)()(.{8})/
+  def country, do: "Singapore"
+  def a2, do: "SG"
+  def a3, do: "SGP"
+
+  matcher :regex, ["65"]
 end

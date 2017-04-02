@@ -1,8 +1,10 @@
 defmodule Phone.MC do
   use Helper.Country
-  field :regex, ~r/^(377)()(.{9})/
-  field :country, "Monaco"
-  field :a2, "MC"
-  field :a3, "MCO"
-  match :regex
+
+  def regex, do: ~r/^(377)()(.{9})/
+  def country, do: "Monaco"
+  def a2, do: "MC"
+  def a3, do: "MCO"
+
+  matcher :regex, ["377"]
 end

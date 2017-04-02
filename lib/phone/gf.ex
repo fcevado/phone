@@ -1,8 +1,10 @@
 defmodule Phone.GF do
   use Helper.Country
-  field :regex, ~r/^(594)([5|6]94)(.{6})/
-  field :country, "French Guiana"
-  field :a2, "GF"
-  field :a3, "GUF"
-  match :regex
+
+  def regex, do: ~r/^(594)([5|6]94)(.{6})/
+  def country, do: "French Guiana"
+  def a2, do: "GF"
+  def a3, do: "GUF"
+
+  matcher :regex, ["594594", "594694"]
 end

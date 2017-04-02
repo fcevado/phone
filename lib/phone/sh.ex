@@ -1,8 +1,10 @@
 defmodule Phone.SH do
   use Helper.Country
-  field :regex, ~r/^(290)()(.{5})/
-  field :country, "Saint Helena and Tristan da Cunha"
-  field :a2, "SH"
-  field :a3, "SHN"
-  match :regex
+
+  def regex, do: ~r/^(290)()(.{5})/
+  def country, do: "Saint Helena and Tristan da Cunha"
+  def a2, do: "SH"
+  def a3, do: "SHN"
+
+  matcher :regex, ["290"]
 end

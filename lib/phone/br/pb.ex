@@ -1,8 +1,10 @@
 defmodule Phone.BR.PB do
   use Helper.Area
-  field :regex, ~r/^(55)(83)([2-5|89].{7}|9[89].{7})$/
-  field :area_name, "Paraíba"
-  field :area_type, "state"
-  field :area_abbreviation, "PB"
-  builder()
+
+  def regex, do: ~r/^(55)(83)([2-5|89].{7}|9[89].{7})$/
+  def area_name, do: "Paraíba"
+  def area_type, do: "state"
+  def area_abbreviation, do: "PB"
+
+  matcher ["5583"]
 end

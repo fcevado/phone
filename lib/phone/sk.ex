@@ -1,8 +1,10 @@
 defmodule Phone.SK do
   use Helper.Country
-  field :regex, ~r/^(421)()(.+)/
-  field :country, "Slovakia"
-  field :a2, "SK"
-  field :a3, "SVK"
-  match :regex
+
+  def regex, do: ~r/^(421)()(.+)/
+  def country, do: "Slovakia"
+  def a2, do: "SK"
+  def a3, do: "SVK"
+
+  matcher :regex, ["421"]
 end

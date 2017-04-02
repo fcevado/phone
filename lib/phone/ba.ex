@@ -1,8 +1,10 @@
 defmodule Phone.BA do
   use Helper.Country
-  field :regex, ~r/^(387)(..)(.{5,6})/
-  field :country, "Bosnia and Herzegovina"
-  field :a2, "BA"
-  field :a3, "BIH"
-  match :regex
+
+  def regex, do: ~r/^(387)(..)(.{5,6})/
+  def country, do: "Bosnia and Herzegovina"
+  def a2, do: "BA"
+  def a3, do: "BIH"
+
+  matcher :regex, ["387"]
 end
