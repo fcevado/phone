@@ -12,12 +12,6 @@ defmodule Phone do
 
   import Helper.Parser
 
-  @after_compile __MODULE__
-  def __after_compile__(_env, _bytecode) do
-    IO.puts ":phone, v0.3.0"
-    IO.puts "WARN: parse/2 function has changed. Please take a look at the documentation."
-  end
-
   @doc """
   Parses a string or integer and returns a map with information about that number.
 
