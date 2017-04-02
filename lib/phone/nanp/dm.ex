@@ -1,8 +1,10 @@
 defmodule Phone.NANP.DM do
   use Helper.Country
-  field :regex, ~r/^(1)(767)([2-9].{6})$/
-  field :country, "Dominica"
-  field :a2, "DM"
-  field :a3, "DMA"
-  match :regex
+
+  def regex, do: ~r/^(1)(767)([2-9].{6})$/
+  def country, do: "Dominica"
+  def a2, do: "DM"
+  def a3, do: "DMA"
+
+  matcher :regex, ["1767"]
 end
