@@ -1,8 +1,10 @@
 defmodule Phone.NANP.US.MS do
   use Helper.Area
-  field :regex, ~r/^(1)(228|601|662|769)([2-9].{6})$/
-  field :area_name, "Mississippi"
-  field :area_type, "state"
-  field :area_abbreviation, "MS"
-  builder()
+
+  def regex, do: ~r/^(1)(228|601|662|769)([2-9].{6})$/
+  def area_name, do: "Mississippi"
+  def area_type, do: "state"
+  def area_abbreviation, do: "MS"
+
+  matcher ["1228", "1601", "1662", "1769"]
 end
