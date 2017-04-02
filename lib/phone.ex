@@ -38,13 +38,9 @@ defmodule Phone do
   """
   @spec parse(String.t) :: {:ok, Map.t}
   def parse(number) when is_bitstring(number) do
-    number = clear(number)
-    number = try do
-      number |> String.to_integer |> Integer.to_string
-    rescue
-      _ -> ""
-    end
-    Phone.Countries.build(number)
+    number
+    |> prepare_number
+    |> Phone.Countries.build
   end
 
   @spec parse(pos_integer) :: {:ok, Map.t}
@@ -55,6 +51,17 @@ defmodule Phone do
 
   def parse(_) do
     {:error, "Not a valid parameter, only string or integer."}
+  end
+
+  @doc false
+  defp prepare_number(number) do
+    number = clear(number)
+
+    try do
+      number |> String.to_integer |> Integer.to_string
+    rescue
+      _ -> ""
+    end
   end
 
   @doc false
@@ -118,4 +125,36 @@ defmodule Phone do
   @spec parse!(pos_integer, Atom.t) :: Map.t
   country_parser()
 
+
+  @doc """
+  Returns `true` if the number can be parsed, otherwhise returns `false`.
+
+  ```
+  iex> Phone.valid?("555132345678")
+  true
+
+  iex> Phone.valid?("+55(51)3234-5678")
+  true
+
+  iex> Phone.valid?("55 51 3234-5678")
+  true
+
+  iex> Phone.valid?(555132345678)
+  true
+
+  ```
+  """
+  @spec parse(String.t) :: boolean
+  def valid?(number) when is_bitstring(number) do
+    number
+    |> prepare_number
+    |> Phone.Countries.match?
+  end
+
+  @spec parse(pos_integer) :: boolean
+  def valid?(number) when is_integer(number) do
+    number
+    |> to_string
+    |> valid?
+  end
 end
