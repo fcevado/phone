@@ -1,8 +1,10 @@
 defmodule Phone.AW do
   use Helper.Country
-  field :regex, ~r/^(297)()(.{7})/
-  field :country, "Aruba"
-  field :a2, "AW"
-  field :a3, "ABW"
-  match :regex
+
+  def regex, do: ~r/^(297)()(.{7})/
+  def country, do: "Aruba"
+  def a2, do: "AW"
+  def a3, do: "ABW"
+
+  matcher :regex, ["297"]
 end

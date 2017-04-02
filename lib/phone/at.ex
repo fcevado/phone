@@ -1,8 +1,10 @@
 defmodule Phone.AT do
   use Helper.Country
-  field :regex, ~r/^(43)()(.+)/
-  field :country, "Austria"
-  field :a2, "AT"
-  field :a3, "AUT"
-  match :regex
+
+  def regex, do: ~r/^(43)()(.+)/
+  def country, do: "Austria"
+  def a2, do: "AT"
+  def a3, do: "AUT"
+
+  matcher :regex, ["43"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.CR do
   use Helper.Country
-  field :regex, ~r/^(506)()(.{8})/
-  field :country, "Costa Rica"
-  field :a2, "CR"
-  field :a3, "CRI"
-  match :regex
+
+  def regex, do: ~r/^(506)()(.{8})/
+  def country, do: "Costa Rica"
+  def a2, do: "CR"
+  def a3, do: "CRI"
+
+  matcher :regex, ["506"]
 end

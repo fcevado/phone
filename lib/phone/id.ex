@@ -1,8 +1,10 @@
 defmodule Phone.ID do
   use Helper.Country
-  field :regex, ~r/^(62)()(.+)/
-  field :country, "Indonesia"
-  field :a2, "ID"
-  field :a3, "IDN"
-  match :regex
+
+  def regex, do: ~r/^(62)()(.+)/
+  def country, do: "Indonesia"
+  def a2, do: "ID"
+  def a3, do: "IDN"
+
+  matcher :regex, ["62"]
 end

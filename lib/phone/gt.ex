@@ -1,8 +1,10 @@
 defmodule Phone.GT do
   use Helper.Country
-  field :regex, ~r/^(502)()(.{8})/
-  field :country, "Guatemala"
-  field :a2, "GT"
-  field :a3, "GTM"
-  match :regex
+
+  def regex, do: ~r/^(502)()(.{8})/
+  def country, do: "Guatemala"
+  def a2, do: "GT"
+  def a3, do: "GTM"
+
+  matcher :regex, ["502"]
 end

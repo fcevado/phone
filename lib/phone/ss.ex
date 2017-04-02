@@ -1,8 +1,10 @@
 defmodule Phone.SS do
   use Helper.Country
-  field :regex, ~r/^(211)()(.+)/
-  field :country, "South Sudan"
-  field :a2, "SS"
-  field :a3, "SSD"
-  match :regex
+
+  def regex, do: ~r/^(211)()(.+)/
+  def country, do: "South Sudan"
+  def a2, do: "SS"
+  def a3, do: "SSD"
+
+  matcher :regex, ["211"]
 end

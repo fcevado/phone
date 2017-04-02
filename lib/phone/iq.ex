@@ -1,8 +1,10 @@
 defmodule Phone.IQ do
   use Helper.Country
-  field :regex, ~r/^(964)()(.+)/
-  field :country, "Iraq"
-  field :a2, "IQ"
-  field :a3, "IRQ"
-  match :regex
+
+  def regex, do: ~r/^(964)()(.+)/
+  def country, do: "Iraq"
+  def a2, do: "IQ"
+  def a3, do: "IRQ"
+
+  matcher :regex, ["964"]
 end

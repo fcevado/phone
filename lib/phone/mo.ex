@@ -1,8 +1,10 @@
 defmodule Phone.MO do
   use Helper.Country
-  field :regex, ~r/^(853)()(.{8})/
-  field :country, "Macao"
-  field :a2, "MO"
-  field :a3, "MAC"
-  match :regex
+
+  def regex, do: ~r/^(853)()(.{8})/
+  def country, do: "Macao"
+  def a2, do: "MO"
+  def a3, do: "MAC"
+
+  matcher :regex, ["853"]
 end

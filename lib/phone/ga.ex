@@ -1,8 +1,10 @@
 defmodule Phone.GA do
   use Helper.Country
-  field :regex, ~r/^(241)()(.{7})/
-  field :country, "Gabon"
-  field :a2, "GA"
-  field :a3, "GAB"
-  match :regex
+
+  def regex, do: ~r/^(241)()(.{7})/
+  def country, do: "Gabon"
+  def a2, do: "GA"
+  def a3, do: "GAB"
+
+  matcher :regex, ["241"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.ET do
   use Helper.Country
-  field :regex, ~r/^(251)(..)(.{7})/
-  field :country, "Ethiopia"
-  field :a2, "ET"
-  field :a3, "ETH"
-  match :regex
+
+  def regex, do: ~r/^(251)(..)(.{7})/
+  def country, do: "Ethiopia"
+  def a2, do: "ET"
+  def a3, do: "ETH"
+
+  matcher :regex, ["251"]
 end

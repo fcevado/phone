@@ -1,8 +1,10 @@
 defmodule Phone.UY do
   use Helper.Country
-  field :regex, ~r/^(598)()(.+)/
-  field :country, "Uruguay"
-  field :a2, "UY"
-  field :a3, "URY"
-  match :regex
+
+  def regex, do: ~r/^(598)()(.+)/
+  def country, do: "Uruguay"
+  def a2, do: "UY"
+  def a3, do: "URY"
+
+  matcher :regex, ["598"]
 end

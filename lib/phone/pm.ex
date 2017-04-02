@@ -1,8 +1,10 @@
 defmodule Phone.PM do
   use Helper.Country
-  field :regex, ~r/^(508)()(.{6})/
-  field :country, "Saint Pierre and Miquelon"
-  field :a2, "PM"
-  field :a3, "SPM"
-  match :regex
+
+  def regex, do: ~r/^(508)()(.{6})/
+  def country, do: "Saint Pierre and Miquelon"
+  def a2, do: "PM"
+  def a3, do: "SPM"
+
+  matcher :regex, ["508"]
 end

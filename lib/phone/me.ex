@@ -1,8 +1,10 @@
 defmodule Phone.ME do
   use Helper.Country
-  field :regex, ~r/^(382)(..)(.{6})/
-  field :country, "Montenegro"
-  field :a2, "ME"
-  field :a3, "MNE"
-  match :regex
+
+  def regex, do: ~r/^(382)(..)(.{6})/
+  def country, do: "Montenegro"
+  def a2, do: "ME"
+  def a3, do: "MNE"
+
+  matcher :regex, ["382"]
 end

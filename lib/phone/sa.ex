@@ -1,8 +1,10 @@
 defmodule Phone.SA do
   use Helper.Country
-  field :regex, ~r/^(966)()(.+)/
-  field :country, "Saudi Arabia"
-  field :a2, "SA"
-  field :a3, "SAU"
-  match :regex
+
+  def regex, do: ~r/^(966)()(.+)/
+  def country, do: "Saudi Arabia"
+  def a2, do: "SA"
+  def a3, do: "SAU"
+
+  matcher :regex, ["966"]
 end

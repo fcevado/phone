@@ -1,8 +1,10 @@
 defmodule Phone.LK do
   use Helper.Country
-  field :regex, ~r/^(94)()(.{9})/
-  field :country, "Sri Lanka"
-  field :a2, "LK"
-  field :a3, "LKA"
-  match :regex
+
+  def regex, do: ~r/^(94)()(.{9})/
+  def country, do: "Sri Lanka"
+  def a2, do: "LK"
+  def a3, do: "LKA"
+
+  matcher :regex, ["94"]
 end

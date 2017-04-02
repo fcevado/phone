@@ -1,8 +1,10 @@
 defmodule Phone.BD do
   use Helper.Country
-  field :regex, ~r/^(880)()(.{10})/
-  field :country, "Bangladesh"
-  field :a2, "BD"
-  field :a3, "BGD"
-  match :regex
+
+  def regex, do: ~r/^(880)()(.{10})/
+  def country, do: "Bangladesh"
+  def a2, do: "BD"
+  def a3, do: "BGD"
+
+  matcher :regex, ["880"]
 end

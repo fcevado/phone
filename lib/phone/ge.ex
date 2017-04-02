@@ -1,8 +1,10 @@
 defmodule Phone.GE do
   use Helper.Country
-  field :regex, ~r/^(995)(.{3})(.{6})/
-  field :country, "Georgia"
-  field :a2, "GE"
-  field :a3, "GEO"
-  match :regex
+
+  def regex, do: ~r/^(995)(.{3})(.{6})/
+  def country, do: "Georgia"
+  def a2, do: "GE"
+  def a3, do: "GEO"
+
+  matcher :regex, ["995"]
 end

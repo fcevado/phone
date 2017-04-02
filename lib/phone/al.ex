@@ -1,8 +1,10 @@
 defmodule Phone.AL do
   use Helper.Country
-  field :regex, ~r/^(355)()(.{7})/
-  field :country, "Albania"
-  field :a2, "AL"
-  field :a3, "ALB"
-  match :regex
+
+  def regex, do: ~r/^(355)()(.{7})/
+  def country, do: "Albania"
+  def a2, do: "AL"
+  def a3, do: "ALB"
+
+  matcher :regex, ["355"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.EG do
   use Helper.Country
-  field :regex, ~r/^(20)()(.+)/
-  field :country, "Egypt"
-  field :a2, "EG"
-  field :a3, "EGY"
-  match :regex
+
+  def regex, do: ~r/^(20)()(.+)/
+  def country, do: "Egypt"
+  def a2, do: "EG"
+  def a3, do: "EGY"
+
+  matcher :regex, ["20"]
 end

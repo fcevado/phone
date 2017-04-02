@@ -1,8 +1,10 @@
 defmodule Phone.AE do
   use Helper.Country
-  field :regex, ~r/^(971)(.)(.{7})/
-  field :country, "United Arab Emirates"
-  field :a2, "AE"
-  field :a3, "ARE"
-  match :regex
+
+  def regex, do: ~r/^(971)(.)(.{7})/
+  def country, do: "United Arab Emirates"
+  def a2, do: "AE"
+  def a3, do: "ARE"
+
+  matcher :regex, ["971"]
 end

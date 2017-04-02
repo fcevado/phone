@@ -1,8 +1,10 @@
 defmodule Phone.KI do
   use Helper.Country
-  field :regex, ~r/^(686)()(.{5})/
-  field :country, "Kiribati"
-  field :a2, "KI"
-  field :a3, "KIR"
-  match :regex
+
+  def regex, do: ~r/^(686)()(.{5})/
+  def country, do: "Kiribati"
+  def a2, do: "KI"
+  def a3, do: "KIR"
+
+  matcher :regex, ["686"]
 end

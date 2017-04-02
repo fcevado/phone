@@ -1,8 +1,10 @@
 defmodule Phone.HK do
   use Helper.Country
-  field :regex, ~r/^(852)()(.{8})/
-  field :country, "Hong Kong"
-  field :a2, "HK"
-  field :a3, "HKG"
-  match :regex
+
+  def regex, do: ~r/^(852)()(.{8})/
+  def country, do: "Hong Kong"
+  def a2, do: "HK"
+  def a3, do: "HKG"
+
+  matcher :regex, ["852"]
 end

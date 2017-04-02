@@ -1,8 +1,10 @@
 defmodule Phone.TM do
   use Helper.Country
-  field :regex, ~r/^(993)()(.+)/
-  field :country, "Turkmenistan"
-  field :a2, "TM"
-  field :a3, "TKM"
-  match :regex
+
+  def regex, do: ~r/^(993)()(.+)/
+  def country, do: "Turkmenistan"
+  def a2, do: "TM"
+  def a3, do: "TKM"
+
+  matcher :regex, ["993"]
 end

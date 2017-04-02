@@ -1,8 +1,10 @@
 defmodule Phone.MX do
   use Helper.Country
-  field :regex, ~r/^(52)()(.{10})/
-  field :country, "Mexico"
-  field :a2, "MX"
-  field :a3, "MEX"
-  match :regex
+
+  def regex, do: ~r/^(52)()(.{10})/
+  def country, do: "Mexico"
+  def a2, do: "MX"
+  def a3, do: "MEX"
+
+  matcher :regex, ["52"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.KM do
   use Helper.Country
-  field :regex, ~r/^(269)(.{3})(.{4})/
-  field :country, "Comoros"
-  field :a2, "KM"
-  field :a3, "COM"
-  match :regex
+
+  def regex, do: ~r/^(269)(.{3})(.{4})/
+  def country, do: "Comoros"
+  def a2, do: "KM"
+  def a3, do: "COM"
+
+  matcher :regex, ["269"]
 end

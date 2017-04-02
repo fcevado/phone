@@ -1,8 +1,10 @@
 defmodule Phone.NG do
   use Helper.Country
-  field :regex, ~r/^(234)()(.+)/
-  field :country, "Nigeria"
-  field :a2, "NG"
-  field :a3, "NGA"
-  match :regex
+
+  def regex, do: ~r/^(234)()(.+)/
+  def country, do: "Nigeria"
+  def a2, do: "NG"
+  def a3, do: "NGA"
+
+  matcher :regex, ["234"]
 end

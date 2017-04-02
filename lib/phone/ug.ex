@@ -1,8 +1,10 @@
 defmodule Phone.UG do
   use Helper.Country
-  field :regex, ~r/^(256)()(.{8})/
-  field :country, "Uganda"
-  field :a2, "UG"
-  field :a3, "UGA"
-  match :regex
+
+  def regex, do: ~r/^(256)()(.{8})/
+  def country, do: "Uganda"
+  def a2, do: "UG"
+  def a3, do: "UGA"
+
+  matcher :regex, ["256"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.BJ do
   use Helper.Country
-  field :regex, ~r/^(229)()(.{8})/
-  field :country, "Benin"
-  field :a2, "BJ"
-  field :a3, "BEN"
-  match :regex
+
+  def regex, do: ~r/^(229)()(.{8})/
+  def country, do: "Benin"
+  def a2, do: "BJ"
+  def a3, do: "BEN"
+
+  matcher :regex, ["229"]
 end

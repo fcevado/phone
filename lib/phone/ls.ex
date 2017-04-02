@@ -1,8 +1,10 @@
 defmodule Phone.LS do
   use Helper.Country
-  field :regex, ~r/^(266)(..)(.{6})/
-  field :country, "Lesotho"
-  field :a2, "LS"
-  field :a3, "LSO"
-  match :regex
+
+  def regex, do: ~r/^(266)(..)(.{6})/
+  def country, do: "Lesotho"
+  def a2, do: "LS"
+  def a3, do: "LSO"
+
+  matcher :regex, ["266"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.OM do
   use Helper.Country
-  field :regex, ~r/^(968)()(.{8})/
-  field :country, "Oman"
-  field :a2, "OM"
-  field :a3, "OMN"
-  match :regex
+
+  def regex, do: ~r/^(968)()(.{8})/
+  def country, do: "Oman"
+  def a2, do: "OM"
+  def a3, do: "OMN"
+
+  matcher :regex, ["968"]
 end

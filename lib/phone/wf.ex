@@ -1,8 +1,10 @@
 defmodule Phone.WF do
   use Helper.Country
-  field :regex, ~r/^(681)()(.{6})/
-  field :country, "Wallis and Futuna"
-  field :a2, "WF"
-  field :a3, "WLF"
-  match :regex
+
+  def regex, do: ~r/^(681)()(.{6})/
+  def country, do: "Wallis and Futuna"
+  def a2, do: "WF"
+  def a3, do: "WLF"
+
+  matcher :regex, ["681"]
 end

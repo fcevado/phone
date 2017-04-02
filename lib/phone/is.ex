@@ -1,8 +1,10 @@
 defmodule Phone.IS do
   use Helper.Country
-  field :regex, ~r/^(354)()(.{7})/
-  field :country, "Iceland"
-  field :a2, "IS"
-  field :a3, "ISL"
-  match :regex
+
+  def regex, do: ~r/^(354)()(.{7})/
+  def country, do: "Iceland"
+  def a2, do: "IS"
+  def a3, do: "ISL"
+
+  matcher :regex, ["354"]
 end

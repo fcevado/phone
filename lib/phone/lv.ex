@@ -1,8 +1,10 @@
 defmodule Phone.LV do
   use Helper.Country
-  field :regex, ~r/^(371)()(.{8})/
-  field :country, "Latvia"
-  field :a2, "LV"
-  field :a3, "LVA"
-  match :regex
+
+  def regex, do: ~r/^(371)()(.{8})/
+  def country, do: "Latvia"
+  def a2, do: "LV"
+  def a3, do: "LVA"
+
+  matcher :regex, ["371"]
 end

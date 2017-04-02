@@ -1,8 +1,10 @@
 defmodule Phone.CV do
   use Helper.Country
-  field :regex, ~r/^(238)()(.{7})/
-  field :country, "Cape Verde"
-  field :a2, "CV"
-  field :a3, "CPV"
-  match :regex
+
+  def regex, do: ~r/^(238)()(.{7})/
+  def country, do: "Cape Verde"
+  def a2, do: "CV"
+  def a3, do: "CPV"
+
+  matcher :regex, ["238"]
 end

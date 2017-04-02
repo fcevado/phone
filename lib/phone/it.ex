@@ -1,8 +1,10 @@
 defmodule Phone.IT do
   use Helper.Country
-  field :regex, ~r/^(39)()(.{9,10})/
-  field :country, "Italy"
-  field :a2, "IT"
-  field :a3, "ITA"
-  match :regex
+
+  def regex, do: ~r/^(39)()(.{9,10})/
+  def country, do: "Italy"
+  def a2, do: "IT"
+  def a3, do: "ITA"
+
+  matcher :regex, ["39"]
 end

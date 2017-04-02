@@ -1,8 +1,10 @@
 defmodule Phone.MG do
   use Helper.Country
-  field :regex, ~r/^(261)()(.+)/
-  field :country, "Madagascar"
-  field :a2, "MG"
-  field :a3, "MDG"
-  match :regex
+
+  def regex, do: ~r/^(261)()(.+)/
+  def country, do: "Madagascar"
+  def a2, do: "MG"
+  def a3, do: "MDG"
+
+  matcher :regex, ["261"]
 end

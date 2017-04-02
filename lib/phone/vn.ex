@@ -1,8 +1,10 @@
 defmodule Phone.VN do
   use Helper.Country
-  field :regex, ~r/^(84)()(.+)/
-  field :country, "Vietnam"
-  field :a2, "VN"
-  field :a3, "VNM"
-  match :regex
+
+  def regex, do: ~r/^(84)()(.+)/
+  def country, do: "Vietnam"
+  def a2, do: "VN"
+  def a3, do: "VNM"
+
+  matcher :regex, ["84"]
 end

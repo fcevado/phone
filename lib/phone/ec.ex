@@ -1,8 +1,10 @@
 defmodule Phone.EC do
   use Helper.Country
-  field :regex, ~r/^(593)(..)(.{7})/
-  field :country, "Ecuador"
-  field :a2, "EC"
-  field :a3, "ECU"
-  match :regex
+
+  def regex, do: ~r/^(593)(..)(.{7})/
+  def country, do: "Ecuador"
+  def a2, do: "EC"
+  def a3, do: "ECU"
+
+  matcher :regex, ["593"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.LI do
   use Helper.Country
-  field :regex, ~r/^(423)()(.{7})/
-  field :country, "Liechtenstein"
-  field :a2, "LI"
-  field :a3, "LIE"
-  match :regex
+
+  def regex, do: ~r/^(423)()(.{7})/
+  def country, do: "Liechtenstein"
+  def a2, do: "LI"
+  def a3, do: "LIE"
+
+  matcher :regex, ["423"]
 end

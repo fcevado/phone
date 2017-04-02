@@ -1,8 +1,10 @@
 defmodule Phone.CF do
   use Helper.Country
-  field :regex, ~r/^(236)()(.{8})/
-  field :country, "Central African Republic"
-  field :a2, "CF"
-  field :a3, "CAF"
-  match :regex
+
+  def regex, do: ~r/^(236)()(.{8})/
+  def country, do: "Central African Republic"
+  def a2, do: "CF"
+  def a3, do: "CAF"
+
+  matcher :regex, ["236"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.PW do
   use Helper.Country
-  field :regex, ~r/^(680)()(.{7})/
-  field :country, "Palau"
-  field :a2, "PW"
-  field :a3, "PLW"
-  match :regex
+
+  def regex, do: ~r/^(680)()(.{7})/
+  def country, do: "Palau"
+  def a2, do: "PW"
+  def a3, do: "PLW"
+
+  matcher :regex, ["680"]
 end
