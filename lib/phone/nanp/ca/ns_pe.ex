@@ -1,8 +1,10 @@
 defmodule Phone.NANP.CA.NS_PE do
   use Helper.Area
-  field :regex, ~r/^(1)(902|782)([2-9].{6})$/
-  field :area_name, ["Nova Scotia","Prince Edward Island"]
-  field :area_type, "provinces"
-  field :area_abbreviation, ["NS","PE"]
-  builder()
+
+  def regex, do: ~r/^(1)(902|782)([2-9].{6})$/
+  def area_name, do: ["Nova Scotia","Prince Edward Island"]
+  def area_type, do: "provinces"
+  def area_abbreviation, do: ["NS","PE"]
+
+  matcher ["1902", "1782"]
 end

@@ -1,8 +1,10 @@
 defmodule Phone.NANP.CA.Territory do
   use Helper.Area
-  field :regex, ~r/^(1)(867)([2-9].{6})$/
-  field :area_name, ["Northwest Territories", "Nunavut", "Yukon"]
-  field :area_type, "territories"
-  field :area_abbreviation, ["NT","NU","YT"]
-  builder()
+
+  def regex, do: ~r/^(1)(867)([2-9].{6})$/
+  def area_name, do: ["Northwest Territories", "Nunavut", "Yukon"]
+  def area_type, do: "territories"
+  def area_abbreviation, do: ["NT","NU","YT"]
+
+  matcher ["1867"]
 end
