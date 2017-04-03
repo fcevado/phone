@@ -73,11 +73,11 @@ defp deps do
 end
 ```
 
-##[Contributing](./CONTRIBUTING.md)
+## [Contributing](./CONTRIBUTING.md)
 
-##[Changelog](./CHANGELOG.md)
+## [Changelog](./CHANGELOG.md)
 
-##[Code of Conduct](./CODE_OF_CONDUCT.md)
+## [Code of Conduct](./CODE_OF_CONDUCT.md)
 
 ## License
 Phone is under Apache v2.0 license. Check the [LICENSE](./LICENSE) file for more details.
