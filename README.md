@@ -11,6 +11,7 @@
 [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/fcevado/phone/master/LICENSE)
 
 Phone number parser for telephone numbers in international standard or missing international country code, for [Elixir](http://elixir-lang.org).
+Note on version `0.4.0` onward: Phone was rebuild to increase performance, that may increase compilation time.
 
 * [Online Documentation](https://hexdocs.pm/phone/api-reference.html)
 * [Hex](https://hex.pm/packages/phone)
