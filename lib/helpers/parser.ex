@@ -72,7 +72,6 @@ defmodule Helper.Parser do
     end
   end
 
-
   defmacro country_parser do
     quote do
         parser :ad, "376"

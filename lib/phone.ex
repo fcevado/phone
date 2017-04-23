@@ -119,7 +119,6 @@ defmodule Phone do
   @spec parse!(pos_integer, Atom.t) :: Map.t
   country_parser()
 
-
   @doc """
   Returns `true` if the number can be parsed, otherwhise returns `false`.
 
