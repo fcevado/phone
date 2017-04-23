@@ -1,4 +1,4 @@
-defmodule Phone.NANP.CA.NS_PE do
+defmodule Phone.NANP.CA.NSAndPE do
   @moduledoc false
 
   use Helper.Area
