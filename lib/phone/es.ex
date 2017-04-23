@@ -7,6 +7,6 @@ defmodule Phone.ES do
   def country, do: "Spain"
   def a2, do: "ES"
   def a3, do: "ESP"
-  
+
   matcher :regex, ["34"]
 end
