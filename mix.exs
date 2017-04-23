@@ -36,6 +36,7 @@ defmodule Phone.Mixfile do
   defp coverage do
     [
       tool: Coverex.Task,
+      ignore_modules: [Helper.Area, Helper.Country, Helper.Parser],
       coveralls: true
     ]
   end
