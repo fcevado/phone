@@ -60,15 +60,15 @@ defmodule PhoneTest do
       "Not a valid parameter, only string or integer.",
     fn -> Phone.parse!(:test) end
 
-    assert Phone.parse({55,51,1234,5678}) == @wrong_type
+    assert Phone.parse({55, 51, 1234, 5678}) == @wrong_type
     assert_raise ArgumentError,
       "Not a valid parameter, only string or integer.",
-    fn -> Phone.parse!({55,51,1234,5678}) end
+    fn -> Phone.parse!({55, 51, 1234, 5678}) end
 
-    assert Phone.parse([55,51,1234,5678]) == @wrong_type
+    assert Phone.parse([55, 51, 1234, 5678]) == @wrong_type
     assert_raise ArgumentError,
       "Not a valid parameter, only string or integer.",
-    fn -> Phone.parse!([55,51,1234,5678]) end
+    fn -> Phone.parse!([55, 51, 1234, 5678]) end
 
     assert Phone.parse(fn(t) -> t end) == @wrong_type
     assert_raise ArgumentError,
