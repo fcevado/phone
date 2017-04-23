@@ -10,8 +10,7 @@ otp_release:
   - 19.0
 
 script:
-  - MIX_ENV=test mix compile
-  - MIX_ENV=test mix test --cover
+  - MIX_ENV=test mix test --force --cover
   
 after_script:
   - MIX_ENV=docs mix deps.get
