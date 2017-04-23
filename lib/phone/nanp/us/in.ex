@@ -1,4 +1,6 @@
 defmodule Phone.NANP.US.IN do
+  @moduledoc false
+
   use Helper.Area
 
   def regex, do: ~r/^(1)(219|260|317|463|574|765|812|930)([2-9].{6})$/

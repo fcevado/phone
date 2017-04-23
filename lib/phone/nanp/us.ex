@@ -1,4 +1,6 @@
 defmodule Phone.NANP.US do
+  @moduledoc false
+
   use Helper.Country
 
   def country, do: "United States"

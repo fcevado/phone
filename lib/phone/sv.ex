@@ -1,4 +1,6 @@
 defmodule Phone.SV do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(503)()(.{7,8})/

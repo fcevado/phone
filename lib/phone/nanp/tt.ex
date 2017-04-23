@@ -1,4 +1,6 @@
 defmodule Phone.NANP.TT do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(1)(868)([2-9].{6})$/

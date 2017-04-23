@@ -1,4 +1,6 @@
 defmodule Phone.PW do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(680)()(.{7})/

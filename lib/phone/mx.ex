@@ -1,4 +1,6 @@
 defmodule Phone.MX do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(52)()(.{10})/

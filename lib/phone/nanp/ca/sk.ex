@@ -1,4 +1,6 @@
 defmodule Phone.NANP.CA.SK do
+  @moduledoc false
+
   use Helper.Area
 
   def regex, do: ~r/^(1)(306|639)([2-9].{6})$/

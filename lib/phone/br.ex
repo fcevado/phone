@@ -1,4 +1,6 @@
 defmodule Phone.BR do
+  @moduledoc false
+
   use Helper.Country
 
   def country, do: "Brazil"

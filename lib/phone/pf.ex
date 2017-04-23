@@ -1,4 +1,6 @@
 defmodule Phone.PF do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(689)()(.{8})/

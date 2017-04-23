@@ -1,4 +1,6 @@
 defmodule Phone.TL do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(670)()(.{8})/

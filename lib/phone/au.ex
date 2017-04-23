@@ -1,4 +1,6 @@
 defmodule Phone.AU do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(61)([1-478])(.{8})/

@@ -1,4 +1,6 @@
 defmodule Phone.EG do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(20)()(.+)/

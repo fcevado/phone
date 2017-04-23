@@ -1,4 +1,6 @@
 defmodule Phone.CW do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(599)(9)(.{7})/

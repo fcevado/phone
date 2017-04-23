@@ -1,4 +1,6 @@
 defmodule Phone.NANP.TollFree do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(1)(800|844|855|866|877|888)([2-9].{6})$/

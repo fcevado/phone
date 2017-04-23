@@ -1,4 +1,6 @@
 defmodule Phone.TK do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(690)([1-9])(.{3})/

@@ -1,4 +1,6 @@
 defmodule Phone.ME do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(382)(..)(.{6})/

@@ -1,4 +1,6 @@
 defmodule Phone.CD do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(243)(.)(.{7})/

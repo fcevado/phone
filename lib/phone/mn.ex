@@ -1,4 +1,6 @@
 defmodule Phone.MN do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(976)()(.+)/

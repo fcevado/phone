@@ -1,4 +1,6 @@
 defmodule Phone.MQ do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(596)([5|6]96)(.{6})/

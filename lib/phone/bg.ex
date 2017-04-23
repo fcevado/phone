@@ -1,4 +1,6 @@
 defmodule Phone.BG do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(359)()(.{8,9})/

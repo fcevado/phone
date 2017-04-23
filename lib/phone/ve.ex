@@ -1,4 +1,6 @@
 defmodule Phone.VE do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(58)(.{3})(.{7})/

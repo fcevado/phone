@@ -1,4 +1,6 @@
 defmodule Phone.ER do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(291)(.)(.{6})/
