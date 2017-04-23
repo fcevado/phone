@@ -7,6 +7,6 @@ defmodule Phone.ER do
   def country, do: "Eritrea"
   def a2, do: "ER"
   def a3, do: "ERI"
-  
+
   matcher :regex, ["291"]
 end

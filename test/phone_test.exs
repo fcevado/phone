@@ -69,7 +69,7 @@ defmodule PhoneTest do
     assert_raise ArgumentError,
       "Not a valid parameter, only string or integer.",
     fn -> Phone.parse!([55,51,1234,5678]) end
-    
+
     assert Phone.parse(fn(t) -> t end) == @wrong_type
     assert_raise ArgumentError,
       "Not a valid parameter, only string or integer.",
