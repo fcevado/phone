@@ -1,4 +1,6 @@
 defmodule Phone.Countries do
+  @moduledoc false
+
   use Helper.Country
 
   matcher :modules, [

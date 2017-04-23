@@ -1,4 +1,6 @@
 defmodule Phone.LK do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(94)()(.{9})/

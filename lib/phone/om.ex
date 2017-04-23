@@ -1,4 +1,6 @@
 defmodule Phone.OM do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(968)()(.{8})/

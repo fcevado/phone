@@ -1,4 +1,6 @@
 defmodule Phone.TZ do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(255)()(.{9})/

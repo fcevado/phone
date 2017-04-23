@@ -1,4 +1,6 @@
 defmodule Phone.NANP.CA.QC do
+  @moduledoc false
+
   use Helper.Area
 
   def regex, do: ~r/^(1)(418|438|450|514|579|581|819|873)([2-9].{6})$/

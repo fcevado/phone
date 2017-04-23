@@ -1,4 +1,6 @@
 defmodule Phone.GF do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(594)([5|6]94)(.{6})/

@@ -1,4 +1,6 @@
 defmodule Phone.MM do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(95)()(.{7,10})/

@@ -2,8 +2,6 @@ defmodule Helper.Area do
   @moduledoc false
   defmacro __using__(_) do
     quote do
-      @moduledoc false
-
       import Helper.Area
 
       def regex, do: ""
@@ -18,6 +16,7 @@ defmodule Helper.Area do
           __MODULE__
           |> Module.split
           |> Enum.reverse
+
         country =
           country
           |> Enum.reverse
@@ -40,56 +39,54 @@ defmodule Helper.Area do
     end
   end
 
-  defmacro matcher(codes) do
+  defp generate_codes(codes) do
     [quote do
       def codes, do: unquote(codes)
     end]
-    ++
-    Enum.map(codes,
-      fn code ->
-        quote do
-          def match?(unquote(code) <> _ = number) do
-            Regex.match?(regex(), number)
-          end
-        end
-      end)
-    ++
-    [quote do
-      def match?(_number), do: false
-    end]
-    ++
-    Enum.map(codes,
-      fn code ->
-        quote do
-          def build(unquote(code) <> _ = number) do
-            if match?(number) do
-              {:ok, builder(number)}
-            else
-              {:error, "Not a valid phone number."}
-            end
-          end
-        end
-      end)
-    ++
+  end
+
+  defp generate_errors do
     [quote do
       def build(_number), do: {:error, "Not a valid phone number."}
+
+      def build!(_number), do: raise ArgumentError, message: "Not a valid phone number."
+
+      def match?(_number), do: false
     end]
+  end
+
+  defp generate_matcher(code) do
+    quote do
+      def match?(unquote(code) <> _ = number) do
+        Regex.match?(regex(), number)
+      end
+
+      def build(unquote(code) <> _ = number) do
+        if match?(number) do
+          {:ok, builder(number)}
+        else
+          {:error, "Not a valid phone number."}
+        end
+      end
+
+      def build!(unquote(code) <> _ = number) do
+        if match?(number) do
+          builder(number)
+        else
+          raise ArgumentError, message: "Not a valid phone number."
+        end
+      end
+    end
+  end
+
+  defmacro matcher(codes) do
+    generate_codes(codes)
     ++
     Enum.map(codes,
       fn code ->
-        quote do
-          def build!(unquote(code) <> _ = number) do
-            if match?(number) do
-              builder(number)
-            else
-              raise ArgumentError, message: "Not a valid phone number."
-            end
-          end
-        end
+        generate_matcher(code)
       end)
     ++
-    [quote do
-      def build!(_number), do: raise ArgumentError, message: "Not a valid phone number."
-    end]
+    generate_errors()
   end
 end

@@ -1,4 +1,6 @@
 defmodule Phone.CZ do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(420)()(.{9})/

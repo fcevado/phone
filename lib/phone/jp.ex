@@ -1,4 +1,6 @@
 defmodule Phone.JP do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(81)()(.+)/

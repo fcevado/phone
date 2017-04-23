@@ -1,4 +1,6 @@
 defmodule Phone.NANP do
+  @moduledoc false
+
   use Helper.Country
 
   matcher :modules, [Phone.NANP.AS, Phone.NANP.AI, Phone.NANP.AG, Phone.NANP.BS,

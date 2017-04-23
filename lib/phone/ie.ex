@@ -1,4 +1,6 @@
 defmodule Phone.IE do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(353)(1|402|404|505|90|[2-9][1-9])(.{5,7})$/

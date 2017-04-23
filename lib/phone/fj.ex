@@ -1,4 +1,6 @@
 defmodule Phone.FJ do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(679)()(.{7})/

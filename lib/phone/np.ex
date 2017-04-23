@@ -1,4 +1,6 @@
 defmodule Phone.NP do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(977)()(.{8})/

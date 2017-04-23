@@ -2,7 +2,6 @@ defmodule Phone do
   @moduledoc ~S"""
   Phone is a real telephone number parser, that will help you get useful information from numbers.
 
-
   ## How to use
 
   Very simple to use:
@@ -118,7 +117,6 @@ defmodule Phone do
   @spec parse!(String.t, Atom.t) :: Map.t
   @spec parse!(pos_integer, Atom.t) :: Map.t
   country_parser()
-
 
   @doc """
   Returns `true` if the number can be parsed, otherwhise returns `false`.

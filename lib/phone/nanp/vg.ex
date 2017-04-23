@@ -1,4 +1,6 @@
 defmodule Phone.NANP.VG do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(1)(284)([2-9].{6})$/

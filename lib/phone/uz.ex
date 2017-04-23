@@ -1,4 +1,6 @@
 defmodule Phone.UZ do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(998)()(.{9})/

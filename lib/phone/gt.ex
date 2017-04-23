@@ -1,4 +1,6 @@
 defmodule Phone.GT do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(502)()(.{8})/

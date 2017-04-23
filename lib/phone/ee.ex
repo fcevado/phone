@@ -1,4 +1,6 @@
 defmodule Phone.EE do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(372)()(.{7,8})/

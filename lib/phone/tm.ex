@@ -1,4 +1,6 @@
 defmodule Phone.TM do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(993)()(.+)/

@@ -1,4 +1,6 @@
 defmodule Phone.KI do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(686)()(.{5})/

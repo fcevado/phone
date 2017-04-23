@@ -1,4 +1,6 @@
 defmodule Phone.AF do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(93)(..)(.{7})/

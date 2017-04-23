@@ -1,4 +1,6 @@
 defmodule Phone.CR do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(506)()(.{8})/

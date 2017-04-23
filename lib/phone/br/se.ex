@@ -1,4 +1,6 @@
 defmodule Phone.BR.SE do
+  @moduledoc false
+
   use Helper.Area
 
   def regex, do: ~r/^(55)(79)([2-5|89].{7}|9[89].{7})$/

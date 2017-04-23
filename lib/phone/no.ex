@@ -1,4 +1,6 @@
 defmodule Phone.NO do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(47)()([2-9].{7}|0.{3})/

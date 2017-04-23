@@ -1,4 +1,6 @@
 defmodule Phone.KZ do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(7)([67]..)(.{7})/

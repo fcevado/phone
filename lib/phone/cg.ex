@@ -1,4 +1,6 @@
 defmodule Phone.CG do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(242)(.{4})(.{5})/

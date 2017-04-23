@@ -1,4 +1,6 @@
 defmodule Phone.AO do
+  @moduledoc false
+
   use Helper.Country
 
   def regex, do: ~r/^(244)()(9)/
