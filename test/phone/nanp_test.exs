@@ -1,6 +1,7 @@
 defmodule Phone.NANPTest do
   use ExUnit.Case, async: true
 
+  main_module = Phone.NANP
   all_modules = [
     Phone.NANP.AS, Phone.NANP.AI, Phone.NANP.AG, Phone.NANP.BS,
     Phone.NANP.BB, Phone.NANP.BM, Phone.NANP.CA, Phone.NANP.DM,
@@ -10,6 +11,21 @@ defmodule Phone.NANPTest do
     Phone.NANP.TT, Phone.NANP.US, Phone.NANP.VC, Phone.NANP.VG,
     Phone.NANP.VI, Phone.NANP.TollFree
   ]
+
+  Enum.map(main_module.codes,
+    fn code ->
+      test "#{inspect main_module} cant parse wrong number with code #{code}" do
+        refute Phone.valid?(unquote("#{code}555123"))
+        assert {:error, _} = Phone.parse(unquote("#{code}555123"))
+
+        refute unquote(main_module).match?(unquote("#{code}555123"))
+        assert {:error, _} = unquote(main_module).build(unquote("#{code}555123"))
+
+        assert_raise ArgumentError,
+        "Not a valid phone number.",
+        fn -> unquote(main_module).build!(unquote("#{code}555123")) end
+      end
+    end)
 
   Enum.map(all_modules,
     fn module ->
