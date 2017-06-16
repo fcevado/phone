@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.4.1:
+  * Add 833 toll free number to NANP
+
 ## v0.4.0:
   * Updates `Helper.Countries` and `Helper.Area` behavior
   * Several changes to improve performance.
