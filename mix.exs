@@ -55,11 +55,11 @@ defmodule Phone.Mixfile do
 
   defp deps do
     [
-      {:coverex, "1.4.12", only: :test},
-      {:credo, "0.7.2", only: :dev},
-      {:earmark, "1.2.0", only: :dev},
-      {:ex_doc, "0.15.0", only: :dev},
-      {:benchfella, "0.3.4", only: :dev},
+      {:coverex, "1.4.15", only: :test},
+      {:credo, "0.8.6", only: :dev},
+      {:earmark, "1.2.3", only: :dev},
+      {:ex_doc, "0.16.3", only: :dev},
+      {:benchfella, "0.3.5", only: :dev},
       {:inch_ex, "0.5.6", only: :docs}
     ]
   end
