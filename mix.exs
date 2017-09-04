@@ -10,8 +10,8 @@ defmodule Phone.Mixfile do
      description: description(),
      package: package(),
      source_url: "https://github.com/fcevado/phone",
-     test_coverage: coverage(),
      deps: deps()]
+    ++ coverage()
   end
 
   defp package do
@@ -35,9 +35,13 @@ defmodule Phone.Mixfile do
 
   defp coverage do
     [
-      tool: Coverex.Task,
-      ignore_modules: [Helper.Area, Helper.Country, Helper.Parser],
-      coveralls: true
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        "coveralls": :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ]
     ]
   end
 
@@ -56,7 +60,7 @@ defmodule Phone.Mixfile do
 
   defp deps do
     [
-      {:coverex, "1.4.15", only: :test},
+      {:excoveralls, "0.7.2", only: :test},
       {:credo, "0.8.6", only: :dev},
       {:earmark, "1.2.3", only: :dev},
       {:ex_doc, "0.16.3", only: :dev},
