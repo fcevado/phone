@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.4.2:
+  * Correct parsing for Angola numbers
+
 ## v0.4.1:
   * Add 833 toll free number to NANP
 
