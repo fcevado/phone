@@ -6,8 +6,8 @@ defmodule Phone.AOTest do
   Enum.map(main_module.codes,
     fn code ->
       test "#{inspect main_module} parses area code #{code}" do
-        assert Phone.valid?(unquote("#{code}9"))
-        assert {:ok, parsed} = Phone.parse(unquote("#{code}9"))
+        assert Phone.valid?(unquote("#{code}555555555"))
+        assert {:ok, parsed} = Phone.parse(unquote("#{code}555555555"))
 
         assert parsed.country == unquote(main_module).country
         assert parsed.a2 == unquote(main_module).a2
