@@ -1,19 +1,26 @@
-defmodule Phone.NANPTest do
+defmodule Phone.CATest do
   use ExUnit.Case, async: true
 
-  main_module = Phone.NANP
+  main_module = Phone.NANP.CA
+
   all_modules = [
-    Phone.NANP.AS, Phone.NANP.AI, Phone.NANP.AG, Phone.NANP.BS,
-    Phone.NANP.BB, Phone.NANP.BM, Phone.NANP.CA, Phone.NANP.DM,
-    Phone.NANP.DO, Phone.NANP.GD, Phone.NANP.GU, Phone.NANP.JM,
-    Phone.NANP.KN, Phone.NANP.KY, Phone.NANP.LC, Phone.NANP.MP,
-    Phone.NANP.MS, Phone.NANP.PR, Phone.NANP.SX, Phone.NANP.TC,
-    Phone.NANP.TT, Phone.NANP.US, Phone.NANP.VC, Phone.NANP.VG,
-    Phone.NANP.VI, Phone.NANP.TollFree
+    Phone.NANP.CA.AB, Phone.NANP.CA.BC, Phone.NANP.CA.MB,
+    Phone.NANP.CA.NB, Phone.NANP.CA.NL, Phone.NANP.CA.NSAndPE,
+    Phone.NANP.CA.ON, Phone.NANP.CA.QC, Phone.NANP.CA.SK,
+    Phone.NANP.CA.Territory
   ]
 
   Enum.map(main_module.codes,
     fn code ->
+      test "#{inspect main_module} parses area code #{code}" do
+        assert Phone.valid?(unquote("#{code}5551234"))
+        assert {:ok, parsed} = Phone.parse(unquote("#{code}5551234"))
+
+        assert parsed.country == unquote(main_module).country
+        assert parsed.a2 == unquote(main_module).a2
+        assert parsed.a3 == unquote(main_module).a3
+      end
+
       test "#{inspect main_module} cant parse wrong number with code #{code}" do
         refute Phone.valid?(unquote("#{code}555123"))
         assert {:error, _} = Phone.parse(unquote("#{code}555123"))
@@ -35,9 +42,12 @@ defmodule Phone.NANPTest do
             assert Phone.valid?(unquote("#{code}5551234"))
             assert {:ok, parsed} = Phone.parse(unquote("#{code}5551234"))
 
-            assert parsed.country == unquote(module).country
-            assert parsed.a2 == unquote(module).a2
-            assert parsed.a3 == unquote(module).a3
+            assert parsed.country == unquote(main_module).country
+            assert parsed.a2 == unquote(main_module).a2
+            assert parsed.a3 == unquote(main_module).a3
+            assert parsed.area_type == unquote(module).area_type
+            assert parsed.area_name == unquote(module).area_name
+            assert parsed.area_abbreviation == unquote(module).area_abbreviation
           end
 
           test "#{inspect module} cant parse wrong number with code #{code}" do
