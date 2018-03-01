@@ -6,10 +6,20 @@ defmodule Helper.Country do
 
       def regex, do: ""
       def country, do: ""
+      def country_code, do: ""
+      def trunk_prefix, do: ""
       def a2, do: ""
       def a3, do: ""
 
-      defoverridable [regex: 0, country: 0, a2: 0, a3: 0]
+      defoverridable [regex: 0, country: 0, a2: 0, a3: 0, country_code: 0, trunk_prefix: 0]
+
+      defp international_code(code) do
+        if code == trunk_prefix() do
+          country_code()
+        else
+          code
+        end
+      end
 
       def builder(number) do
         [[_, code, area, number]] = Regex.scan(regex(), number)
@@ -18,7 +28,7 @@ defmodule Helper.Country do
           country: country(),
           a2: a2(),
           a3: a3(),
-          international_code: code,
+          international_code: international_code(code),
           area_code: area,
           number: number
         }
