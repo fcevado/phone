@@ -9,7 +9,7 @@ defmodule Helper.Country do
       def a2, do: ""
       def a3, do: ""
 
-      defoverridable [regex: 0, country: 0, a2: 0, a3: 0]
+      defoverridable regex: 0, country: 0, a2: 0, a3: 0
 
       def builder(number) do
         [[_, code, area, number]] = Regex.scan(regex(), number)
@@ -27,19 +27,23 @@ defmodule Helper.Country do
   end
 
   defp generate_codes(codes) do
-    [quote do
-      def codes, do: unquote(codes)
-    end]
+    [
+      quote do
+        def codes, do: unquote(codes)
+      end
+    ]
   end
 
   defp generate_errors do
-    [quote do
-      def match?(_number), do: false
+    [
+      quote do
+        def match?(_number), do: false
 
-      def build!(_number), do: raise ArgumentError, "Not a valid phone number."
+        def build!(_number), do: raise(ArgumentError, "Not a valid phone number.")
 
-      def build(_number), do: {:error, "Not a valid phone number."}
-    end]
+        def build(_number), do: {:error, "Not a valid phone number."}
+      end
+    ]
   end
 
   def generate_matcher(:regex, code) do
@@ -83,34 +87,25 @@ defmodule Helper.Country do
   end
 
   defmacro matcher(:regex, codes) do
-    generate_codes(codes)
-    ++
-    Enum.map(codes,
-      fn code ->
+    generate_codes(codes) ++
+      Enum.map(codes, fn code ->
         generate_matcher(:regex, code)
-      end)
-    ++
-    generate_errors()
+      end) ++ generate_errors()
   end
 
   defmacro matcher(:modules, modules) do
-    modules = Enum.map(modules, &(Macro.expand(&1, __CALLER__)))
+    modules = Enum.map(modules, &Macro.expand(&1, __CALLER__))
 
     (modules
-    |> Enum.reduce([], fn m, acc -> acc ++ m.codes end)
-    |> generate_codes)
-    ++
-    Enum.map(modules,
-      fn module ->
-        Enum.map(module.codes,
-          fn code ->
-            generate_matcher(:modules, module, code)
-          end)
-      end)
-    ++
-    generate_errors()
+     |> Enum.reduce([], fn m, acc -> acc ++ m.codes end)
+     |> generate_codes) ++
+      Enum.map(modules, fn module ->
+        Enum.map(module.codes, fn code ->
+          generate_matcher(:modules, module, code)
+        end)
+      end) ++ generate_errors()
   end
 
   defmacro matcher(_, _),
-    do: raise ArgumentError, "You can only match against :regex or :modules"
+    do: raise(ArgumentError, "You can only match against :regex or :modules")
 end

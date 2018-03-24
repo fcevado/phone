@@ -8,5 +8,5 @@ defmodule Phone.NANP.CA.NSAndPE do
   def area_type, do: "provinces"
   def area_abbreviation, do: ["NS", "PE"]
 
-  matcher ["1902", "1782"]
+  matcher(["1902", "1782"])
 end

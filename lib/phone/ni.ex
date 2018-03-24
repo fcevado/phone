@@ -8,5 +8,5 @@ defmodule Phone.NI do
   def a2, do: "NI"
   def a3, do: "NIC"
 
-  matcher :regex, ["505"]
+  matcher(:regex, ["505"])
 end

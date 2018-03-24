@@ -8,5 +8,5 @@ defmodule Phone.KM do
   def a2, do: "KM"
   def a3, do: "COM"
 
-  matcher :regex, ["269"]
+  matcher(:regex, ["269"])
 end

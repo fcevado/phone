@@ -8,5 +8,5 @@ defmodule Phone.SB do
   def a2, do: "SB"
   def a3, do: "SLB"
 
-  matcher :regex, ["677"]
+  matcher(:regex, ["677"])
 end

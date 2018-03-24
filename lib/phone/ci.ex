@@ -8,5 +8,5 @@ defmodule Phone.CI do
   def a2, do: "CI"
   def a3, do: "CIV"
 
-  matcher :regex, ["225"]
+  matcher(:regex, ["225"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.NANP.GD do
   def a2, do: "GD"
   def a3, do: "GRD"
 
-  matcher :regex, ["1473"]
+  matcher(:regex, ["1473"])
 end

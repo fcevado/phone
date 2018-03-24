@@ -8,5 +8,5 @@ defmodule Phone.MZ do
   def a2, do: "MZ"
   def a3, do: "MOZ"
 
-  matcher :regex, ["258"]
+  matcher(:regex, ["258"])
 end

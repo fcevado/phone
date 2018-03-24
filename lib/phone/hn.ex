@@ -8,5 +8,5 @@ defmodule Phone.HN do
   def a2, do: "HN"
   def a3, do: "HND"
 
-  matcher :regex, ["504"]
+  matcher(:regex, ["504"])
 end

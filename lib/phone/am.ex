@@ -8,5 +8,5 @@ defmodule Phone.AM do
   def a2, do: "AM"
   def a3, do: "ARM"
 
-  matcher :regex, ["374"]
+  matcher(:regex, ["374"])
 end

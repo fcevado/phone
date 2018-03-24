@@ -8,5 +8,5 @@ defmodule Phone.NP do
   def a2, do: "NP"
   def a3, do: "NPL"
 
-  matcher :regex, ["977"]
+  matcher(:regex, ["977"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.IR do
   def a2, do: "IR"
   def a3, do: "IRN"
 
-  matcher :regex, ["98"]
+  matcher(:regex, ["98"])
 end

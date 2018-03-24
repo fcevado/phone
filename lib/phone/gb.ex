@@ -8,5 +8,5 @@ defmodule Phone.GB do
   def a2, do: "GB"
   def a3, do: "GBR"
 
-  matcher :regex, ["44"]
+  matcher(:regex, ["44"])
 end

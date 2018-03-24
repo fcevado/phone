@@ -8,5 +8,5 @@ defmodule Phone.BR.SP do
   def area_type, do: "state"
   def area_abbreviation, do: "SP"
 
-  matcher ["5511", "5512", "5513", "5514", "5515", "5516", "5517", "5518", "5519"]
+  matcher(["5511", "5512", "5513", "5514", "5515", "5516", "5517", "5518", "5519"])
 end

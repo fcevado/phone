@@ -8,5 +8,5 @@ defmodule Phone.DE do
   def a2, do: "DE"
   def a3, do: "DEU"
 
-  matcher :regex, ["49"]
+  matcher(:regex, ["49"])
 end

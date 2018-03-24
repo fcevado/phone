@@ -8,5 +8,5 @@ defmodule Phone.RW do
   def a2, do: "RW"
   def a3, do: "RWA"
 
-  matcher :regex, ["250"]
+  matcher(:regex, ["250"])
 end

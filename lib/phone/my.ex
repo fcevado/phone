@@ -8,5 +8,5 @@ defmodule Phone.MY do
   def a2, do: "MY"
   def a3, do: "MYS"
 
-  matcher :regex, ["60"]
+  matcher(:regex, ["60"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.NANP.CA.NB do
   def area_type, do: "province"
   def area_abbreviation, do: "NB"
 
-  matcher ["1506"]
+  matcher(["1506"])
 end

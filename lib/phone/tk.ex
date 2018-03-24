@@ -8,5 +8,5 @@ defmodule Phone.TK do
   def a2, do: "TK"
   def a3, do: "TKL"
 
-  matcher :regex, ["690"]
+  matcher(:regex, ["690"])
 end

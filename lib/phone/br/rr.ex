@@ -8,5 +8,5 @@ defmodule Phone.BR.RR do
   def area_type, do: "state"
   def area_abbreviation, do: "RR"
 
-  matcher ["5595"]
+  matcher(["5595"])
 end

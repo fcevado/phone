@@ -8,5 +8,5 @@ defmodule Phone.NANP.US.MT do
   def area_type, do: "state"
   def area_abbreviation, do: "MT"
 
-  matcher ["1406"]
+  matcher(["1406"])
 end

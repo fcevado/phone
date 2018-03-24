@@ -9,18 +9,18 @@ defmodule Helper.Area do
       def area_type, do: ""
       def area_abbreviation, do: ""
 
-      defoverridable [regex: 0, area_name: 0, area_type: 0, area_abbreviation: 0]
+      defoverridable regex: 0, area_name: 0, area_type: 0, area_abbreviation: 0
 
       def builder(number) do
         [_ | country] =
           __MODULE__
-          |> Module.split
-          |> Enum.reverse
+          |> Module.split()
+          |> Enum.reverse()
 
         country =
           country
-          |> Enum.reverse
-          |> Module.concat
+          |> Enum.reverse()
+          |> Module.concat()
 
         [[_, code, area, number]] = Regex.scan(regex(), number)
 
@@ -40,19 +40,23 @@ defmodule Helper.Area do
   end
 
   defp generate_codes(codes) do
-    [quote do
-      def codes, do: unquote(codes)
-    end]
+    [
+      quote do
+        def codes, do: unquote(codes)
+      end
+    ]
   end
 
   defp generate_errors do
-    [quote do
-      def build(_number), do: {:error, "Not a valid phone number."}
+    [
+      quote do
+        def build(_number), do: {:error, "Not a valid phone number."}
 
-      def build!(_number), do: raise ArgumentError, message: "Not a valid phone number."
+        def build!(_number), do: raise(ArgumentError, message: "Not a valid phone number.")
 
-      def match?(_number), do: false
-    end]
+        def match?(_number), do: false
+      end
+    ]
   end
 
   defp generate_matcher(code) do
@@ -80,13 +84,9 @@ defmodule Helper.Area do
   end
 
   defmacro matcher(codes) do
-    generate_codes(codes)
-    ++
-    Enum.map(codes,
-      fn code ->
+    generate_codes(codes) ++
+      Enum.map(codes, fn code ->
         generate_matcher(code)
-      end)
-    ++
-    generate_errors()
+      end) ++ generate_errors()
   end
 end

@@ -8,5 +8,5 @@ defmodule Phone.NU do
   def a2, do: "NU"
   def a3, do: "NIU"
 
-  matcher :regex, ["683"]
+  matcher(:regex, ["683"])
 end

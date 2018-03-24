@@ -8,5 +8,5 @@ defmodule Phone.PT do
   def a2, do: "PT"
   def a3, do: "PRT"
 
-  matcher :regex, ["351"]
+  matcher(:regex, ["351"])
 end

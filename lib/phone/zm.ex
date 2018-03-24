@@ -8,5 +8,5 @@ defmodule Phone.ZM do
   def a2, do: "ZM"
   def a3, do: "ZMB"
 
-  matcher :regex, ["260"]
+  matcher(:regex, ["260"])
 end

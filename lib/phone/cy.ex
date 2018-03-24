@@ -8,5 +8,5 @@ defmodule Phone.CY do
   def a2, do: "CY"
   def a3, do: "CYP"
 
-  matcher :regex, ["357"]
+  matcher(:regex, ["357"])
 end

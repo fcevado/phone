@@ -8,5 +8,5 @@ defmodule Phone.NANP.US.SD do
   def area_type, do: "state"
   def area_abbreviation, do: "SD"
 
-  matcher ["1605"]
+  matcher(["1605"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.SH do
   def a2, do: "SH"
   def a3, do: "SHN"
 
-  matcher :regex, ["290"]
+  matcher(:regex, ["290"])
 end

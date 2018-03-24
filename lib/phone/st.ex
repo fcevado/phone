@@ -8,5 +8,5 @@ defmodule Phone.ST do
   def a2, do: "ST"
   def a3, do: "STP"
 
-  matcher :regex, ["239"]
+  matcher(:regex, ["239"])
 end

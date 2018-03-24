@@ -8,5 +8,5 @@ defmodule Phone.AD do
   def a2, do: "AD"
   def a3, do: "AND"
 
-  matcher :regex, ["376"]
+  matcher(:regex, ["376"])
 end

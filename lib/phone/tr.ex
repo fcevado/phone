@@ -8,5 +8,5 @@ defmodule Phone.TR do
   def a2, do: "TR"
   def a3, do: "TUR"
 
-  matcher :regex, ["90"]
+  matcher(:regex, ["90"])
 end

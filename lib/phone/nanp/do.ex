@@ -8,5 +8,5 @@ defmodule Phone.NANP.DO do
   def a2, do: "DO"
   def a3, do: "DOM"
 
-  matcher :regex, ["1809", "1829", "1849"]
+  matcher(:regex, ["1809", "1829", "1849"])
 end

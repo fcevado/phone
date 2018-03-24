@@ -8,5 +8,5 @@ defmodule Phone.UG do
   def a2, do: "UG"
   def a3, do: "UGA"
 
-  matcher :regex, ["256"]
+  matcher(:regex, ["256"])
 end

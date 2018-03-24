@@ -8,5 +8,5 @@ defmodule Phone.NANP.VC do
   def a2, do: "VC"
   def a3, do: "VCT"
 
-  matcher :regex, ["1784"]
+  matcher(:regex, ["1784"])
 end

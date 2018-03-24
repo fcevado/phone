@@ -8,5 +8,5 @@ defmodule Phone.SE do
   def a2, do: "SE"
   def a3, do: "SWE"
 
-  matcher :regex, ["46"]
+  matcher(:regex, ["46"])
 end

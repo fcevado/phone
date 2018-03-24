@@ -8,5 +8,5 @@ defmodule Phone.NA do
   def a2, do: "NA"
   def a3, do: "NAM"
 
-  matcher :regex, ["264"]
+  matcher(:regex, ["264"])
 end

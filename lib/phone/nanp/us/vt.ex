@@ -8,5 +8,5 @@ defmodule Phone.NANP.US.VT do
   def area_type, do: "state"
   def area_abbreviation, do: "VT"
 
-  matcher ["1802"]
+  matcher(["1802"])
 end

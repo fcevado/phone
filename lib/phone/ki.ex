@@ -8,5 +8,5 @@ defmodule Phone.KI do
   def a2, do: "KI"
   def a3, do: "KIR"
 
-  matcher :regex, ["686"]
+  matcher(:regex, ["686"])
 end

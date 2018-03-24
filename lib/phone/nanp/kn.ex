@@ -8,5 +8,5 @@ defmodule Phone.NANP.KN do
   def a2, do: "KN"
   def a3, do: "KNA"
 
-  matcher :regex, ["1869"]
+  matcher(:regex, ["1869"])
 end

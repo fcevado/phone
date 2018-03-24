@@ -8,5 +8,5 @@ defmodule Phone.NANP.TC do
   def a2, do: "TC"
   def a3, do: "TCA"
 
-  matcher :regex, ["1649"]
+  matcher(:regex, ["1649"])
 end

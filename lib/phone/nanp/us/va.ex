@@ -8,5 +8,5 @@ defmodule Phone.NANP.US.VA do
   def area_type, do: "state"
   def area_abbreviation, do: "VA"
 
-  matcher ["1276", "1434", "1540", "1571", "1703", "1757", "1804"]
+  matcher(["1276", "1434", "1540", "1571", "1703", "1757", "1804"])
 end

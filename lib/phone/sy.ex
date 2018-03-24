@@ -8,5 +8,5 @@ defmodule Phone.SY do
   def a2, do: "SY"
   def a3, do: "SYR"
 
-  matcher :regex, ["963"]
+  matcher(:regex, ["963"])
 end

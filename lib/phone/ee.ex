@@ -8,5 +8,5 @@ defmodule Phone.EE do
   def a2, do: "EE"
   def a3, do: "EST"
 
-  matcher :regex, ["372"]
+  matcher(:regex, ["372"])
 end

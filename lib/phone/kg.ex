@@ -8,5 +8,5 @@ defmodule Phone.KG do
   def a2, do: "KG"
   def a3, do: "KGZ"
 
-  matcher :regex, ["996"]
+  matcher(:regex, ["996"])
 end

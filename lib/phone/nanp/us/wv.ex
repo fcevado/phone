@@ -8,5 +8,5 @@ defmodule Phone.NANP.US.WV do
   def area_type, do: "state"
   def area_abbreviation, do: "WV"
 
-  matcher ["1304", "1681"]
+  matcher(["1304", "1681"])
 end

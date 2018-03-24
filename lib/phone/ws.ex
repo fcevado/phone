@@ -8,5 +8,5 @@ defmodule Phone.WS do
   def a2, do: "WS"
   def a3, do: "WSM"
 
-  matcher :regex, ["685"]
+  matcher(:regex, ["685"])
 end

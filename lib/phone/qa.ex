@@ -8,5 +8,5 @@ defmodule Phone.QA do
   def a2, do: "QA"
   def a3, do: "QAT"
 
-  matcher :regex, ["974"]
+  matcher(:regex, ["974"])
 end

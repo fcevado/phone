@@ -8,5 +8,5 @@ defmodule Phone.ID do
   def a2, do: "ID"
   def a3, do: "IDN"
 
-  matcher :regex, ["62"]
+  matcher(:regex, ["62"])
 end

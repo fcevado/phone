@@ -8,5 +8,5 @@ defmodule Phone.BR.DF do
   def area_type, do: "district"
   def area_abbreviation, do: "DF"
 
-  matcher ["5561"]
+  matcher(["5561"])
 end

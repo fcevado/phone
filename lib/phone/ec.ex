@@ -8,5 +8,5 @@ defmodule Phone.EC do
   def a2, do: "EC"
   def a3, do: "ECU"
 
-  matcher :regex, ["593"]
+  matcher(:regex, ["593"])
 end

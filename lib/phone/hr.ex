@@ -8,5 +8,5 @@ defmodule Phone.HR do
   def a2, do: "HR"
   def a3, do: "HRV"
 
-  matcher :regex, ["385"]
+  matcher(:regex, ["385"])
 end

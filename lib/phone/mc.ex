@@ -8,5 +8,5 @@ defmodule Phone.MC do
   def a2, do: "MC"
   def a3, do: "MCO"
 
-  matcher :regex, ["377"]
+  matcher(:regex, ["377"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.NANP.LC do
   def a2, do: "LC"
   def a3, do: "LCA"
 
-  matcher :regex, ["1758"]
+  matcher(:regex, ["1758"])
 end

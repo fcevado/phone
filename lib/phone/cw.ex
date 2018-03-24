@@ -8,5 +8,5 @@ defmodule Phone.CW do
   def a2, do: "CW"
   def a3, do: "CUW"
 
-  matcher :regex, ["5999"]
+  matcher(:regex, ["5999"])
 end

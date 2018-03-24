@@ -8,5 +8,5 @@ defmodule Phone.KR do
   def a2, do: "KR"
   def a3, do: "KOR"
 
-  matcher :regex, ["82"]
+  matcher(:regex, ["82"])
 end

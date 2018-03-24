@@ -8,5 +8,5 @@ defmodule Phone.LY do
   def a2, do: "LY"
   def a3, do: "LBY"
 
-  matcher :regex, ["218"]
+  matcher(:regex, ["218"])
 end

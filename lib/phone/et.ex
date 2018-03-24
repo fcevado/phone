@@ -8,5 +8,5 @@ defmodule Phone.ET do
   def a2, do: "ET"
   def a3, do: "ETH"
 
-  matcher :regex, ["251"]
+  matcher(:regex, ["251"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.VU do
   def a2, do: "VU"
   def a3, do: "VUT"
 
-  matcher :regex, ["678"]
+  matcher(:regex, ["678"])
 end

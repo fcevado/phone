@@ -8,5 +8,5 @@ defmodule Phone.PL do
   def a2, do: "PL"
   def a3, do: "POL"
 
-  matcher :regex, ["48"]
+  matcher(:regex, ["48"])
 end

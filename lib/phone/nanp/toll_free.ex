@@ -8,5 +8,5 @@ defmodule Phone.NANP.TollFree do
   def a2, do: ""
   def a3, do: ""
 
-  matcher :regex, ["1800", "1833", "1844", "1855", "1866", "1877", "1888"]
+  matcher(:regex, ["1800", "1833", "1844", "1855", "1866", "1877", "1888"])
 end

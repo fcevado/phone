@@ -8,5 +8,5 @@ defmodule Phone.IE do
   def a2, do: "IE"
   def a3, do: "IRL"
 
-  matcher :regex, ["353"]
+  matcher(:regex, ["353"])
 end

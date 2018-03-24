@@ -8,5 +8,5 @@ defmodule Phone.SS do
   def a2, do: "SS"
   def a3, do: "SSD"
 
-  matcher :regex, ["211"]
+  matcher(:regex, ["211"])
 end

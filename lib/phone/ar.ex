@@ -8,5 +8,5 @@ defmodule Phone.AR do
   def a2, do: "AR"
   def a3, do: "ARG"
 
-  matcher :regex, ["54"]
+  matcher(:regex, ["54"])
 end

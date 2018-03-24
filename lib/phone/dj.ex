@@ -8,5 +8,5 @@ defmodule Phone.DJ do
   def a2, do: "DJ"
   def a3, do: "DJI"
 
-  matcher :regex, ["253"]
+  matcher(:regex, ["253"])
 end

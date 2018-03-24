@@ -8,5 +8,5 @@ defmodule Phone.IQ do
   def a2, do: "IQ"
   def a3, do: "IRQ"
 
-  matcher :regex, ["964"]
+  matcher(:regex, ["964"])
 end

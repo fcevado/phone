@@ -8,5 +8,5 @@ defmodule Phone.GF do
   def a2, do: "GF"
   def a3, do: "GUF"
 
-  matcher :regex, ["594594", "594694"]
+  matcher(:regex, ["594594", "594694"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.AU do
   def a2, do: "AU"
   def a3, do: "AUS"
 
-  matcher :regex, ["611", "612", "613", "614", "617", "618"]
+  matcher(:regex, ["611", "612", "613", "614", "617", "618"])
 end

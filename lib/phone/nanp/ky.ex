@@ -8,5 +8,5 @@ defmodule Phone.NANP.KY do
   def a2, do: "KY"
   def a3, do: "CYM"
 
-  matcher :regex, ["1345"]
+  matcher(:regex, ["1345"])
 end

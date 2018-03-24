@@ -8,5 +8,5 @@ defmodule Phone.NANP.AI do
   def a2, do: "AI"
   def a3, do: "AIA"
 
-  matcher :regex, ["1264"]
+  matcher(:regex, ["1264"])
 end

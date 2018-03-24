@@ -2,16 +2,17 @@ defmodule Phone.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :phone,
-     version: "0.4.2",
-     elixir: ">= 1.1.0",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     description: description(),
-     package: package(),
-     source_url: "https://github.com/fcevado/phone",
-     deps: deps()]
-    ++ coverage()
+    [
+      app: :phone,
+      version: "0.4.2",
+      elixir: ">= 1.1.0",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
+      source_url: "https://github.com/fcevado/phone",
+      deps: deps()
+    ] ++ coverage()
   end
 
   defp package do
@@ -37,7 +38,7 @@ defmodule Phone.Mixfile do
     [
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
-        "coveralls": :test,
+        coveralls: :test,
         "coveralls.detail": :test,
         "coveralls.post": :test,
         "coveralls.html": :test

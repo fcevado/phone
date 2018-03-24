@@ -8,5 +8,5 @@ defmodule Phone.GL do
   def a2, do: "GL"
   def a3, do: "GRL"
 
-  matcher :regex, ["299"]
+  matcher(:regex, ["299"])
 end

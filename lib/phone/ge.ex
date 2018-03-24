@@ -8,5 +8,5 @@ defmodule Phone.GE do
   def a2, do: "GE"
   def a3, do: "GEO"
 
-  matcher :regex, ["995"]
+  matcher(:regex, ["995"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.CF do
   def a2, do: "CF"
   def a3, do: "CAF"
 
-  matcher :regex, ["236"]
+  matcher(:regex, ["236"])
 end

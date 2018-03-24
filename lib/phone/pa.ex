@@ -8,5 +8,5 @@ defmodule Phone.PA do
   def a2, do: "PA"
   def a3, do: "PAN"
 
-  matcher :regex, ["507"]
+  matcher(:regex, ["507"])
 end

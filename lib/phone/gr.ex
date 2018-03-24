@@ -8,5 +8,5 @@ defmodule Phone.GR do
   def a2, do: "GR"
   def a3, do: "GRC"
 
-  matcher :regex, ["30"]
+  matcher(:regex, ["30"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.NANP.US.NM do
   def area_type, do: "state"
   def area_abbreviation, do: "NM"
 
-  matcher ["1505", "1575"]
+  matcher(["1505", "1575"])
 end

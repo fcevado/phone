@@ -8,5 +8,5 @@ defmodule Phone.SN do
   def a2, do: "SN"
   def a3, do: "SEN"
 
-  matcher :regex, ["221"]
+  matcher(:regex, ["221"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.JP do
   def a2, do: "JP"
   def a3, do: "JPN"
 
-  matcher :regex, ["81"]
+  matcher(:regex, ["81"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.CR do
   def a2, do: "CR"
   def a3, do: "CRI"
 
-  matcher :regex, ["506"]
+  matcher(:regex, ["506"])
 end
