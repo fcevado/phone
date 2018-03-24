@@ -4,7 +4,7 @@ defmodule Phone.Mixfile do
   def project do
     [
       app: :phone,
-      version: "0.4.2",
+      version: "0.4.3",
       elixir: ">= 1.1.0",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
@@ -18,7 +18,7 @@ defmodule Phone.Mixfile do
   defp package do
     [
       files: files(),
-      maintainers: ["Flávio Moreira Vieira"],
+      maintainers: ["Flávio M.V."],
       licenses: ["Apache 2.0"],
       links: links()
     ]

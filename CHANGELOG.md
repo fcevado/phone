@@ -1,5 +1,10 @@
 # Changelog
 
+
+## v0.4.3:
+  * Add Idaho, New York, Pennsylvania, Texas, Washington missing area codes.
+  * Fix typo on NANP Toll Free Number module.
+
 ## v0.4.2:
   * Correct parsing for Angola numbers
 
