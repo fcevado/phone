@@ -8,5 +8,5 @@ defmodule Phone.MX do
   def a2, do: "MX"
   def a3, do: "MEX"
 
-  matcher :regex, ["52"]
+  matcher(:regex, ["52"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.ML do
   def a2, do: "ML"
   def a3, do: "MLI"
 
-  matcher :regex, ["223"]
+  matcher(:regex, ["223"])
 end

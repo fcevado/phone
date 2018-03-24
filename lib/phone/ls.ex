@@ -8,5 +8,5 @@ defmodule Phone.LS do
   def a2, do: "LS"
   def a3, do: "LSO"
 
-  matcher :regex, ["266"]
+  matcher(:regex, ["266"])
 end

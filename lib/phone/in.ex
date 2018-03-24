@@ -8,5 +8,5 @@ defmodule Phone.IN do
   def a2, do: "IN"
   def a3, do: "IND"
 
-  matcher :regex, ["91"]
+  matcher(:regex, ["91"])
 end

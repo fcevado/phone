@@ -8,5 +8,5 @@ defmodule Phone.RO do
   def a2, do: "RO"
   def a3, do: "ROU"
 
-  matcher :regex, ["40"]
+  matcher(:regex, ["40"])
 end

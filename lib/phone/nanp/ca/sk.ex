@@ -8,5 +8,5 @@ defmodule Phone.NANP.CA.SK do
   def area_type, do: "province"
   def area_abbreviation, do: "SK"
 
-  matcher ["1306", "1639"]
+  matcher(["1306", "1639"])
 end

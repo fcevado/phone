@@ -8,5 +8,5 @@ defmodule Phone.CV do
   def a2, do: "CV"
   def a3, do: "CPV"
 
-  matcher :regex, ["238"]
+  matcher(:regex, ["238"])
 end

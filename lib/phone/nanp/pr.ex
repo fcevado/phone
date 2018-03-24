@@ -8,5 +8,5 @@ defmodule Phone.NANP.PR do
   def a2, do: "PR"
   def a3, do: "PRI"
 
-  matcher :regex, ["1787", "1939"]
+  matcher(:regex, ["1787", "1939"])
 end

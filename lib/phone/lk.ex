@@ -8,5 +8,5 @@ defmodule Phone.LK do
   def a2, do: "LK"
   def a3, do: "LKA"
 
-  matcher :regex, ["94"]
+  matcher(:regex, ["94"])
 end

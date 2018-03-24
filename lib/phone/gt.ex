@@ -8,5 +8,5 @@ defmodule Phone.GT do
   def a2, do: "GT"
   def a3, do: "GTM"
 
-  matcher :regex, ["502"]
+  matcher(:regex, ["502"])
 end

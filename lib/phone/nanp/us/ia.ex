@@ -8,5 +8,5 @@ defmodule Phone.NANP.US.IA do
   def area_type, do: "state"
   def area_abbreviation, do: "IA"
 
-  matcher ["1319", "1515", "1563", "1641", "1712"]
+  matcher(["1319", "1515", "1563", "1641", "1712"])
 end

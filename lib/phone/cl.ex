@@ -8,5 +8,5 @@ defmodule Phone.CL do
   def a2, do: "CL"
   def a3, do: "CHL"
 
-  matcher :regex, ["56"]
+  matcher(:regex, ["56"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.MU do
   def a2, do: "MU"
   def a3, do: "MUS"
 
-  matcher :regex, ["230"]
+  matcher(:regex, ["230"])
 end

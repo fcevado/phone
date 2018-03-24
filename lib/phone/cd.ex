@@ -8,5 +8,5 @@ defmodule Phone.CD do
   def a2, do: "CD"
   def a3, do: "COD"
 
-  matcher :regex, ["243"]
+  matcher(:regex, ["243"])
 end

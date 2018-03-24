@@ -9,5 +9,5 @@ defmodule Phone.PS do
   def a2, do: "DJ"
   def a3, do: "DJI"
 
-  matcher :regex, ["970"]
+  matcher(:regex, ["970"])
 end

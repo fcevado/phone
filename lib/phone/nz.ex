@@ -8,5 +8,5 @@ defmodule Phone.NZ do
   def a2, do: "NZ"
   def a3, do: "NZL"
 
-  matcher :regex, ["64"]
+  matcher(:regex, ["64"])
 end

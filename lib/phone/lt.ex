@@ -8,5 +8,5 @@ defmodule Phone.LT do
   def a2, do: "LT"
   def a3, do: "LTU"
 
-  matcher :regex, ["370"]
+  matcher(:regex, ["370"])
 end

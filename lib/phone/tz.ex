@@ -8,5 +8,5 @@ defmodule Phone.TZ do
   def a2, do: "TZ"
   def a3, do: "TZA"
 
-  matcher :regex, ["255"]
+  matcher(:regex, ["255"])
 end

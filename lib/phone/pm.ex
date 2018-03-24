@@ -8,5 +8,5 @@ defmodule Phone.PM do
   def a2, do: "PM"
   def a3, do: "SPM"
 
-  matcher :regex, ["508"]
+  matcher(:regex, ["508"])
 end

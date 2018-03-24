@@ -8,5 +8,5 @@ defmodule Phone.CZ do
   def a2, do: "CZ"
   def a3, do: "CZE"
 
-  matcher :regex, ["420"]
+  matcher(:regex, ["420"])
 end

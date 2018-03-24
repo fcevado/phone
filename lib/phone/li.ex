@@ -8,5 +8,5 @@ defmodule Phone.LI do
   def a2, do: "LI"
   def a3, do: "LIE"
 
-  matcher :regex, ["423"]
+  matcher(:regex, ["423"])
 end

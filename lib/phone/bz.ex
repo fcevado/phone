@@ -8,5 +8,5 @@ defmodule Phone.BZ do
   def a2, do: "BZ"
   def a3, do: "BLZ"
 
-  matcher :regex, ["501"]
+  matcher(:regex, ["501"])
 end

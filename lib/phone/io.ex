@@ -8,5 +8,5 @@ defmodule Phone.IO do
   def a2, do: "IO"
   def a3, do: "IOT"
 
-  matcher :regex, ["246"]
+  matcher(:regex, ["246"])
 end

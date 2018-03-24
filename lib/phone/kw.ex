@@ -8,5 +8,5 @@ defmodule Phone.KW do
   def a2, do: "KW"
   def a3, do: "KWT"
 
-  matcher :regex, ["965"]
+  matcher(:regex, ["965"])
 end

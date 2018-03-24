@@ -8,5 +8,5 @@ defmodule Phone.NANP.SX do
   def a2, do: "SX"
   def a3, do: "SXM"
 
-  matcher :regex, ["1721"]
+  matcher(:regex, ["1721"])
 end

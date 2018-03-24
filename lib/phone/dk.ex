@@ -8,5 +8,5 @@ defmodule Phone.DK do
   def a2, do: "DK"
   def a3, do: "DNK"
 
-  matcher :regex, ["45"]
+  matcher(:regex, ["45"])
 end

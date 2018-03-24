@@ -8,5 +8,5 @@ defmodule Phone.NANP.CA.QC do
   def area_type, do: "province"
   def area_abbreviation, do: "QC"
 
-  matcher ["1418", "1438", "1450", "1514", "1579", "1581", "1819", "1873"]
+  matcher(["1418", "1438", "1450", "1514", "1579", "1581", "1819", "1873"])
 end

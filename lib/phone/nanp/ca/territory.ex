@@ -8,5 +8,5 @@ defmodule Phone.NANP.CA.Territory do
   def area_type, do: "territories"
   def area_abbreviation, do: ["NT", "NU", "YT"]
 
-  matcher ["1867"]
+  matcher(["1867"])
 end

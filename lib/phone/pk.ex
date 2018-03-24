@@ -8,5 +8,5 @@ defmodule Phone.PK do
   def a2, do: "PK"
   def a3, do: "PAK"
 
-  matcher :regex, ["92"]
+  matcher(:regex, ["92"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.BR.PI do
   def area_type, do: "state"
   def area_abbreviation, do: "PI"
 
-  matcher ["5586", "5589"]
+  matcher(["5586", "5589"])
 end

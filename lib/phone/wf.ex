@@ -8,5 +8,5 @@ defmodule Phone.WF do
   def a2, do: "WF"
   def a3, do: "WLF"
 
-  matcher :regex, ["681"]
+  matcher(:regex, ["681"])
 end

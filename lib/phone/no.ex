@@ -8,5 +8,5 @@ defmodule Phone.NO do
   def a2, do: "NO"
   def a3, do: "NOR"
 
-  matcher :regex, ["47"]
+  matcher(:regex, ["47"])
 end

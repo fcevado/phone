@@ -8,5 +8,5 @@ defmodule Phone.MW do
   def a2, do: "MW"
   def a3, do: "MWI"
 
-  matcher :regex, ["265"]
+  matcher(:regex, ["265"])
 end

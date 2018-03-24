@@ -8,5 +8,5 @@ defmodule Phone.BI do
   def a2, do: "BI"
   def a3, do: "BDI"
 
-  matcher :regex, ["257"]
+  matcher(:regex, ["257"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.TD do
   def a2, do: "TD"
   def a3, do: "TCD"
 
-  matcher :regex, ["235"]
+  matcher(:regex, ["235"])
 end

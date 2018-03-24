@@ -8,5 +8,5 @@ defmodule Phone.CN do
   def a2, do: "CN"
   def a3, do: "CHN"
 
-  matcher :regex, ["86"]
+  matcher(:regex, ["86"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.PF do
   def a2, do: "PF"
   def a3, do: "PYF"
 
-  matcher :regex, ["689"]
+  matcher(:regex, ["689"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.PW do
   def a2, do: "PW"
   def a3, do: "PLW"
 
-  matcher :regex, ["680"]
+  matcher(:regex, ["680"])
 end

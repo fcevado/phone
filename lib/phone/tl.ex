@@ -8,5 +8,5 @@ defmodule Phone.TL do
   def a2, do: "TL"
   def a3, do: "TLS"
 
-  matcher :regex, ["670"]
+  matcher(:regex, ["670"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.BR.AM do
   def area_type, do: "state"
   def area_abbreviation, do: "AM"
 
-  matcher ["5592", "5597"]
+  matcher(["5592", "5597"])
 end

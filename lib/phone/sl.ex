@@ -8,5 +8,5 @@ defmodule Phone.SL do
   def a2, do: "SL"
   def a3, do: "SLE"
 
-  matcher :regex, ["232"]
+  matcher(:regex, ["232"])
 end

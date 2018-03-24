@@ -8,5 +8,5 @@ defmodule Phone.FI do
   def a2, do: "FI"
   def a3, do: "FIN"
 
-  matcher :regex, ["358"]
+  matcher(:regex, ["358"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.BT do
   def a2, do: "BT"
   def a3, do: "BTN"
 
-  matcher :regex, ["975"]
+  matcher(:regex, ["975"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.PE do
   def a2, do: "PE"
   def a3, do: "PER"
 
-  matcher :regex, ["51"]
+  matcher(:regex, ["51"])
 end

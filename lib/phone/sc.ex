@@ -8,5 +8,5 @@ defmodule Phone.SC do
   def a2, do: "SC"
   def a3, do: "SYC"
 
-  matcher :regex, ["248:"]
+  matcher(:regex, ["248:"])
 end

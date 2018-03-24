@@ -8,5 +8,5 @@ defmodule Phone.NANP.US.KS do
   def area_type, do: "state"
   def area_abbreviation, do: "KS"
 
-  matcher ["1316", "1620", "1785", "1913"]
+  matcher(["1316", "1620", "1785", "1913"])
 end

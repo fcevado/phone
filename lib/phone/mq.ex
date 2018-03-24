@@ -8,5 +8,5 @@ defmodule Phone.MQ do
   def a2, do: "MQ"
   def a3, do: "MTQ"
 
-  matcher :regex, ["596596", "596696"]
+  matcher(:regex, ["596596", "596696"])
 end

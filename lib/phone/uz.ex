@@ -8,5 +8,5 @@ defmodule Phone.UZ do
   def a2, do: "UZ"
   def a3, do: "UZB"
 
-  matcher :regex, ["998"]
+  matcher(:regex, ["998"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.SV do
   def a2, do: "SV"
   def a3, do: "SLV"
 
-  matcher :regex, ["503"]
+  matcher(:regex, ["503"])
 end

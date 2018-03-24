@@ -8,5 +8,5 @@ defmodule Phone.BD do
   def a2, do: "BD"
   def a3, do: "BGD"
 
-  matcher :regex, ["880"]
+  matcher(:regex, ["880"])
 end

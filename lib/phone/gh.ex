@@ -8,5 +8,5 @@ defmodule Phone.GH do
   def a2, do: "GH"
   def a3, do: "GHA"
 
-  matcher :regex, ["233"]
+  matcher(:regex, ["233"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.RU do
   def a2, do: "RU"
   def a3, do: "RUS"
 
-  matcher :regex, ["73", "75", "78", "79"]
+  matcher(:regex, ["73", "75", "78", "79"])
 end

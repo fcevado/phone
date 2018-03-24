@@ -8,5 +8,5 @@ defmodule Phone.TV do
   def a2, do: "TV"
   def a3, do: "TUV"
 
-  matcher :regex, ["688"]
+  matcher(:regex, ["688"])
 end

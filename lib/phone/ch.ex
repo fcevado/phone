@@ -8,5 +8,5 @@ defmodule Phone.CH do
   def a2, do: "CH"
   def a3, do: "CHE"
 
-  matcher :regex, ["41"]
+  matcher(:regex, ["41"])
 end

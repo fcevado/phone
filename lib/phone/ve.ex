@@ -8,5 +8,5 @@ defmodule Phone.VE do
   def a2, do: "VE"
   def a3, do: "VEN"
 
-  matcher :regex, ["58"]
+  matcher(:regex, ["58"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.CO do
   def a2, do: "CO"
   def a3, do: "COL"
 
-  matcher :regex, ["57"]
+  matcher(:regex, ["57"])
 end

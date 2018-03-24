@@ -8,5 +8,5 @@ defmodule Phone.LU do
   def a2, do: "LU"
   def a3, do: "LUX"
 
-  matcher :regex, ["352"]
+  matcher(:regex, ["352"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.NANP.GU do
   def a2, do: "GU"
   def a3, do: "GUM"
 
-  matcher :regex, ["1671"]
+  matcher(:regex, ["1671"])
 end

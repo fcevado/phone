@@ -8,5 +8,5 @@ defmodule Phone.NANP.AG do
   def a2, do: "AG"
   def a3, do: "ATG"
 
-  matcher :regex, ["1268"]
+  matcher(:regex, ["1268"])
 end

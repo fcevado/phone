@@ -8,5 +8,5 @@ defmodule Phone.PG do
   def a2, do: "PG"
   def a3, do: "PNG"
 
-  matcher :regex, ["675"]
+  matcher(:regex, ["675"])
 end

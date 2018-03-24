@@ -8,5 +8,5 @@ defmodule Phone.NANP.DM do
   def a2, do: "DM"
   def a3, do: "DMA"
 
-  matcher :regex, ["1767"]
+  matcher(:regex, ["1767"])
 end

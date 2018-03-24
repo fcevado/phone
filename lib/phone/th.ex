@@ -8,5 +8,5 @@ defmodule Phone.TH do
   def a2, do: "TH"
   def a3, do: "THA"
 
-  matcher :regex, ["66"]
+  matcher(:regex, ["66"])
 end

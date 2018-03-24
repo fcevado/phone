@@ -8,5 +8,5 @@ defmodule Phone.AO do
   def a2, do: "AO"
   def a3, do: "AGO"
 
-  matcher :regex, ["244"]
+  matcher(:regex, ["244"])
 end

@@ -8,5 +8,5 @@ defmodule Phone.FM do
   def a2, do: "FM"
   def a3, do: "FSM"
 
-  matcher :regex, ["691"]
+  matcher(:regex, ["691"])
 end

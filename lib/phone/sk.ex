@@ -8,5 +8,5 @@ defmodule Phone.SK do
   def a2, do: "SK"
   def a3, do: "SVK"
 
-  matcher :regex, ["421"]
+  matcher(:regex, ["421"])
 end

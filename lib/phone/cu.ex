@@ -8,5 +8,5 @@ defmodule Phone.CU do
   def a2, do: "CU"
   def a3, do: "CUB"
 
-  matcher :regex, ["53"]
+  matcher(:regex, ["53"])
 end

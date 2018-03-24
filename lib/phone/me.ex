@@ -8,5 +8,5 @@ defmodule Phone.ME do
   def a2, do: "ME"
   def a3, do: "MNE"
 
-  matcher :regex, ["382"]
+  matcher(:regex, ["382"])
 end

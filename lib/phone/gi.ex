@@ -8,5 +8,5 @@ defmodule Phone.GI do
   def a2, do: "GI"
   def a3, do: "GIB"
 
-  matcher :regex, ["350"]
+  matcher(:regex, ["350"])
 end

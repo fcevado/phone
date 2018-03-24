@@ -8,5 +8,5 @@ defmodule Phone.IS do
   def a2, do: "IS"
   def a3, do: "ISL"
 
-  matcher :regex, ["354"]
+  matcher(:regex, ["354"])
 end

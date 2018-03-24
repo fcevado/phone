@@ -8,5 +8,5 @@ defmodule Phone.OM do
   def a2, do: "OM"
   def a3, do: "OMN"
 
-  matcher :regex, ["968"]
+  matcher(:regex, ["968"])
 end

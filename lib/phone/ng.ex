@@ -8,5 +8,5 @@ defmodule Phone.NG do
   def a2, do: "NG"
   def a3, do: "NGA"
 
-  matcher :regex, ["234"]
+  matcher(:regex, ["234"])
 end

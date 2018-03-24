@@ -8,5 +8,5 @@ defmodule Phone.PY do
   def a2, do: "PY"
   def a3, do: "PRY"
 
-  matcher :regex, ["595"]
+  matcher(:regex, ["595"])
 end
