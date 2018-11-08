@@ -3,7 +3,7 @@ defmodule Phone.MC do
 
   use Helper.Country
 
-  def regex, do: ~r/^(377)()(.{9})/
+  def regex, do: ~r/^(377)()(.{8})/
   def country, do: "Monaco"
   def a2, do: "MC"
   def a3, do: "MCO"
