@@ -7,3 +7,5 @@
 erl_crash.dump
 *.ez
 mix.lock
+*.iml
+.idea/
