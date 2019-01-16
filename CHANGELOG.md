@@ -1,6 +1,15 @@
 # Changelog
 
 
+## v0.4.4:
+  * Fix United Arab Emirates parsing
+  * Fix Germany parsing
+  * Fix Brazil parsing
+  * Fix South Africa parsing
+  * Fix Pakistan parsing
+  * Fix Monaco parsing
+  * Fix Ireland parsing
+  
 ## v0.4.3:
   * Add Idaho, New York, Pennsylvania, Texas, Washington missing area codes.
   * Fix typo on NANP Toll Free Number module.
