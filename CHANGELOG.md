@@ -2,6 +2,10 @@
 
 
 ## v0.4.4:
+  * Fix Australia regex
+  * Fix Ireland regex
+
+## v0.4.4:
   * Fix United Arab Emirates parsing
   * Fix Germany parsing
   * Fix Brazil parsing

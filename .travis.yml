@@ -1,12 +1,12 @@
 language: elixir
 
 elixir:
-  - 1.5.1
-  - 1.6.4
+  - 1.7.4
+  - 1.8.1
 
 otp_release:
-  - 19.3
-  - 20.3
+  - 20.3.8
+  - 21.2.6
 
 script:
   - MIX_ENV=test mix coveralls.travis --force
