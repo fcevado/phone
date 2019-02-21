@@ -63,8 +63,8 @@ defmodule Phone.Mixfile do
     [
       {:excoveralls, "0.7.2", only: :test},
       {:credo, "0.8.6", only: :dev},
-      {:earmark, "1.2.3", only: :dev},
-      {:ex_doc, "0.16.3", only: :dev},
+      {:earmark, "1.3.1", only: :dev},
+      {:ex_doc, "0.19.2", only: :dev},
       {:benchfella, "0.3.5", only: :dev},
       {:inch_ex, "0.5.6", only: :docs}
     ]
