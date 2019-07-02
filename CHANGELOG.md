@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v0.4.5
+
+* Fix Italy regex to consider 3 minimum digits and max 12
+
 ## v0.4.4:
   * Fix Australia regex
   * Fix Ireland regex
