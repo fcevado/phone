@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.4.6
+
+* Fix max length for German numbers to 11
 
 ## v0.4.5
 
