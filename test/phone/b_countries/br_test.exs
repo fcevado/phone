@@ -83,4 +83,26 @@ defmodule Phone.BRTest do
       end
     end)
   end)
+
+  describe "Brazilian toll-free numbers" do
+    test "it can recognize Brazilian toll-free numbers" do
+      sample_number = "+558002345678"
+      assert Phone.valid?(sample_number)
+      assert {:ok, parsed} = Phone.parse(sample_number)
+
+      assert parsed.country == Phone.BR.TollFree.country
+      assert parsed.a2 == Phone.BR.TollFree.a2
+      assert parsed.a3 == Phone.BR.TollFree.a3
+    end
+
+    test "it won't accept a Brazilian toll-free number that seems implausibly long" do
+      bad_number = "+55800234567890"
+      refute Phone.valid?(bad_number)
+      assert {:error, _} = Phone.parse(bad_number)
+
+      assert_raise ArgumentError, "Not a valid phone number.", fn ->
+        Phone.BR.TollFree.build!(bad_number)
+      end
+    end
+  end
 end

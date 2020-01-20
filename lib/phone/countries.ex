@@ -25,6 +25,7 @@ defmodule Phone.Countries do
     Phone.BN,
     Phone.BO,
     Phone.BR,
+    Phone.BR.TollFree,
     Phone.BT,
     Phone.BW,
     Phone.BY,
