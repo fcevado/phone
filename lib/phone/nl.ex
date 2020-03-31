@@ -3,7 +3,7 @@ defmodule Phone.NL do
 
   use Helper.Country
 
-  def regex, do: ~r/^(31)()(.{9})/
+  def regex, do: ~r/^(31)()(.{9,10})/
   def country, do: "Netherlands"
   def a2, do: "NL"
   def a3, do: "NLD"

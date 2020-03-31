@@ -1,6 +1,15 @@
 # Changelog
 
 
+## v0.4.10
+
+* Add new area codes for US, California.
+* Update regex for Netherlands
+
+## v0.4.9
+
+* Add Vancouver missing area code
+
 ## v0.4.8
 
 * Add brazilian toll free numbers
