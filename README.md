@@ -62,6 +62,7 @@ Countries that already has area code info:
 * United States.
 * Canada.
 * Brazil.
+* Spain.
 
 ## Vocabulary
   * a2: Alpha-2, two letters code for country names.
