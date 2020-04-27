@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.4.11
+
+* Update regex for Belgium.
 
 ## v0.4.10
 
