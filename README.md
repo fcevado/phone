@@ -58,7 +58,7 @@ What is, what isnt and what will be about Phone:
         ```
 
 ## Area Codes
-Countries that already has area code info:
+  Countries that already has area code info:
   * United States.
   * Canada.
   * Brazil.
@@ -75,7 +75,7 @@ Add to your depencies like any other hex package.
 
 ```elixir
 defp deps do
-  [{:phone, "0.4.11"}]
+  [{:phone, "0.5.0"}]
 end
 ```
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.0
+
+* Add support to region codes for Spain. 
+
 ## v0.4.11
 
 * Update regex for Belgium.
