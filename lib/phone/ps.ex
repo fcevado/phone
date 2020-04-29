@@ -1,6 +1,5 @@
 defmodule Phone.PS do
   @moduledoc false
-  @moduledoc false
 
   use Helper.Country
 
