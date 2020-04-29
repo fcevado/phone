@@ -53,7 +53,7 @@ defmodule Phone.ESTest do
     Phone.ES.VA,
     Phone.ES.VI,
     Phone.ES.Z,
-    Phone.ES.ZA,
+    Phone.ES.ZA
   ]
 
   Enum.map(main_module.codes, fn code ->
@@ -113,9 +113,9 @@ defmodule Phone.ESTest do
       assert Phone.valid?(sample_number)
       assert {:ok, parsed} = Phone.parse(sample_number)
 
-      assert parsed.country == Phone.ES.IntelligentNumbers.country
-      assert parsed.a2 == Phone.ES.IntelligentNumbers.a2
-      assert parsed.a3 == Phone.ES.IntelligentNumbers.a3
+      assert parsed.country == Phone.ES.IntelligentNumbers.country()
+      assert parsed.a2 == Phone.ES.IntelligentNumbers.a2()
+      assert parsed.a3 == Phone.ES.IntelligentNumbers.a3()
     end
 
     test "it won't accept a Spanish intelligent numbers that seems implausibly long" do
@@ -128,5 +128,4 @@ defmodule Phone.ESTest do
       end
     end
   end
-
 end

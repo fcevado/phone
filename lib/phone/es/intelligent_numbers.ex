@@ -26,6 +26,6 @@ defmodule Phone.ES.IntelligentNumbers do
     "34706",
     "34707",
     "34708",
-    "34709",
+    "34709"
   ])
 end

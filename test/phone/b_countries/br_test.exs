@@ -90,9 +90,9 @@ defmodule Phone.BRTest do
       assert Phone.valid?(sample_number)
       assert {:ok, parsed} = Phone.parse(sample_number)
 
-      assert parsed.country == Phone.BR.TollFree.country
-      assert parsed.a2 == Phone.BR.TollFree.a2
-      assert parsed.a3 == Phone.BR.TollFree.a3
+      assert parsed.country == Phone.BR.TollFree.country()
+      assert parsed.a2 == Phone.BR.TollFree.a2()
+      assert parsed.a3 == Phone.BR.TollFree.a3()
     end
 
     test "it won't accept a Brazilian toll-free number that seems implausibly long" do

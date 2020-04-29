@@ -31,4 +31,3 @@ defmodule Phone.ES.B do
     "34839"
   ])
 end
-

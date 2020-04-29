@@ -1,11 +1,5 @@
 defmodule Phone.ES do
-  @doc """
-    Telephone Numbers rules based in a government file called 
-      "El Plan Nacional de Numeración - Guía práctica de usuario"
-    
-    Provincies and acronyms from ISO 3166-2:ES
-  """
-
+  @moduledoc false
   use Helper.Country
 
   def country, do: "Spain"
@@ -62,6 +56,6 @@ defmodule Phone.ES do
     Phone.ES.VA,
     Phone.ES.VI,
     Phone.ES.Z,
-    Phone.ES.ZA,
+    Phone.ES.ZA
   ])
 end
