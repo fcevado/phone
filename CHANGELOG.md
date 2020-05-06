@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.1
+
+* Update regex for Singapore to support 10 digits number. 
+
 ## v0.5.0
 
 * Add support to region codes for Spain. 
