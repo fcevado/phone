@@ -29,14 +29,13 @@ defmodule Phone do
 
   ```
   """
-  @spec parse(String.t()) :: {:ok, Map.t()}
+  @spec parse(pos_integer | String.t()) :: {:ok, Map.t()} | {:error, String.t()}
   def parse(number) when is_bitstring(number) do
     number
     |> prepare_number
     |> Phone.Countries.build()
   end
 
-  @spec parse(pos_integer) :: {:ok, Map.t()}
   def parse(number) when is_integer(number) do
     number = Integer.to_string(number)
     parse(number)
@@ -91,7 +90,7 @@ defmodule Phone do
 
   ```
   """
-  @spec parse!(String.t()) :: Map.t()
+  @spec parse!(pos_integer | String.t()) :: Map.t()
   def parse!(number) when is_bitstring(number) do
     number = clear(number)
 
@@ -105,7 +104,6 @@ defmodule Phone do
     Phone.Countries.build!(number)
   end
 
-  @spec parse!(pos_integer) :: Map.t()
   def parse!(number) when is_integer(number) do
     number = Integer.to_string(number)
     parse!(number)
@@ -115,10 +113,8 @@ defmodule Phone do
     raise ArgumentError, message: "Not a valid parameter, only string or integer."
   end
 
-  @spec parse(String.t(), Atom.t()) :: {:ok, Map.t()}
-  @spec parse(pos_integer, Atom.t()) :: {:ok, Map.t()}
-  @spec parse!(String.t(), Atom.t()) :: Map.t()
-  @spec parse!(pos_integer, Atom.t()) :: Map.t()
+  @spec parse(pos_integer | String.t(), Atom.t()) :: {:ok, Map.t()} | {:error, String.t()}
+  @spec parse!(pos_integer | String.t(), Atom.t()) :: Map.t()
   country_parser()
 
   @doc """
@@ -139,14 +135,13 @@ defmodule Phone do
 
   ```
   """
-  @spec parse(String.t()) :: boolean
+  @spec valid?(pos_integer | String.t()) :: boolean
   def valid?(number) when is_bitstring(number) do
     number
     |> prepare_number
     |> Phone.Countries.match?()
   end
 
-  @spec parse(pos_integer) :: boolean
   def valid?(number) when is_integer(number) do
     number
     |> to_string
