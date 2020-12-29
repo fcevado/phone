@@ -1,0 +1,7 @@
+engines:
+  credo:
+    enabled: true
+  remark-link:
+    enable: false
+pull_requests:
+  comments: false
