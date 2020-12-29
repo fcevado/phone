@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.5.2
+
+* Update regex for Jamaica to support new region code. 
+* Fix typo on Saint Vincent and the Grenadines country name.
+
 ## v0.5.1
 
 * Update regex for Singapore to support 10 digits number. 
