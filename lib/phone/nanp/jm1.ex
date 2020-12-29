@@ -1,4 +1,4 @@
-defmodule Phone.NANP.JM do
+defmodule Phone.NANP.JM1 do
   @moduledoc false
 
   use Helper.Country
