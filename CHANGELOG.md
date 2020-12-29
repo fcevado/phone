@@ -1,37 +1,42 @@
 # Changelog
 
+## v0.5.2
+
+  * Update regex for Jamaica to support new region code. 
+  * Fix typo on Saint Vincent and the Grenadines country name.
+
 ## v0.5.1
 
-* Update regex for Singapore to support 10 digits number. 
+  * Update regex for Singapore to support 10 digits number. 
 
 ## v0.5.0
 
-* Add support to region codes for Spain. 
+  * Add support to region codes for Spain. 
 
 ## v0.4.11
 
-* Update regex for Belgium.
+  * Update regex for Belgium.
 
 ## v0.4.10
 
-* Add new area codes for US, California.
-* Update regex for Netherlands
+  * Add new area codes for US, California.
+  * Update regex for Netherlands
 
 ## v0.4.9
 
-* Add Vancouver missing area code
+  * Add Vancouver missing area code
 
 ## v0.4.8
 
-* Add brazilian toll free numbers
+  * Add brazilian toll free numbers
 
 ## v0.4.6
 
-* Fix max length for German numbers to 11
+  * Fix max length for German numbers to 11
 
 ## v0.4.5
 
-* Fix Italy regex to consider 3 minimum digits and max 12
+  * Fix Italy regex to consider 3 minimum digits and max 12
 
 ## v0.4.4:
   * Fix Australia regex
