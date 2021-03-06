@@ -107,6 +107,33 @@ defmodule Phone.ESTest do
     end)
   end)
 
+  describe "Spanish mobile numbers" do
+    module = Phone.ES.Mobile
+    Enum.map(module.codes, fn code ->
+      test "#{inspect(module)} parses area code #{code}" do
+        assert Phone.valid?(unquote("#{code}5555555"))
+        assert {:ok, parsed} = Phone.parse(unquote("#{code}5555555"))
+
+        assert parsed.country == Phone.ES.Mobile.country()
+        assert parsed.a2 == Phone.ES.Mobile.a2()
+        assert parsed.a3 == Phone.ES.Mobile.a3()
+      end
+
+      test "#{inspect(module)} cant parse wrong number with code #{code}" do
+        refute Phone.valid?(unquote("#{code}555"))
+        assert {:error, _} = Phone.parse(unquote("#{code}555"))
+
+        refute unquote(module).match?(unquote("#{code}555"))
+        assert {:error, _} = unquote(module).build(unquote("#{code}555"))
+
+        assert_raise ArgumentError, "Not a valid phone number.", fn ->
+          unquote(module).build!(unquote("#{code}555"))
+        end
+      end
+    end)
+
+  end
+
   describe "Spanish intelligent numbers" do
     test "it can recognize Spanish intelligent numbers" do
       sample_number = "+34701023456"

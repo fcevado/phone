@@ -55,6 +55,7 @@ defmodule Phone.Countries do
     Phone.EG,
     Phone.ER,
     Phone.ES,
+    Phone.ES.Mobile,
     Phone.ES.IntelligentNumbers,
     Phone.ET,
     Phone.FI,
