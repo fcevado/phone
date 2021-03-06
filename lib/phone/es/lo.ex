@@ -3,7 +3,7 @@ defmodule Phone.ES.LO do
 
   use Helper.Area
 
-  def regex, do: ~r/^(34)(941|841)(.{6})/
+  def regex, do: ~r/^(34)(941|841)(.{6})$/
   def area_name, do: "La Rioja"
   def area_type, do: "province"
   def area_abbreviation, do: "LO"

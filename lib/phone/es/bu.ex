@@ -3,7 +3,7 @@ defmodule Phone.ES.BU do
 
   use Helper.Area
 
-  def regex, do: ~r/^(34)(947|847)(.{6})/
+  def regex, do: ~r/^(34)(947|847)(.{6})$/
   def area_name, do: "Burgos"
   def area_type, do: "province"
   def area_abbreviation, do: "BU"

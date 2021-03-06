@@ -3,7 +3,7 @@ defmodule Phone.ES.Mobile do
 
   use Helper.Country
 
-  def regex, do: ~r/^(34)(6[0-9]|7[1-4])(.{7})/
+  def regex, do: ~r/^(34)(6[0-9]|7[1-4])(.{7})$/
   def country, do: "Spain Mobile"
   def a2, do: "ES"
   def a3, do: "ESP"
