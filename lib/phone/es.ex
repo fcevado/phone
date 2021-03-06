@@ -35,6 +35,7 @@ defmodule Phone.ES do
     Phone.ES.LU,
     Phone.ES.M,
     Phone.ES.MA,
+    Phone.ES.Mobile,
     Phone.ES.MU,
     Phone.ES.NA,
     Phone.ES.O,
