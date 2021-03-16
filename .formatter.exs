@@ -1,9 +1,9 @@
+# Used by "mix format"
 [
   inputs: [
-    "mix.exs",
-    "{config,lib,priv,test,bench}/**/*.{ex,exs}",
+    "{mix,.formatter}.exs",
+    "{config,lib,test,bench}/**/*.{ex,exs}"
   ],
-
   locals_without_parens: [
     # Formatter tests
     assert_format: 2,

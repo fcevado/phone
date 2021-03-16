@@ -1,37 +1,58 @@
 defmodule Phone.Mixfile do
   use Mix.Project
 
+  @source_url "https://github.com/fcevado/phone"
+  @version "0.5.2"
+
   def project do
     [
       app: :phone,
-      version: "0.5.2",
+      version: @version,
       elixir: ">= 1.1.0",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
-      description: description(),
       package: package(),
-      source_url: "https://github.com/fcevado/phone",
-      deps: deps()
+      deps: deps(),
+      docs: docs()
     ] ++ coverage()
-  end
-
-  defp package do
-    [
-      files: files(),
-      maintainers: ["Flávio M.V."],
-      licenses: ["Apache 2.0"],
-      links: links()
-    ]
-  end
-
-  defp description do
-    """
-    Get useful info from telephone numbers.
-    """
   end
 
   def application do
     [applications: []]
+  end
+
+  defp package do
+    [
+      description: """
+      Phone number parser for telephone numbers in international standard or
+      missing international country code.
+      """,
+      maintainers: ["Flávio M.V."],
+      licenses: ["Apache-2.0"],
+      links: %{
+        "Changelog" => "https://hexdocs.pm/phone/changelog.html",
+        "GitHub" => @source_url
+      }
+    ]
+  end
+
+  defp deps do
+    [
+      {:excoveralls, "0.13.4", only: :test, runtime: false},
+      {:credo, "1.5.4", only: :dev, runtime: false},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:benchfella, "0.3.5", only: :dev},
+    ]
+  end
+
+  defp docs do
+    [
+      extras: ["CHANGELOG.md", "README.md"],
+      main: "readme",
+      formatters: ["html"],
+      api_reference: false,
+      skip_undefined_reference_warnings_on: ["CHANGELOG.md"]
+    ]
   end
 
   defp coverage do
@@ -43,30 +64,6 @@ defmodule Phone.Mixfile do
         "coveralls.post": :test,
         "coveralls.html": :test
       ]
-    ]
-  end
-
-  defp files do
-    [
-      "mix.exs",
-      "lib"
-    ]
-  end
-
-  defp links do
-    %{
-      "Github" => "https://github.com/fcevado/phone"
-    }
-  end
-
-  defp deps do
-    [
-      {:excoveralls, "0.13.4", only: :test},
-      {:credo, "1.5.4", only: :dev},
-      {:earmark, "1.4.13", only: :dev},
-      {:ex_doc, "0.23.0", only: :dev},
-      {:benchfella, "0.3.5", only: :dev},
-      {:inch_ex, "2.0.0", only: :docs}
     ]
   end
 end
