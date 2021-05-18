@@ -3,7 +3,7 @@ defmodule Phone.ES.CU do
 
   use Helper.Area
 
-  def regex, do: ~r/^(34)(969|869)(.{6})/
+  def regex, do: ~r/^(34)(969|869)(.{6})$/
   def area_name, do: "Cuenca"
   def area_type, do: "province"
   def area_abbreviation, do: "CU"

@@ -3,7 +3,7 @@ defmodule Phone.ES.V do
 
   use Helper.Area
 
-  def regex, do: ~r/^(34)(96[0-3]|86[0-3])(.{6})/
+  def regex, do: ~r/^(34)(96[0-3]|86[0-3])(.{6})$/
   def area_name, do: "Valencia"
   def area_type, do: "province"
   def area_abbreviation, do: "V"

@@ -3,7 +3,7 @@ defmodule Phone.ES.GI do
 
   use Helper.Area
 
-  def regex, do: ~r/^(34)(972|872)(.{6})/
+  def regex, do: ~r/^(34)(972|872)(.{6})$/
   def area_name, do: "Girona"
   def area_type, do: "province"
   def area_abbreviation, do: "GI"

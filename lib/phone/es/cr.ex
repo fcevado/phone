@@ -3,7 +3,7 @@ defmodule Phone.ES.CR do
 
   use Helper.Area
 
-  def regex, do: ~r/^(34)(926|826)(.{6})/
+  def regex, do: ~r/^(34)(926|826)(.{6})$/
   def area_name, do: "Ciudad Real"
   def area_type, do: "province"
   def area_abbreviation, do: "CR"

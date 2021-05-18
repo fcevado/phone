@@ -3,7 +3,7 @@ defmodule Phone.ES.MA do
 
   use Helper.Area
 
-  def regex, do: ~r/^(34)(95[1-2]|85[1-2])(.{6})/
+  def regex, do: ~r/^(34)(95[1-2]|85[1-2])(.{6})$/
   def area_name, do: "Málaga"
   def area_type, do: "province"
   def area_abbreviation, do: "MA"

@@ -3,7 +3,7 @@ defmodule Phone.ES.CS do
 
   use Helper.Area
 
-  def regex, do: ~r/^(34)(964|864)(.{6})/
+  def regex, do: ~r/^(34)(964|864)(.{6})$/
   def area_name, do: "Castellón"
   def area_type, do: "province"
   def area_abbreviation, do: "CS"
