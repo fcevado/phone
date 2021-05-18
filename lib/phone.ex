@@ -122,7 +122,7 @@ defmodule Phone do
   country_parser()
 
   @doc """
-  Returns `true` if the number can be parsed, otherwhise returns `false`.
+  Returns `true` if the number can be parsed, otherwise returns `false`.
 
   ```
   iex> Phone.valid?("555132345678")
