@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.5.3 - 2021-05-15
+
+  * Add support to mobile spanish phone numbers.
+  * Improve documentation.
+
 ## v0.5.2 - 2020-12-29
 
   * Update regex for Jamaica to support new region code.
