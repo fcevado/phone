@@ -3,8 +3,9 @@ defmodule Phone.NANP.US.FL do
 
   use Helper.Area
 
-  def regex,
-    do: ~r/^(1)(239|305|321|352|386|407|561|727|754|772|786|813|850|863|904|941|954)([2-9].{6})$/
+  def regex do
+    ~r/^(1)(239|305|321|352|386|407|561|689|727|754|772|786|813|850|863|904|941|954)([2-9].{6})$/
+  end
 
   def area_name, do: "Florida"
   def area_type, do: "state"
@@ -18,6 +19,7 @@ defmodule Phone.NANP.US.FL do
     "1386",
     "1407",
     "1561",
+    "1689",
     "1727",
     "1754",
     "1772",
