@@ -1,5 +1,10 @@
 # Changelog
 
+
+## v0.5.4 - 2021-05-20
+
+  * Add new area code for US, Florida. 
+
 ## v0.5.3 - 2021-05-15
 
   * Add support to mobile spanish phone numbers.
