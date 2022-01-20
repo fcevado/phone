@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.5.5 - 2022-01-20
+
+  * Fix pattern match for Russia. 
 
 ## v0.5.4 - 2021-05-20
 
