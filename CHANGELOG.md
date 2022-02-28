@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.6 - 2022-02-28
+
+  * Fix pattern match for Brazil regions: PI, PR, RS. 
+
 ## v0.5.5 - 2022-01-20
 
   * Fix pattern match for Russia. 

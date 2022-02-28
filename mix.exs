@@ -2,7 +2,7 @@ defmodule Phone.Mixfile do
   use Mix.Project
 
   @source_url "https://github.com/fcevado/phone"
-  @version "0.5.5"
+  @version "0.5.6"
 
   def project do
     [
@@ -38,9 +38,9 @@ defmodule Phone.Mixfile do
 
   defp deps do
     [
-      {:excoveralls, "0.13.4", only: :test, runtime: false},
-      {:credo, "1.5.4", only: :dev, runtime: false},
-      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.14", only: :test, runtime: false},
+      {:credo, "~> 1.6", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.28", only: :dev, runtime: false},
       {:benchfella, "0.3.5", only: :dev}
     ]
   end
