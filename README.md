@@ -12,7 +12,7 @@ Phone number parser for telephone numbers in international standard or missing i
 
 Note on version `0.4.0` onward: `Phone` was rebuild to increase performance, that may increase compilation time but made `Phone` 100 times faster.
 
-* [Online Documentation](https://hexdocs.pm/phone/api-reference.html)
+* [Online Documentation](https://hexdocs.pm/phone/readme.html)
 * [Hex](https://hex.pm/packages/phone)
 
 ## About
