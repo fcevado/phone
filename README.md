@@ -19,12 +19,12 @@ Note on version `0.4.0` onward: `Phone` was rebuild to increase performance, tha
 
 What is, what isn't and what will be about Phone:
   1. It isn't:
-    * Intended to work as libphonenumber.
-    * Prepared to format numbers.
-    * Necessary any information about the number if in international standard.
+     * Intended to work as libphonenumber.
+     * Prepared to format numbers.
+     * Necessary any information about the number if in international standard.
   2. It is:
-    * A real parser, created to extract information based only in the number.
-    * Prepared to work with numbers not only in the international standard.
+     * A real parser, created to extract information based only in the number.
+     * Prepared to work with numbers not only in the international standard.
   3. It will have:
      * Area code info for every country that numbering plan has area codes.
 
