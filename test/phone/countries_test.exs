@@ -154,6 +154,7 @@ defmodule Phone.CountriesTest do
     Phone.PW,
     Phone.PY,
     Phone.QA,
+    Phone.RE,
     Phone.RO,
     Phone.RS,
     Phone.RU,
