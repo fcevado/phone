@@ -69,6 +69,7 @@ defmodule Phone.CountriesTest do
     Phone.GL,
     Phone.GM,
     Phone.GN,
+    Phone.GP,
     Phone.GQ,
     Phone.GR,
     Phone.GT,
