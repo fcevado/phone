@@ -1,16 +1,20 @@
 # Changelog
 
+## v0.5.7 - 2023-03-07
+
+  * Add new are code for US, California.
+
 ## v0.5.6 - 2022-02-28
 
-  * Fix pattern match for Brazil regions: PI, PR, RS. 
+  * Fix pattern match for Brazil regions: PI, PR, RS.
 
 ## v0.5.5 - 2022-01-20
 
-  * Fix pattern match for Russia. 
+  * Fix pattern match for Russia.
 
 ## v0.5.4 - 2021-05-20
 
-  * Add new area code for US, Florida. 
+  * Add new area code for US, Florida.
 
 ## v0.5.3 - 2021-05-15
 
