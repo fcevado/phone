@@ -39,8 +39,8 @@ defmodule Phone.Mixfile do
   defp deps do
     [
       {:excoveralls, "~> 0.14", only: :test, runtime: false},
-      {:credo, "~> 1.6", only: :dev, runtime: false},
-      {:ex_doc, "~> 0.28", only: :dev, runtime: false},
+      {:credo, "~> 1.7", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.29", only: :dev, runtime: false},
       {:benchfella, "0.3.5", only: :dev}
     ]
   end
