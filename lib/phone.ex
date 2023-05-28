@@ -29,14 +29,13 @@ defmodule Phone do
 
   ```
   """
-  @spec parse(String.t()) :: {:ok, Map.t()}
+  @spec parse(String.t() | pos_integer()) :: {:ok, map()}
   def parse(number) when is_bitstring(number) do
     number
     |> prepare_number
     |> Phone.Countries.build()
   end
 
-  @spec parse(pos_integer) :: {:ok, Map.t()}
   def parse(number) when is_integer(number) do
     number = Integer.to_string(number)
     parse(number)
@@ -46,7 +45,6 @@ defmodule Phone do
     {:error, "Not a valid parameter, only string or integer."}
   end
 
-  @doc false
   defp prepare_number(number) do
     number = clear(number)
 
@@ -57,7 +55,6 @@ defmodule Phone do
     end
   end
 
-  @doc false
   defp clear(number) when is_bitstring(number) do
     number
     |> String.graphemes()
@@ -65,7 +62,6 @@ defmodule Phone do
     |> Enum.join("")
   end
 
-  @doc false
   defp valid_char("+"), do: false
   defp valid_char("("), do: false
   defp valid_char(")"), do: false
@@ -91,7 +87,7 @@ defmodule Phone do
 
   ```
   """
-  @spec parse!(String.t()) :: Map.t()
+  @spec parse!(String.t() | pos_integer()) :: map()
   def parse!(number) when is_bitstring(number) do
     number = clear(number)
 
@@ -105,7 +101,6 @@ defmodule Phone do
     Phone.Countries.build!(number)
   end
 
-  @spec parse!(pos_integer) :: Map.t()
   def parse!(number) when is_integer(number) do
     number = Integer.to_string(number)
     parse!(number)
@@ -115,10 +110,8 @@ defmodule Phone do
     raise ArgumentError, message: "Not a valid parameter, only string or integer."
   end
 
-  @spec parse(String.t(), Atom.t()) :: {:ok, Map.t()}
-  @spec parse(pos_integer, Atom.t()) :: {:ok, Map.t()}
-  @spec parse!(String.t(), Atom.t()) :: Map.t()
-  @spec parse!(pos_integer, Atom.t()) :: Map.t()
+  @spec parse(String.t() | pos_integer(), atom()) :: {:ok, map()}
+  @spec parse!(String.t() | pos_integer(), atom()) :: map()
   country_parser()
 
   @doc """
@@ -139,14 +132,13 @@ defmodule Phone do
 
   ```
   """
-  @spec parse(String.t()) :: boolean
+  @spec valid?(String.t() | pos_integer()) :: boolean()
   def valid?(number) when is_bitstring(number) do
     number
     |> prepare_number
     |> Phone.Countries.match?()
   end
 
-  @spec parse(pos_integer) :: boolean
   def valid?(number) when is_integer(number) do
     number
     |> to_string
