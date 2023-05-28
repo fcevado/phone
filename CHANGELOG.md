@@ -1,8 +1,11 @@
 # Changelog
 
-## v0.5.7 - 2023-03-07
+## v0.5.7 - 2023-05-28
 
-  * Add new are code for US, California.
+  * Fix typespecs
+  * Add missing countries Guadaloupe(GP) and Reunion(RE),
+  * Add missing area code for IE.
+  * Add missing area code for Texas and California, US.
 
 ## v0.5.6 - 2022-02-28
 
