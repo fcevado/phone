@@ -3,7 +3,7 @@ defmodule Phone.RE do
 
   use Helper.Country
 
-  def regex, do: ~r/^(262)()(.+)/
+  def regex, do: ~r/^(262)(.{3})(.{6})/
   def country, do: "Réunion"
   def a2, do: "RE"
   def a3, do: "REU"

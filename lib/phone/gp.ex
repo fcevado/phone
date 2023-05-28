@@ -3,7 +3,7 @@ defmodule Phone.GP do
 
   use Helper.Country
 
-  def regex, do: ~r/^(590)()(.+)/
+  def regex, do: ~r/^(590)(.{3})(.{6})/
   def country, do: "Guadeloupe"
   def a2, do: "GP"
   def a3, do: "GLP"
