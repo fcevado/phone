@@ -29,7 +29,7 @@ defmodule Phone do
 
   ```
   """
-  @spec parse(String.t() | pos_integer()) :: {:ok, map()}
+  @spec parse(String.t() | pos_integer()) :: {:ok, map()} | {:error, String.t()}
   def parse(number) when is_bitstring(number) do
     number
     |> prepare_number
@@ -110,7 +110,7 @@ defmodule Phone do
     raise ArgumentError, message: "Not a valid parameter, only string or integer."
   end
 
-  @spec parse(String.t() | pos_integer(), atom()) :: {:ok, map()}
+  @spec parse(String.t() | pos_integer(), atom()) :: {:ok, map()} | {:error, String.t()}
   @spec parse!(String.t() | pos_integer(), atom()) :: map()
   country_parser()
 
