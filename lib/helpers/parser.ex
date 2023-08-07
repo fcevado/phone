@@ -81,6 +81,7 @@ defmodule Helper.Parser do
       parser(:ao, "244")
       parser(:ar, "54")
       parser(:at, "43")
+      parser(:au, "61")
       parser(:aw, "297")
       parser(:az, "994")
 
