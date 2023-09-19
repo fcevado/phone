@@ -109,6 +109,7 @@ defmodule Phone.ESTest do
 
   describe "Spanish mobile numbers" do
     module = Phone.ES.Mobile
+
     Enum.map(module.codes, fn code ->
       test "#{inspect(module)} parses area code #{code}" do
         assert Phone.valid?(unquote("#{code}5555555"))
@@ -131,7 +132,6 @@ defmodule Phone.ESTest do
         end
       end
     end)
-
   end
 
   describe "Spanish intelligent numbers" do
