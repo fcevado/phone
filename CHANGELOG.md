@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.5.8 - 2023-09-21
+
+  * Fix missing AU support
+  * Add area code for US, South Carolina
+  * Add area code for US, Florida
+  * Add area code for US, Georgia
+
 ## v0.5.7 - 2023-05-28
 
   * Fix typespecs
