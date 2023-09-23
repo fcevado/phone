@@ -3,7 +3,7 @@ defmodule Phone.NANP.US.OH do
 
   use Helper.Area
 
-  def regex, do: ~r/^(1)(216|220|234|330|380|419|440|513|567|614|740|937)([2-9].{6})$/
+  def regex, do: ~r/^(1)(216|220|234|326|330|380|419|440|513|567|614|740|937)([2-9].{6})$/
   def area_name, do: "Ohio"
   def area_type, do: "state"
   def area_abbreviation, do: "OH"
@@ -12,6 +12,7 @@ defmodule Phone.NANP.US.OH do
     "1216",
     "1220",
     "1234",
+    "1326",
     "1330",
     "1380",
     "1419",
