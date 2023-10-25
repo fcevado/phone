@@ -3,7 +3,7 @@ defmodule Phone.NANP.US.PA do
 
   use Helper.Area
 
-  def regex, do: ~r/^(1)(215|223|267|272|412|445|484|570|610|717|724|814|878)([2-9].{6})$/
+  def regex, do: ~r/^(1)(215|223|267|272|412|445|484|570|582|610|717|724|814|835|878)([2-9].{6})$/
   def area_name, do: "Pennsylvania"
   def area_type, do: "state"
   def area_abbreviation, do: "PA"
@@ -17,10 +17,12 @@ defmodule Phone.NANP.US.PA do
     "1445",
     "1484",
     "1570",
+    "1582",
     "1610",
     "1717",
     "1724",
     "1814",
+    "1835",
     "1878"
   ])
 end
