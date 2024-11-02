@@ -2,7 +2,7 @@ defmodule Phone.Mixfile do
   use Mix.Project
 
   @source_url "https://github.com/fcevado/phone"
-  @version "0.5.8"
+  @version "0.5.9"
 
   def project do
     [

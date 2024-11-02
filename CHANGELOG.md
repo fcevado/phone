@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.5.9 - 2024-10-02
+
+  * Add recently updated area codes for US states: AL, CA, CO, DC, FL, IL, MO, NC, OH, OK, PA, VA.
+  * Fix incorrect code for Iceland.
+
 ## v0.5.8 - 2023-09-21
 
   * Fix missing AU support
