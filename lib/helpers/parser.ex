@@ -165,7 +165,7 @@ defmodule Helper.Parser do
       parser(:io, "246")
       parser(:iq, "964")
       parser(:ir, "98")
-      parser(:is, "353")
+      parser(:is, "354")
       parser(:it, "39")
 
       parser(:jo, "962")
