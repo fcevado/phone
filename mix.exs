@@ -18,7 +18,7 @@ defmodule Phone.Mixfile do
   end
 
   def application do
-    [applications: []]
+    [extra_applications: []]
   end
 
   defp package do
@@ -40,7 +40,7 @@ defmodule Phone.Mixfile do
     [
       {:excoveralls, "~> 0.18", only: :test, runtime: false},
       {:credo, "~> 1.7", only: :dev, runtime: false},
-      {:ex_doc, "~> 0.34", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.36", only: :dev, runtime: false},
       {:benchfella, "0.3.5", only: :dev}
     ]
   end
