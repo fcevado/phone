@@ -97,10 +97,10 @@ defmodule Helper.Country do
     modules = Enum.map(modules, &Macro.expand(&1, __CALLER__))
 
     (modules
-     |> Enum.reduce([], fn m, acc -> acc ++ m.codes end)
+     |> Enum.reduce([], fn m, acc -> acc ++ m.codes() end)
      |> generate_codes) ++
       Enum.map(modules, fn module ->
-        Enum.map(module.codes, fn code ->
+        Enum.map(module.codes(), fn code ->
           generate_matcher(:modules, module, code)
         end)
       end) ++ generate_errors()
