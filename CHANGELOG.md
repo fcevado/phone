@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.5.11 - 2025-05-17
+
+  * Fix wrong alpha2 code for Jamaica.
+  * Add Norfolk Island, NF, country code.
+
 ## v0.5.10 - 2024-12-29
 
   * Fix duplicated area code on US states: CA, NJ.
